@@ -13,29 +13,100 @@
         <link rel="icon" class="js-site-favicon" type="image/svg+xml" href="https://github.githubassets.com/favicons/favicon.svg">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="index.css?1">
         <!--<link rel="stylesheet" href="https://raw.githubusercontent.com/virachai/virachai.github.io/main/node_modules/main.css" crossorigin="anonymous">
         <link rel="stylesheet" href="https://raw.githack.com/virachai/virachai.github.io/main/node_modules/main.css">-->
         <script src="github_white_favicon.user.js"></script>
+		<style>
+		div#home{
+			background: linear-gradient(136deg, rgb(68, 132, 206), rgb(26, 215, 192), rgb(255, 155, 17), rgb(155, 89, 182), rgb(255, 127, 127), rgb(236, 240, 241)) 0% 0% / 1200% 1200%;
+			min-height:460px
+		}
+		.dropdown-toggle::after {
+			margin-left: 0;
+			vertical-align: 0.15em;
+		}
+		.navbar-transparent {
+			background-color: rgba(255, 255, 255, 0);
+			transition: background-color 0.2s;
+		}
+		.navbar-white {
+			background-color: rgba(234, 236, 239, 0.81);
+			transition: background-color 0.2s;
+		}
+		.brand {
+			color: #363636 !important;
+		}
+		.nav-link {
+			transition: color, 0.2s;
+		}
+		.toggler {
+			border: none;
+			padding: 4px;
+			border-radius: 4px;
+		}
+		.toggler:focus {
+				outline: none;
+				background-color: rgba(0, 0, 0, 0.05);
+		}
+		ol.dropdown-menu-order { padding-inline-start: 40px; }
+		ol.dropdown-menu-order > li {
+			/*display: list-item;
+			list-style: decimal;*/
+			list-style-type: upper-alpha;
+		}
+		ol.dropdown-menu-order > li > a {padding-left: 0.5rem;}
+		</style>
     </head>
     <body>
+	<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<script src="index.js"></script>
 	<div id="root">
-        <nav class=" fixed-top  navbar-transparent navbar navbar-expand-lg navbar-light">
-			<a href="#home" class="brand navbar-brand">&lt;Virachai /&gt;</a>
+        <nav class="fixed-top navbar-transparent navbar navbar-expand-lg navbar-light">
+			<a href="index.html" class="brand navbar-brand">&lt;Virachai /&gt;</a>
             <button aria-controls="basic-navbar-nav" type="button" aria-label="Toggle navigation" class="toggler navbar-toggler collapsed">
 				<span class="navbar-toggler-icon">
 </span>
             </button>
             <div class="navbar-collapse collapse" id="basic-navbar-nav">
 				<div class="mr-auto navbar-nav">
-					<a href="#projects" data-rb-event-key="#projects" class="nav-link lead nav-link">Projects</a>
-					<a href="#courses" data-rb-event-key="#courses" class="nav-link lead nav-link">Courses</a>
-					<a href="#aboutme" data-rb-event-key="#aboutme" class="nav-link lead nav-link">About</a>
-					<a href="#skills" data-rb-event-key="#skills" class="nav-link lead nav-link">Skills</a>
+					<ul class="nav navbar-nav">
+						<li><a href="#projects" data-rb-event-key="#projects" class="nav-link lead nav-link">Project</a></l>													
+						<li class="dropdown">
+							<a href="#courses" data-rb-event-key="#courses" class="nav-link lead nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true" title="Total Course: 32">
+								<span class="nav-label">Courses</span>
+								<span class="caret"></span>
+							</a>
+							<ol type="A" class="dropdown-menu dropdown-menu-order"  role="menu" aria-labelledby="dropdownMenuLink">
+<li><a tabindex="-1" class="dropdown-item" href="#" title="HTML: HyperText Markup Language">HTML</a></li>
+<li><a tabindex="-1" class="dropdown-item" href="#" title="An HTML form is used to collect user input.">Form</a></li>
+<li><a tabindex="-1" class="dropdown-item" href="#" title="CSS: Cascading Style Sheet">CSS</a></li>
+<li><a tabindex="-1" class="dropdown-item" href="#" title="Bootstrap - The most popular HTML, CSS, and JS library in the world.">Bootstrap</a></li>
+<li><a tabindex="-1" class="dropdown-item" href="#" title="A distributed version control system">Git</a></li>
+<li><a tabindex="-1" class="dropdown-item" href="#" title="User Experience / User interface Design">UX/UI Design</a></li>
+							</ol>
+						</l>
+						<li class="dropdown">
+							<a href="#labs" data-rb-event-key="#labs" class="nav-link lead nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
+								<span class="nav-label">Labs</span>
+								<span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu"  role="menu" aria-labelledby="dropdownMenuLink">
+<li><a tabindex="-1" class="dropdown-item" href="#lab001" title="Create a Static Website Using HTML & CSS">Lab HTML A</a></li>
+<li><a tabindex="-1" class="dropdown-item" href="#lab002">Lab HTML B</a></li>
+							</ul>
+						</l>
+					</ul>
+					<li><a href="#aboutme" data-rb-event-key="#aboutme" class="nav-link lead nav-link">About</a></l>
+					<li><a href="#skills" data-rb-event-key="#skills" class="nav-link lead nav-link">Skills</a></l>	
 				</div>
             </div>
 		</nav>
-		<div id="home" class="title bg-transparent bgstyle text-light min-vh-100 d-flex align-content-center align-items-center flex-wrap m-0 jumbotron jumbotron-fluid" style="background: linear-gradient(136deg, rgb(68, 132, 206), rgb(26, 215, 192), rgb(255, 155, 17), rgb(155, 89, 182), rgb(255, 127, 127), rgb(236, 240, 241)) 0% 0% / 1200% 1200%;">
+		<div id="home" class="title bg-transparent bgstyle text-light min-vh-100 d-flex align-content-center align-items-center flex-wrap m-0 jumbotron jumbotron-fluid" style="">
 		<!-- Main Section -->
 		<div class="text-center container">
 			<h1 class="display-1">Virachai Wongsena</h1>
@@ -66,6 +137,15 @@
 			</div>
 		</div>
 		<!-- /Main Section -->
+
+		<footer class="mt-auto py-5 text-center " style="background-color: rgb(245, 245, 245);">
+			<div class="container">
+				<h2 class="display-4 pb-3 text-center">Get In Touch</h2>
+				<p class="lead text-center pb-3">I’m currently learning Front-End, Back-End, DevOps & more. if you have any questions, or if you just want to say hi, please feel free to email me at, <a href="mailto:wvirachai@gmail.com">wvirachai@gmail.com</a>.</p>
+				<i class="fas fa-code"></i> with <i class="fas fa-heart"></i> by <a class="badge badge-dark" rel="noopener" href="https://github.com/virachai" aria-label="My GitHub">Vrachai Wongsena</a> using <i class="fab fa-react"></i>
+				<p><small class="text-muted">Project code is open source.</small></p>
+			</div>
+		</footer>
     </div>
 	</body>
 </html>
