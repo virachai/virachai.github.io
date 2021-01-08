@@ -22,21 +22,13 @@ $( document ).ready(function() {
 			}, 500, $(this));
 			window.scroll(0, 1);
 			$("#fixFullScr").toggle();
-			//$("#fixFullScr").toggle(() => $("div#root").addClass("modal-open"), () => $("div#root").removeClass("modal-open"));			
+			//$("div#fixFullScr").toggle(() => $("div#root").addClass("modal-open"), () => $("div#root").removeClass("modal-open"));			
 			
-			var addMod = $('div#fixFullScr').is(':visible') ? $("div#root").addClass("modal-open"):$("div#root").removeClass("modal-open");
+			var addMod = () => $('div#fixFullScr').is(':visible') ? $("div#root").addClass("modal-open"):$("div#root").removeClass("modal-open");
+			addMod();
+			setModalOpen();
 			if(document.querySelector('div#root') !== null){
-				$("div#fixFullScr").on("toggle", function () {
-					//$("div#root").addClass("modal-open");
-				}).on("hidden", function () {
-					/*$("div#root").removeClass("modal-open")
-					$("#button").click(function() {
-						$([document.documentElement, document.body]).animate({
-							scrollTop: $("#root").offset().top
-						}, 2000);
-					});*/
-				});
-
+				
 				//var rootFix = (rootDiv) => rootDiv.style.position = rootDiv.style.position.toString()=='fixed'?'initial':'fixed';
 				//rootFix(document.querySelector('div#root'));
 				/*$("div#fixFullScr").on("show", function () {
@@ -88,6 +80,7 @@ window.addEventListener('scroll', function() {
 	var elementRoot = document.querySelector('div#root');
 
 	var positionRoot = elementRoot.getBoundingClientRect();
+	document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
 	//elementRoot.style.top = parseInt(positionRoot.top.toString());
 	
 	var element = document.querySelector('.container');
@@ -232,3 +225,67 @@ function getAnchorText(hash){
 		document.querySelector('#infoBarMain').style.display = 'block';
 	}
 }
+
+function setModalOpen(){
+	if($('div#fixFullScr').is(':visible'))
+	{
+		// When the modal is shown, we want a fixed body
+		document.body.style.position = 'fixed';
+		// document.body.style.top = `-${window.scrollY}px`;
+		const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
+		document.body.style.top = `-${scrollY}`;
+		
+		document.title = `-${window.scrollY}px`;
+		//$("div#root").addClass("modal-open");
+	}
+	else
+	{
+		/*$("div#root").removeClass("modal-open")
+		$("#button").click(function() {
+			$([document.documentElement, document.body]).animate({
+				scrollTop: $("#root").offset().top
+			}, 2000);
+		});*/
+		// When the modal is hidden, we want to remain at the top of the scroll position
+		const scrollY = document.body.style.top;
+		document.body.style.position = '';
+		document.body.style.top = '';
+		//setTimeout(function(){window.scrollTo(0, Math.abs( parseInt(scrollY || '0') ));}, 100);
+		setTimeout(function(){ window.scrollTo({
+			top: Math.abs( parseInt(scrollY || '0') ),
+			left: 0,
+			behavior: 'smooth'
+		  });
+		}, 10);
+		/*setTimeout(function(scrollY){ 
+			$([document.documentElement, document.body]).animate({
+				scrollTop: Math.abs( parseInt(scrollY || '0') )
+			}, 2000);
+		}, 10, scrollY);scrollY
+		/*window.scrollTo({
+			top: Math.abs( parseInt(scrollY || '0') ),
+			left: 0,
+			behavior: 'smooth'
+		  });*/
+		document.title = Math.abs(parseInt(scrollY || '0') );
+	}
+}
+
+const showDialog = () => {
+	document.getElementById('dialog').classList.add('show')
+	const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
+	const body = document.body;
+	body.style.position = 'fixed';
+	body.style.top = `-${scrollY}`;
+  };
+  const closeDialog = () => {
+	const body = document.body;
+	const scrollY = body.style.top;
+	body.style.position = '';
+	body.style.top = '';
+	window.scrollTo(0, parseInt(scrollY || '0') * -1);
+	document.getElementById('dialog').classList.remove('show');
+  }
+  /*window.addEventListener('scroll', () => {
+	document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
+  });*/

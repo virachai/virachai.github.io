@@ -3,9 +3,15 @@ button.navbar-toggler > .fa-times{opacity: 1;font-size: 1.85rem; width: 30px; he
 button.navbar-toggler > span:first{max-height: 30px;max-width: 30px;}
 /*button.navbar-toggler > .fa-times{color: #232323; transition: color 0.3s ease;}*/
 .modal-open {
-  /*height: 100vh;
-  overflow-y: hidden;*/
+  /*height: 100vh;*/
+  overflow-y: hidden;
   position: fixed;
+}
+
+#show {
+  position: fixed;
+  top: 0px;
+  left: 0px;
 }
 
 /* 
