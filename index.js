@@ -1,10 +1,71 @@
 var oldBar = '<div class="alert alert-info centered-horizontally" id="infoBarMain" style="display: none;">' +
-		'<a href="#" class="close" id="idClose" data-dismiss="alert" aria-label="close" title="close alert messages"><small>(0)</small>&nbsp;&times;</a>' +
-		'<strong>Info!</strong> <span>This alert box indicates a neutral informative change or action.</span>' +
-		'</div>';
+'<a href="#" class="close" id="idClose" data-dismiss="alert" aria-label="close" title="close alert messages"><small>(0)</small>&nbsp;&times;</a>' +
+'<strong>Info!</strong> <span>This alert box indicates a neutral informative change or action.</span>' +
+'</div>';
 //document.querySelector("#infoBarMain");
 var barShow = false;
 $( document ).ready(function() {
+
+	/*const classChildren = x => document.getElementsByClassName('navbar-${x}')[0];
+
+	classChildren('toggler').addEventListener('click', () => {
+		classChildren('collapse').classList.toggle('collapse');
+	}, false);*/
+	var elemToggler = document.querySelector('button.navbar-toggler') !== null;
+	if(elemToggler){
+		document.querySelector("button.navbar-toggler").addEventListener('click', () => {
+			document.querySelector("div.navbar-collapse").classList.toggle('collapse');
+			//document.querySelector("button.navbar-toggler").children.classList.toggle('fa-times');
+			setTimeout(function(thisElem){
+				thisElem.find("span").first().toggleClass('navbar-toggler-icon');
+				thisElem.find("span").first().toggleClass('fa fa-times');
+			}, 500, $(this));
+			window.scroll(0, 1);
+			$("#fixFullScr").toggle();
+			//$("#fixFullScr").toggle(() => $("div#root").addClass("modal-open"), () => $("div#root").removeClass("modal-open"));			
+			
+			var addMod = $('div#fixFullScr').is(':visible') ? $("div#root").addClass("modal-open"):$("div#root").removeClass("modal-open");
+			if(document.querySelector('div#root') !== null){
+				$("div#fixFullScr").on("toggle", function () {
+					//$("div#root").addClass("modal-open");
+				}).on("hidden", function () {
+					/*$("div#root").removeClass("modal-open")
+					$("#button").click(function() {
+						$([document.documentElement, document.body]).animate({
+							scrollTop: $("#root").offset().top
+						}, 2000);
+					});*/
+				});
+
+				//var rootFix = (rootDiv) => rootDiv.style.position = rootDiv.style.position.toString()=='fixed'?'initial':'fixed';
+				//rootFix(document.querySelector('div#root'));
+				/*$("div#fixFullScr").on("show", function () {
+					$("div#root").addClass("modal-open");
+				}).on("hidden", function () {
+					$("div#root").removeClass("modal-open")
+				});
+
+				
+				$('#clickme').toggle(
+					function(){alert('click 1');},
+					function(){alert('click 2');}
+				);
+				if(!$(this).hasClass("selected")) { 
+    				$(this).addClass("selected");
+  				}
+				*/
+			} 
+			//$("div#root").css("position", "fixed");
+			/*$('div#root').toggle(function () {
+				$(this).css("position", "fixed");
+			}, function () {
+				$(this).css("position", "static");
+			});*/
+			window.scroll(0, 0);
+			//$(this).find("span").toggleClass('fa-times');
+		}, false);
+	}
+	
 	
 	$(window).on('hashchange', function(e){
 		var pathname = window.location.pathname; // Returns path only (/path/example.html)
@@ -23,6 +84,11 @@ $( document ).ready(function() {
 var myVar;
 
 window.addEventListener('scroll', function() {
+
+	var elementRoot = document.querySelector('div#root');
+
+	var positionRoot = elementRoot.getBoundingClientRect();
+	//elementRoot.style.top = parseInt(positionRoot.top.toString());
 	
 	var element = document.querySelector('.container');
 	if(element.length < 1) return;
@@ -36,14 +102,14 @@ window.addEventListener('scroll', function() {
 	var elementNavWhite = document.querySelector('.navbar-white') !== null;
 	if(position.top < positionNav.bottom && elementNavTransparent) {
 		var copy = new Date();
-		console.log(copy.getTime() + ' position.top < positionNav.bottom && elementNavTransparent');
+		//console.log(copy.getTime() + ' position.top < positionNav.bottom && elementNavTransparent');
 		elementNav.classList.add("navbar-white");
 		elementNav.classList.remove("navbar-transparent");
 	}
 	else if(position.top >= positionNav.bottom && elementNavWhite)
 	{
 		var copy = new Date();
-		console.log(copy.getTime() + ' position.top >= positionNav.bottom && elementNavWhite');
+		//console.log(copy.getTime() + ' position.top >= positionNav.bottom && elementNavWhite');
 		elementNav.classList.add("navbar-transparent");
 		elementNav.classList.remove("navbar-white");
 	}
