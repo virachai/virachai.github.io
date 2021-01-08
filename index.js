@@ -235,7 +235,7 @@ function setModalOpen(){
 		const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
 		document.body.style.top = `-${scrollY}`;
 		
-		document.title = `-${window.scrollY}px`;
+		//document.title = `-${window.scrollY}px`;
 		//$("div#root").addClass("modal-open");
 	}
 	else
@@ -267,7 +267,7 @@ function setModalOpen(){
 			left: 0,
 			behavior: 'smooth'
 		  });*/
-		document.title = Math.abs(parseInt(scrollY || '0') );
+		//document.title = Math.abs(parseInt(scrollY || '0') );
 	}
 }
 
