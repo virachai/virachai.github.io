@@ -56,7 +56,8 @@ button.navbar-toggler > span:first{max-height: 30px;max-width: 30px;}
   opacity: 0; /* hide this */
   z-index: 2; /* and place it over the hamburger */
   
-  -webkit-touch-callout: none;
+  -webkit-touch-
+  : none;
 }
 
 /*
@@ -94,7 +95,8 @@ button.navbar-toggler > span:first{max-height: 30px;max-width: 30px;}
 
 /* 
  * Transform all the slices of hamburger
- * into a crossmark.
+ * into a 
+ .
  */
 #menuToggle input:checked ~ span.menuToggleBar
 {
@@ -113,7 +115,8 @@ button.navbar-toggler > span:first{max-height: 30px;max-width: 30px;}
 }
 
 /*
- * Ohyeah and the last one should go the other direction
+ * 
+  and the last one should go the other direction
  */
 #menuToggle input:checked ~ span.menuToggleBar:nth-last-child(2)
 {
@@ -308,3 +311,62 @@ i.classArrowGif {
   -webkit-animation: bounce 1s infinite;
 	-moz-animation:    bounce 1s infinite
 }
+
+div#home{
+  background: linear-gradient(136deg, rgb(68, 132, 206), rgb(26, 215, 192), rgb(255, 155, 17), rgb(155, 89, 182), rgb(255, 127, 127), rgb(236, 240, 241)) 0% 0% / 1200% 1200%;
+  padding-bottom: 36px;
+  padding-top: 36px;
+}
+@media only screen and (max-height: 490px) {
+  /* height : 490px - 0px */
+  div#home {
+      min-height: 490px !important;
+    }
+}
+.dropdown-toggle::after {
+  margin-left: 0;
+  vertical-align: 0.15em;
+}
+.navbar-transparent {
+  background-color: rgba(255, 255, 255, 0);
+  transition: background-color 0.2s;
+}
+.navbar-white {
+  background-color: rgba(234, 236, 239, 0.81);
+  transition: background-color 0.2s;
+}
+.brand {
+  color: #363636 !important;
+}
+.nav-link {
+  transition: color, 0.2s;
+}
+.toggler {
+  border: none;
+  padding: 4px;
+  border-radius: 4px;
+}
+.toggler:focus {
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+ol.dropdown-menu-order { padding-inline-start: 40px; }
+ol.dropdown-menu-order > li {
+  /*display: list-item;
+  list-style: decimal;*/
+  list-style-type: upper-alpha;
+}
+ol.dropdown-menu-order > li > a {padding-left: 0.5rem;}
+div.centered-horizontally{
+  position: fixed;
+  top: 50%;
+  width: 100%;
+  z-index: 1000;
+  text-align:center
+}
+
+/*a:hover, a:active, a.active {
+  color: red !important;
+}*/
+
+div#infoBarMain > a > small {font-size: 65%;}

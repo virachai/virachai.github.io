@@ -13,68 +13,10 @@
         <link rel="icon" class="js-site-favicon" type="image/svg+xml" href="https://github.githubassets.com/favicons/favicon.svg">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="index.css?43">
+        <link rel="stylesheet" href="index.css">
         <!--<link rel="stylesheet" href="https://raw.githubusercontent.com/virachai/virachai.github.io/main/node_modules/main.css" crossorigin="anonymous">
         <link rel="stylesheet" href="https://raw.githack.com/virachai/virachai.github.io/main/node_modules/main.css">-->
         <script src="github_white_favicon.user.js"></script>
-		<style>
-		div#home{
-			background: linear-gradient(136deg, rgb(68, 132, 206), rgb(26, 215, 192), rgb(255, 155, 17), rgb(155, 89, 182), rgb(255, 127, 127), rgb(236, 240, 241)) 0% 0% / 1200% 1200%;
-			padding-bottom: 36px;
-			padding-top: 36px;
-		}
-		@media only screen and (max-height: 490px) {
-			/* height : 490px - 0px */
-			div#home {
-    			min-height: 490px !important;
-  			}
-		}
-		.dropdown-toggle::after {
-			margin-left: 0;
-			vertical-align: 0.15em;
-		}
-		.navbar-transparent {
-			background-color: rgba(255, 255, 255, 0);
-			transition: background-color 0.2s;
-		}
-		.navbar-white {
-			background-color: rgba(234, 236, 239, 0.81);
-			transition: background-color 0.2s;
-		}
-		.brand {
-			color: #363636 !important;
-		}
-		.nav-link {
-			transition: color, 0.2s;
-		}
-		.toggler {
-			border: none;
-			padding: 4px;
-			border-radius: 4px;
-		}
-		.toggler:focus {
-				outline: none;
-				background-color: rgba(0, 0, 0, 0.05);
-		}
-		ol.dropdown-menu-order { padding-inline-start: 40px; }
-		ol.dropdown-menu-order > li {
-			/*display: list-item;
-			list-style: decimal;*/
-			list-style-type: upper-alpha;
-		}
-		ol.dropdown-menu-order > li > a {padding-left: 0.5rem;}
-		div.centered-horizontally{
-		  position: fixed;
-		  top: 50%;
-		  width: 100%;
-		  z-index: 1000;
-		  text-align:center
-		}
-
-		/*a:hover, a:active, a.active {
-			color: red !important;
-		}*/
-		</style>
     </head>
 	<body><a id="lab001"></a>
 	<div id="fixFullScr" style="display: none;"></div>
@@ -88,7 +30,13 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-	<script src="index.js?43"></script>
+	<script src="index.js"></script>
+
+	<script>
+		$("*[src^='index.js']").attr('src' ,'index.js?s=' + new Date().getTime());
+		$("*[src^='index.css']").attr('src' ,'index.css?s=' + new Date().getTime());
+	</script>
+
 	<div id="root">
         <nav class="fixed-top navbar-transparent navbar navbar-expand-lg navbar-light" id="menuToggle">
 			<a href="index.html" class="brand navbar-brand">&lt;Virachai /&gt;</a>
@@ -132,6 +80,7 @@
 							<ul class="dropdown-menu"  role="menu" aria-labelledby="dropdownMenuLink">
 <li><a tabindex="-1" class="dropdown-item" href="#lab001" title="Create a Static Website Using HTML & CSS">Lab HTML A</a></li>
 <li><a tabindex="-1" class="dropdown-item" href="#lab002" title="Practice using JavaScript HTML DOM">Lab HTML B</a></li>
+<li><a tabindex="-1" class="dropdown-item" href="#lab003" title="Create a Form with CSS">Lab CSS A</a></li>
 							</ul>
 						</l>
 					</ul>

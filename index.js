@@ -4,6 +4,8 @@ var oldBar = '<div class="alert alert-info centered-horizontally" id="infoBarMai
 '</div>';
 //document.querySelector("#infoBarMain");
 var barShow = false;
+var myVar;
+var runLab002 = () => {};
 $( document ).ready(function() {
 
 	/*const classChildren = x => document.getElementsByClassName('navbar-${x}')[0];
@@ -17,8 +19,8 @@ $( document ).ready(function() {
 			document.querySelector("div.navbar-collapse").classList.toggle('collapse');
 			//document.querySelector("button.navbar-toggler").children.classList.toggle('fa-times');
 			setTimeout(function(thisElem){
-				thisElem.find("span").first().toggleClass('navbar-toggler-icon');
-				thisElem.find("span").first().toggleClass('fa fa-times');
+				$("button.navbar-toggler").find("span").first().toggleClass('navbar-toggler-icon');
+				$("button.navbar-toggler").find("span").first().toggleClass('fa fa-times');
 			}, 500, $(this));
 			window.scroll(0, 1);
 			$("#fixFullScr").toggle();
@@ -73,7 +75,7 @@ $( document ).ready(function() {
 		//document.title = hash;
 	});
 
-var myVar;
+//var myVar;
 
 window.addEventListener('scroll', function() {
 
@@ -142,17 +144,22 @@ window.addEventListener('scroll', function() {
        setTimeout(function(){
 			$( "body" ).prepend( oldBar );
 		 }, 2000);
-    });
+	});
 
 }); //$( document ).ready
 
-function onLab(hash){
+var setInfoMsgBar = (hash) => {
+	//if(barShow) return;
+	barShow = false;
+	clearInterval(myVar);
+	
 	var elem = document.querySelector("#infoBarMain") !== null;
 	if(elem){
 		getAnchorText(hash);
 		//document.querySelector('#infoBarMain').style.display = 'block';
 	}else{
 		//lab001
+		//barShow = false;
 		$( "body" ).prepend( oldBar );
 		setTimeout(function(){
 			getAnchorText(hash);
@@ -163,30 +170,108 @@ function onLab(hash){
 	if(!barShow)
 	{
 		var seconds = new Date().getTime() / 1000;
-		var num = 5;
+		var num = 9;
 		var countTime = parseInt(seconds) + parseInt(num);
 		document.querySelector(".alert-info small").textContent = "(" + num + ")";
 		barShow = true;
 		myVar = setInterval( function(){ closeAlertBar(countTime); }, 1000);
 	}
+}
+
+var fnNavBarTop = () => {
+	setTimeout(function(){
+		if( (document.querySelector("button.navbar-toggler") !== null) ) {
+			if( ! ( document.querySelector("div.collapse#basic-navbar-nav")!== null ) ){
+				document.querySelector("button.navbar-toggler").click();
+			}
+		}			
+		setTimeout( () => window.scroll(0, 1), 5);
+		//setTimeout( () => window.scroll(0, 0), 300);
+	}, 100);
+}
+
+var runLab001 = () => {
+	if( (elementArrow = document.querySelector('i.classHide') !== null)){
+		setTimeout(function(){
+			if( (document.querySelector('i.classHide') !== null) ){
+				document.querySelector('i.classHide').classList.add("classArrowGif");
+				document.querySelector('i.classArrowGif').classList.remove("classHide");
+			}
+			
+		}, 1000);
+		
+		setTimeout(function(){	
+			if( ( document.querySelector('i.classArrowGif') !== null ) ){
+				document.querySelector('i.classArrowGif').classList.add("classHide");
+				document.querySelector('i.classHide').classList.remove("classArrowGif");
+			}
+		}, 12000);
+	}
+}
+
+function onLab(hash){
+
 	switch(hash) {
 		case 'lab001':
-			var elementArrow = document.querySelector('i.classHide') !== null;
-			if(elementArrow){
-				setTimeout(function(){
-					document.querySelector('i.classHide').classList.add("classArrowGif");
-					document.querySelector('i.classArrowGif').classList.remove("classHide");
-				 }, 100);
-				 setTimeout(function(){
-					var elementArrow = document.querySelector('i.classArrowGif') !== null;
-					if(elementArrow){
-						document.querySelector('i.classArrowGif').classList.add("classHide");
-						document.querySelector('i.classHide').classList.remove("classArrowGif");
-					}
-				 }, 12000);
-			}
+			setInfoMsgBar(hash);
+			fnNavBarTop();
+			runLab001();
+			//return;			
 		break;
 		case 'lab002':
+			//container
+			setInfoMsgBar(hash);
+			fnNavBarTop();
+			var containerBtnFirst = $(".container > a.btn:first");
+			const btnOldText = containerBtnFirst.text();
+			const btnOldHref = containerBtnFirst.attr("href");
+			containerBtnFirst.text('Echo Hello world').attr("href", "#hello");
+			containerBtnFirst.addClass("btnEchoHello");
+			
+			//More about me
+			var runLab002 = () => {
+				
+				if( !( document.querySelector('.container > h1.display-1') !== null ) ) return;
+				var display1H1 = document.querySelector('.container > h1.display-1');
+				const displayText = display1H1.innerHTML;
+				var strDisplay = display1H1.innerHTML;
+				var str = display1H1.textContent;
+				var echoText = "Hello world";
+				//containerBtnFirst.text( "Can Click!" );
+				
+				if( !( document.querySelector('.container > a.btnEchoHello') !== null ) ) return;
+
+				//containerBtnFirst.text( "Can Click!!" );
+
+				strDisplay = strDisplay.replace(str, echoText);
+				display1H1.innerHTML = strDisplay;
+				if(document.querySelector("#infoBarMain a") !== null) document.querySelector("#infoBarMain a").click();
+				containerBtnFirst.text(btnOldText).attr("href", btnOldHref);
+				//setTimeout(function(){containerBtnFirst.focusout();}, 1000);
+				containerBtnFirst.removeClass("echoHello");
+				setTimeout(function(){ display1H1.innerHTML = displayText;}, 12000);
+				runLab001();
+				$(".container > a.btn:first").unbind( "click", runLab002 );
+			}
+			containerBtnFirst.bind( "click", runLab002 );
+			//containerBtnFirst.text( "Can Click!" );
+			$('container > a.echoHello').click(function() {
+				//alert('Hello world');
+				//display-1
+				//$(this).bind( "click", runLab002 )
+    			//$(this).text( "Can Click!" );
+				//runLab002();
+				//runLab001();
+				// runLab002 = () => {};
+				//
+			});
+			//alert('Hello world');
+			//$(".container > a.btn:first") = btnOld;
+		// code block
+		case 'lab003':
+			//container
+			fnNavBarTop();
+			//$(".container > a.btn:first").text('Print Hello world').attr("href", "#hello");
 		// code block
 		break;
 		default:
@@ -221,7 +306,7 @@ function getAnchorText(hash){
 	if(infoBarMain && anchorText.toString().length > 0 && anchorTitle){
 		anchorTitle = anchorTitle?" - " + anchorTitle : "";
 		document.querySelector("#infoBarMain span").textContent = anchorText.toString() + anchorTitle;
-		document.title = document.querySelector("#infoBarMain span").textContent;
+		//document.title = document.querySelector("#infoBarMain span").textContent;
 		document.querySelector('#infoBarMain').style.display = 'block';
 	}
 }
@@ -289,3 +374,32 @@ const showDialog = () => {
   /*window.addEventListener('scroll', () => {
 	document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
   });*/
+
+  var stripHtml = (htmlText) => {
+    // Create a new div element
+    var temporalDivElement = document.createElement("div");
+    // Set the HTML content with the providen
+    temporalDivElement.innerHTML = htmlText;
+    // Retrieve the text property of the element (cross-browser support)
+    return temporalDivElement.textContent || temporalDivElement.innerText || "";
+}
+
+function sleep(ms) {
+	return new Promise(resolve => setTimeout(resolve, ms));
+ }
+  
+ async function demo() {
+	console.log('Taking a break...');
+	await sleep(2000);
+	console.log('Two seconds later, showing sleep in a loop...');
+  
+	// Sleep in loop
+	for (let i = 0; i < 5; i++) {
+	  if (i === 3)
+		await sleep(2000);
+	  console.log(i);
+	}
+  }
+  
+ // demo();
+  
