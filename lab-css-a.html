@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="robots" content="noindex">
+	<meta name="googlebot" content="noindex">
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" >
+	<meta http-equiv="Pragma" content="no-cache" >
+	<meta http-equiv="Expires" content="0" >        
+	<meta name="viewport" content="width=device-width">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Lab CSS A - Create a Form with CSS</title>
+	<link rel="alternate icon" class="js-site-favicon" type="image/png" href="https://github.githubassets.com/favicons/favicon.png">
+	<link rel="icon" class="js-site-favicon" type="image/svg+xml" href="https://github.githubassets.com/favicons/favicon.svg">
+	<style>
+		form#labFormA {display: block; width: 600px; min-width: 320px;border: 2px solid var(--fds-dark-mode-gray-50);}
+		form#labFormA > fieldset {padding:20px; margin :0;border:10px solid #f1f1f1}
+		form#labFormA > fieldset input, form#labFormA > fieldset select { width:170px; margin: 3px; font-size: 14px;}
+		form#labFormA > fieldset label { display: inline-block; width:150px}
+		/* #F2F3F5 #f1f1f1*/
+		form#labFormA > fieldset > h3 {
+			background-color: #f1f1f1;
+            width: calc(100% - 20px);
+            padding: 5px; 
+            font-size: 14px;
+            text-transform: uppercase;
+            border-top: 2px solid #CCCCCC;
+            color: #4A4A4A;
+            opacity: 0.8;
+		}
+        form#labFormA > fieldset input[name="url"] {width: 60px;}
+        *form#labFormA > fieldset button {width: auto;}
+        /*form#labFormA > fieldset input[name="url"] {width: auto;}*/
+        .custom-file-input::-webkit-file-upload-button {
+            visibility: hidden;
+        }
+        .custom-file-input::before {
+            content: 'Upload Logo';
+            display: inline-block;
+            /*background: linear-gradient(top, #f9f9f9, #e3e3e3);*/
+            border: 1px solid #999;
+            border-radius: 3px;
+            padding: 5px 8px;
+            outline: none;
+            white-space: nowrap;
+            -webkit-user-select: none;
+            cursor: pointer;
+            text-shadow: 1px 1px #fff;
+            font: 400 13.3333px Arial;
+            background-color: -internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59));
+            box-sizing: border-box;
+            padding: 1px 6px;
+            border-width: 1px;
+            border-style: outset;
+        }
+        .custom-file-input:hover::before {
+            border-color: black;
+        }
+        .custom-file-input:active::before {
+            background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+        }
+        form#labFormA > fieldset input.logoStatus {
+            border: 0;
+            padding: 3px 4px;
+            color: black;
+            /*width: 170px;*/
+            background-color: transparent;
+        }
+        form#labFormA > fieldset select { padding: 1px 3px;width: 178px;}
+        .required:after {
+            content:" *";
+            color: red;
+        }
+        .question-mark, .question-mark:active, .question-mark:hover, .question-mark:focus {
+            padding:0px 3px;
+            font-weight: bold;
+            background: linear-gradient(to right, #ffffcc , #cccc99);
+            border-width: 1px;
+            border-radius: 3px;
+            outline: unset;
+        }
+        /*.question-mark:after {
+            content:" &#63;";
+        }*/
+	</style>
+</head>
+<body>
+<h2>Lab CSS A - Create a Form with CSS</h2>
+<form action="lab-css-a.html" method="post" name="labFormA" id="labFormA">
+	<fieldset>
+		<!-- <legend>Simple fieldset</legend> -->
+        <label for="name" class="required">Name :</label>
+        <input type="text" id="name" name="name" value="" required><button type="button" class="question-mark">&#63;</button><br>
+        <label for="tabText" class="required">Tab Text :</label>
+        <input type="text" id="tabText" name="tabText" value="" required><button type="button" class="question-mark">&#63;</button><br>
+        <label for="url" class="required">URL :</label>
+        <span>http://wizehive.com/webform/<input type="url" id="url" name="url" value="" required></span><br>
+        <h3>Form Setup</h3>
+        <label for="selectForm">Form:</label>
+        <select name="selectForm" id="selectForm" form="labFormA">
+            <option></option>
+        </select>
+        <button type="button">Edit</button>
+        <!--<input list="formList" name="selectForm">
+            <datalist id="formList">
+                <option value="Internet Explorer">
+                <option value="Firefox">
+                <option value="Chrome">
+                <option value="Opera">
+                <option value="Safari">
+            </datalist>-->  <br>             
+        <label for="logoFile">Logo:</label>
+        <span><input type="text" id="logoStatus" name="logoStatus" value="no logo uploaded" class="logoStatus" disabled>
+            <button type="button" name="triggerLogoFile" id="triggerLogoFile">Upload Logo</button>
+        <input type="file" id="logoFile" name="logoFile" style="display: none"></span>
+        <label for="selectTemplate">Template Text:</label>
+        <select name="selectTemplate" id="selectTemplate" form="labFormA">
+            <option>English</option>
+        </select>
+        <button type="button">Edit</button><br>
+        <label for="selectReviewForm">Review Form:</label>
+        <select name="selectReviewForm" id="selectReviewForm" form="labFormA">
+            <option>Default</option>
+        </select><br>
+        <label for="selectReviewScore">Review Score:</label>
+        <select name="selectReviewScore" id="selectReviewScore" form="labFormA">
+            <option>Rating</option>
+        </select>
+        <button type="reset">Reload fields</button><br>
+        <label for="selectScoringType">Scoring Type:</label>
+        <select name="selectScoringType" id="selectScoringType" form="labFormA" style="width: auto;">
+            <option>Average</option>
+        </select><br>
+        <label for="name">Max Score:</label>
+        <input type="number" id="maxScore" maxScore="name" value="4.00" min="0" max="4.00" step="0.1">
+	</fieldset>
+</form> 
+
+<!-- <p>If you click the "Submit" button, the form-data will be sent to a page called "lab-css-a.html".</p> -->
+<style>
+:root, .__fb-light-mode {
+    --fds-active-icon: #3578E5;
+    --fds-attachment-footer-background: #F2F3F5;
+    --fds-black: #000000;
+    --fds-black-alpha-05: rgba(0, 0, 0, 0.05);
+    --fds-black-alpha-10: rgba(0, 0, 0, 0.1);
+    --fds-black-alpha-15: rgba(0, 0, 0, 0.15);
+    --fds-black-alpha-20: rgba(0, 0, 0, 0.2);
+    --fds-black-alpha-30: rgba(0, 0, 0, 0.3);
+    --fds-black-alpha-40: rgba(0, 0, 0, 0.4);
+    --fds-black-alpha-50: rgba(0, 0, 0, 0.5);
+    --fds-black-alpha-60: rgba(0, 0, 0, 0.6);
+    --fds-black-alpha-80: rgba(0, 0, 0, 0.8);
+    --fds-blue-05: #ECF3FF;
+    --fds-blue-30: #AAC9FF;
+    --fds-blue-40: #77A7FF;
+    --fds-blue-60: #1877F2;
+    --fds-blue-70: #2851A3;
+    --fds-blue-80: #1D3C78;
+    --fds-blue-95: #E7F3FF;
+    --fds-blue-badge: #1877F2;
+    --fds-blue-link: #1877F2;
+    --fds-button-icon: #444950;
+    --fds-button-text: #444950;
+    --fds-comment-background: #F2F3F5;
+    --fds-dark-mode-gray-35: #CCCCCC;
+    --fds-dark-mode-gray-50: #828282;
+    --fds-dark-mode-gray-70: #4A4A4A;
+    --fds-dark-mode-gray-80: #373737;
+    --fds-dark-mode-gray-90: #282828;
+    --fds-dark-mode-gray-100: #1C1C1C;
+    --fds-dark-ui-card-border: #282828;
+    --fds-dark-ui-cards: #1C1C1C;
+    --fds-dark-ui-disabled-icon: #373737;
+    --fds-dark-ui-divider: #282828;
+    --fds-dark-ui-medium-text: #828282;
+    --fds-dark-ui-nav-bar: #1C1C1C;
+    --fds-dark-ui-primary-icon: #828282;
+    --fds-dark-ui-primary-text: #CCCCCC;
+    --fds-dark-ui-secondary-icon: #4A4A4A;
+    --fds-dark-ui-secondary-text: #4A4A4A;
+    --fds-dark-ui-tab-bar: #1C1C1C;
+    --fds-dark-ui-wash: #000000;
+    --fds-data-mango: #f5bb41;
+    --fds-disabled-icon: #BEC3C9;
+    --fds-disabled-text: #BEC3C9;
+    --fds-divider-on-wash: #CCD0D5;
+    --fds-divider-on-white: #DADDE1;
+    --fds-fast: 200ms;
+    --fds-fb-blue-70: #4267B2;
+    --fds-fb-blue-75: #385898;
+}
+</style>
+<script>
+    if(document.querySelector("#triggerLogoFile") !== null){
+        document.querySelector("#triggerLogoFile").addEventListener('click', function(event) {
+            if(document.querySelector("#logoFile") !== null) document.querySelector("#logoFile").click();
+            /*if (!confirm(`sure u want to delete ${this.title}`)) {
+                event.preventDefault();
+            }*/
+        });
+    }        
+</script>
+</body>
+</html>
