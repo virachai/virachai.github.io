@@ -1,0 +1,233 @@
+.bannerWrap {
+	height: auto;
+	min-height: 58px;
+	transition: all .5s;
+	box-shadow: inset 0 -1px 0 0 #e5e5e5;
+	position: relative;
+	background: #f5f5f5;
+	overflow: hidden;
+	padding-top: 10px;
+}
+.swiper-container {
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+	list-style: none;
+	padding: 0;
+	z-index: 1;
+}
+.swiper-container-android .swiper-slide, .swiper-wrapper {
+	transform: translateZ(0);
+}
+.swiper-wrapper {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	display: flex;
+	transition-property: transform;
+	box-sizing: content-box;
+}
+.swiper-slide {
+	flex-shrink: 0;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	transition-property: transform;
+}
+._2CVsKbIX {
+	text-align: center;
+}
+._8gPPHhHw, ._2vXfoh-O {
+	font-family: inherit;
+	color: #111;
+}
+._2vXfoh-O {
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 1;
+	display: block;
+	vertical-align: middle;
+}
+._8gPPHhHw {
+	display: inline-block;
+	font-size: 12px;
+	line-height: 2;
+}
+._8gPPHhHw, ._2vXfoh-O {
+	font-family: inherit;
+	color: #111;
+}
+._2trpWJ_I {
+	text-decoration: underline;
+}
+._3cz-03q- {
+    background-color: #fff;
+}
+
+@media (min-width: 640px){
+	.css-1vtn5w7 {
+		margin-top: 0px;
+	}
+}
+
+.css-1gfb4pw {
+    margin-top: 0px;
+}
+
+._2IK2ad9n .ncss-row {
+    margin-left: 0;
+    margin-right: 0;
+}
+.ncss-row {
+    font-size: 0;
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+._2IK2ad9n [class*=ncss-col-] {
+    padding-left: 0;
+    padding-right: 0;
+}
+[data-container-type=local_menu] .grid-col {
+    min-height: auto;
+}
+.sticky-inner-wrapper {
+    background-color: #fff;
+}
+
+._1gSEALx7 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-top: 36px;
+    padding-bottom: 24px;
+    transition: padding .2s;
+    flex-direction: column;
+    position: relative;
+    background: #fff;
+}
+@media only screen and (min-width: 640px){
+	._1gSEALx7 {
+		position: static;
+	}
+}
+@media only screen and (min-width: 1024px)
+{
+	._1gSEALx7 {
+		flex-direction: row;
+		padding-top: 26px;
+		padding-bottom: 34px;
+	}
+}
+
+._1ZsY6zh2[hidden] {
+    display: none;
+}
+@media only screen and (min-width: 640px){
+	._1ZsY6zh2[hidden] {
+		display: block;
+		margin-left: 100px;
+		margin-right: 0;
+		overflow: hidden;
+		height: 0;
+		align-self: normal;
+	}
+}
+
+
+._1ZsY6zh2 {
+    white-space: nowrap;
+    margin-right: 100px;
+    min-width: 175px;
+    transition: font-size .2s;
+    font-size: 24px;
+    font-weight: 500;
+    padding: 0 20px;
+    align-self: flex-start;
+}
+@media only screen and (min-width: 640px){
+	._1ZsY6zh2 {
+		padding-left: 0;
+		align-self: inherit;
+	}
+}
+media only screen and (min-width: 1024px){
+	.sticky-outer-wrapper.active ._1ZsY6zh2 {
+		font-size: 16px;
+	}
+}
+@media only screen and (min-width: 1024px){
+	.sticky-outer-wrapper.active {
+		height: 60px!important;
+	}
+}
+
+._1uZt26F- {
+    padding-top: 12px;
+    margin-top: 0;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    width: 100%;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+@media only screen and (min-width: 640px){
+	._1uZt26F- {
+		padding-left: 0;
+		padding-top: 0;
+		margin-top: 12px;
+		width: auto;
+		overflow: visible;
+	}
+}
+
+
+._AKr_3ox {
+    display: inline-block;
+    white-space: nowrap;
+    padding: 0 20px;
+}
+._AKr_3ox > li + li:last-child {
+    margin-right: 0;
+}
+._AKr_3ox > li + li {
+    margin-left: 16px;
+}
+@media only screen and (min-width: 640px){
+	._AKr_3ox {
+	 padding: 0;
+	}
+}
+@media only screen and (min-width: 1024px)
+{
+	._AKr_3ox {
+		text-align: center;
+	}
+}
+
+._AKr_3ox > li {
+    display: inline-block;
+    margin-right: 16px;
+}
+@media only screen and (min-width: 640px)
+._AKr_3ox > li {
+    position: relative;
+}
+
+.JSftBPEZ {
+    padding: 4px 0;
+    transition: color .2s ease-in-out;
+    font-weight: 500;
+}
+.JSftBPEZ:hover {
+    color: #757575;
+}
+
+div.sticky {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
