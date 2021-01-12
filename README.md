@@ -3,7 +3,7 @@ __Virachai Wongsena - Course : Online CodeCamp#8 Full-Stack JavaScript__
 
 I’m currently learning Front-End, Back-End, DevOps & more.
 
-> *My [Website](https://virachai.github.io/#lab001)* (Code Camp #8 Labs)
+> *My [Website](https://virachai.github.io/)* (Code Camp #8 Labs)
 
 ## My homework
 * :fire: [Lab HTML A](https://virachai.github.io/#lab001) - Create a Static Website Using HTML & CSS
