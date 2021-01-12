@@ -153,7 +153,7 @@
 		align-self: inherit;
 	}
 }
-media only screen and (min-width: 1024px){
+@media only screen and (min-width: 1024px){
 	.sticky-outer-wrapper.active ._1ZsY6zh2 {
 		font-size: 16px;
 	}
@@ -212,9 +212,10 @@ media only screen and (min-width: 1024px){
     display: inline-block;
     margin-right: 16px;
 }
-@media only screen and (min-width: 640px)
-._AKr_3ox > li {
-    position: relative;
+@media only screen and (min-width: 640px){
+	._AKr_3ox > li {
+		position: relative;
+	}
 }
 
 .JSftBPEZ {
