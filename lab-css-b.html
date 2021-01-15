@@ -15,13 +15,48 @@
 	<link rel="stylesheet" href="https://www.nike.com/assets/ncss/3.2/dotcom/desktop/css/ncss.th-th.min.css">
 	<link rel="stylesheet" href="https://www.nike.com/assets/dotcom/nav/4.44.2/dotcom-nav-client.css">
 	<link rel="stylesheet" href="lab-css-b.css">
-	<style>		
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<style>
+		#header-sticky, #content-sticky {
+			position: -webkit-sticky;
+			position: sticky;
+			top: 0;
+			height: 1px;
+		}
+		div.content-relative {
+			position: relative;		
+			position: sticky;
+			top: 0px;		
+			z-index: 99;
+		}		
+		
+		@media only screen and (min-width: 1024px){
+			div.content-sticky {					
+				height: 60px;
+			}
+			div.content-sticky + div{margin-top: -44px;}
+			.hideChild > * {opacity: 0;}
+			div.content-sticky div.sticky-outer-wrapper div._1gSEALx7,
+			.sticky-outer-wrapper.active ._1gSEALx7 {
+    			padding-top: 6px;
+    			padding-bottom: 14px;
+			}
+			div.content-sticky div.sticky-outer-wrapper h1._1ZsY6zh2,
+			.sticky-outer-wrapper.active ._1ZsY6zh2 {
+    			font-size: 16px;
+			}			
+		}
 	</style>
 	<!-- /(href\="https\:\/\/www\.nike\.com\/((?!\s).)*)/ -->
 </head>
-<body style="overflow: scroll;">
+<body style="overflow-y: scroll;">
+	<script src="lab-css-b.js"></script>
+	<script>
+		$("*[src^='lab-css-b.js']").attr('src' ,'lab-css-b.js?s=' + new Date().getTime());
+		$("*[href^='lab-css-b.css']").attr('href' ,'lab-css-b.css?s=' + new Date().getTime());
+	</script>
 	<div id="gen-nav-commerce-header-v2">
-		<div class="pre-l-header-container _1BHsIGzZ">
+		<div class="pre-l-header-container _1BHsIGzZ" style="position: relative;">
 			<div class="pre-l-brand-header d-sm-h d-lg-b z3" data-pre="BrandHeader">
 				<div class="pre-l-wrapper mauto-sm d-sm-flx flx-dir-sm-r flx-jc-sm-sb flx-wr-sm-nw">
 					
@@ -65,6 +100,7 @@
 					</div>
 				</div>
 			</div>
+			<div id="header-sticky"></div>
 			<header class="pre-l-header top-stack-context" data-pre="Header">
 				<!-- pre-l-header top-stack-context is-hidden is-fixed -->
 				<div>
@@ -99,9 +135,9 @@
 									<div class="d-sm-flx flx-jc-lg-fe u-position-rel">
 										<div class="pre-search-contain">
 											<div class="pre-search-input-box d-sm-b flx-dir-lg-c flx-ai-lg-fe d-lg-flx flx-gro-sm-1 flx-gro-lg-0" type="search">
-												<input type="text" id="VisualSearchInput" class="pre-search-input headline-5" name="search" autocomplete="off" data-var="vsInput" tabindex="0" placeholder="ค้นหา" aria-label="ค้นหาสินค้า" role="combobox" aria-controls="VisualSearchSuggestionsList" aria-owns="VisualSearchSuggestionsList" aria-expanded="false">
+												<input type="text" id="VisualSearchInput" class="pre-search-input headline-5" name="search" autocomplete="off" data-var="vsInput" tabindex="0" placeholder="ค้นหา" aria-label="search item" role="combobox" aria-controls="VisualSearchSuggestionsList" aria-owns="VisualSearchSuggestionsList" aria-expanded="false">
 												
-												<button class="pre-clear-search ncss-btn pr0-sm z2 d-sm-h" data-var="vsClearSearch" aria-label="รีเซ็ตการค้นหา">
+												<button class="pre-clear-search ncss-btn pr0-sm z2 d-sm-h" data-var="vsClearSearch" aria-label="reset search">
 													<svg class="search-clear-icon" fill="#111" height="30px" width="30px" viewBox="0 0 24 24">
 														<path d="M22 20H7.3c-.3 0-.6-.1-.8-.4l-5.3-7c-.3-.4-.3-.9 0-1.2l5.3-7c.2-.3.5-.4.8-.4H22c.6 0 1 .4 1 1v14c0 .6-.4 1-1 1zM7.8 18H21V6H7.8l-4.6 6 4.6 6zm8.2-3c-.3 0-.5-.1-.7-.3L14 13.4l-1.3 1.3c-.4.4-1 .4-1.4 0s-.4-1 0-1.4l1.3-1.3-1.3-1.3c-.4-.4-.4-1 0-1.4s1-.4 1.4 0l1.3 1.3 1.3-1.3c.4-.4 1-.4 1.4 0s.4 1 0 1.4L15.4 12l1.3 1.3c.4.4.4 1 0 1.4-.2.2-.5.3-.7.3z">
 														</path>
@@ -165,7 +201,8 @@
 				<div class="SKI5MWQX _1vSV2T5_">
 					<div class="swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-ios">
 						<div class="swiper-wrapper">
-							<div class="swiper-slide swiper-slide-active" style="width: 1583px;">
+							<div class="swiper-slide swiper-slide-active" style="width: 100vw;">
+								<!-- width: 1583px; -->
 								<div class="_2CVsKbIX" aria-hidden="false">
 									<span class="_2vXfoh-O"></span>
 									<div class="_8gPPHhHw">
@@ -179,8 +216,9 @@
 					</div>
 				</div>
 			</div><!-- bannerWrap -->
-
-			<div id="24aba6a2-4889-4ea6-be77-e04b6fd6dc9e" data-qa="grid" data-container-type="local_menu" data-fluid-grid="false" class="grid Z25uR9U5 fixed-fluid _3cz-03q- _2IK2ad9n css-1gfb4pw css-1vtn5w7" style="position:relative">
+			
+			<div id="content-sticky"></div>
+			<div id="24aba6a2-4889-4ea6-be77-e04b6fd6dc9e" data-qa="grid" data-container-type="local_menu" data-fluid-grid="false" class="grid Z25uR9U5 fixed-fluid _3cz-03q- _2IK2ad9n css-1gfb4pw css-1vtn5w7 content-relative">
 				<div id="72fd4361-660d-40f5-9408-0d5a9432333c" data-qa="grid-row" class="ncss-row grid-row">
 					<div id="b85dcfe8-90f1-418b-8c71-96c9dc2ccc76" data-qa="grid-col" class="grid-col va-sm-t ncss-col-lg-12 ncss-col-md-12 ncss-col-sm-12 ncss-col-lg-offset-0 ncss-col-md-offset-0 ncss-col-sm-offset-0">
 						<div>
@@ -190,7 +228,7 @@
 									<!-- position: fixed; top: 0px; z-index: 90; width: 1583px; -->
 									<div class="ncss-container fixed-fluid _1gSEALx7">
 										<h1 class="_1ZsY6zh2">ผู้ชาย</h1>
-										<div class="_1uZt26F-">
+										<div class="_1uZt26F-" style="overflow:hidden;">
 											<ul class="_AKr_3ox">
 												<li>
 													<a href="#" data-analytics-action-id="0be74554-50ae-4319-933a-e85f86864ddd" class="JSftBPEZ">รองเท้า</a>
@@ -212,14 +250,33 @@
 				</div>
 			</div><!-- local_menu -->
 
-			<div id="9eda678b-86b6-4fb7-ba8e-f210d0e287ca" data-qa="grid" data-container-type="image" data-fluid-grid="false" class="grid Z25uR9U5 fixed-fluid ncss-container _1WKaQgke css-1vtn5w7" style="position:relative">
-				<div style="height: 1000px">
-				</div>
+			<div id="9eda678b-86b6-4fb7-ba8e-f210d0e287ca" class="grid Z25uR9U5 fixed-fluid ncss-container _1WKaQgke css-1vtn5w7" style="position:relative">
+				<div id="785650ca-476b-4ada-8652-fbd028c768dc" data-qa="grid-row" class="ncss-row grid-row">
+					<div id="8c5619d1-3953-480c-b57e-d9ff0913808c" data-qa="grid-col" class="grid-col va-sm-t ncss-col-lg-12 ncss-col-md-12 ncss-col-sm-12 ncss-col-lg-offset-0 ncss-col-md-offset-0 ncss-col-sm-offset-0">
+						<div>
+							<figure class="image-card _3l8ZuNi4">
+								<div class="_2vrtOptK _12NrIYxy _1J1k7Sv3 media-container">
+									<div style="width:100%;height:100%">
+										<img alt="#" class="_32IPZERI _3jm9Bm_E guL_1FMX" src="https://static.nike.com/a/images/f_auto/dpr_1.0/w_1471,c_limit/922cbcf2-4ed7-4430-91a8-c699931460ff/-.jpg">
+									</div>
+								</div>
+								<figcaption class="_13xDDA0A _2n345FhB _1s5Pr4ak">
+									<p class="vVtA7wL6 headline-5 text-color-primary-dark" style="color:#111111">ใหม่จาก Nike Running</p>
+<p data-qa="title" class="si35-ISy responsive-display-2-1 _2svRm8bR text-color-primary-dark" style="color:#111111">THE NEW REACT INFINITY RUN 2</p>
+									<p class="body-2 text-color-primary-dark" style="color:#111111">Designed to help reduce injuries and keep you on the run.</p>
+									<div class="YEqpdVMc cta-container hasText">
+										<a href="#" target="_self" class="dz_xjzja _2minRfAM ncss-btn-primary-dark" tabindex="0" aria-label="เลือกซื้อ">Shop</a>
+									</div>
+								</figcaption>
+								<a href="#" target="_self" aria-label="Visit"></a>
+							</figure>
+						</div>							
+					</div>					
+				</div>			
+				<div style="height:1000px"></div>	
 			</div><!-- image -->
 		</div>
 	</div><!-- ciclp-app -->
-	
-
 
 </body>
 </html>
