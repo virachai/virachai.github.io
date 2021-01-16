@@ -17,7 +17,12 @@
 	<link rel="stylesheet" href="https://www.nike.com/assets/ncss/glyphs/2.5/css/glyphs.min.css">
 	<link rel="stylesheet" href="https://www.nike.com/assets/ncss/3.2/dotcom/desktop/css/ncss.th-th.min.css">
 	<link rel="stylesheet" href="https://www.nike.com/assets/dotcom/nav/4.44.2/dotcom-nav-client.css">
-	<link rel="stylesheet" href="lab-css-b.css">	
+	<link rel="stylesheet" href="lab-css-b.css">
+	<script src="lab-css-b.js"></script>
+	<script>
+		$("*[src^='lab-css-b.js']").attr('src' ,'lab-css-b.js?s=' + new Date().getTime());
+		$("*[href^='lab-css-b.css']").attr('href' ,'lab-css-b.css?s=' + new Date().getTime());
+	</script>
 	<style>
 		#header-sticky, #content-sticky {
 			position: -webkit-sticky;
@@ -52,11 +57,6 @@
 	<!-- /(href\="https\:\/\/www\.nike\.com\/((?!\s).)*)/ -->
 </head>
 <body style="overflow-y: scroll;">
-	<script src="lab-css-b.js"></script>
-	<script>
-		$("*[src^='lab-css-b.js']").attr('src' ,'lab-css-b.js?s=' + new Date().getTime());
-		$("*[href^='lab-css-b.css']").attr('href' ,'lab-css-b.css?s=' + new Date().getTime());
-	</script>
 	<div id="gen-nav-commerce-header-v2">
 		<div class="pre-l-header-container _1BHsIGzZ" style="position: relative;">
 			<div class="pre-l-brand-header d-sm-h d-lg-b z3" data-pre="BrandHeader">
@@ -191,7 +191,7 @@
 						</div>
 					</div>
 
-					<div id="HeaderInsertionPointBottom" data-var="insertionPointBottom"></div>
+					<div id="HeaderInsertionPointBottom"></div>
 				</div>
 			</header>
 		</div>		
@@ -220,9 +220,9 @@
 			</div><!-- bannerWrap -->
 			
 			<div id="content-sticky"></div>
-			<div id="24aba6a2-4889-4ea6-be77-e04b6fd6dc9e" data-qa="grid" data-container-type="local_menu" data-fluid-grid="false" class="grid Z25uR9U5 fixed-fluid _3cz-03q- _2IK2ad9n css-1gfb4pw css-1vtn5w7 content-relative">
-				<div id="72fd4361-660d-40f5-9408-0d5a9432333c" data-qa="grid-row" class="ncss-row grid-row">
-					<div id="b85dcfe8-90f1-418b-8c71-96c9dc2ccc76" data-qa="grid-col" class="grid-col va-sm-t ncss-col-lg-12 ncss-col-md-12 ncss-col-sm-12 ncss-col-lg-offset-0 ncss-col-md-offset-0 ncss-col-sm-offset-0">
+			<div data-qa="grid" data-container-type="local_menu" data-fluid-grid="false" class="grid Z25uR9U5 fixed-fluid _3cz-03q- _2IK2ad9n css-1gfb4pw css-1vtn5w7 content-relative">
+				<div data-qa="grid-row" class="ncss-row grid-row">
+					<div data-qa="grid-col" class="grid-col va-sm-t ncss-col-lg-12 ncss-col-md-12 ncss-col-sm-12 ncss-col-lg-offset-0 ncss-col-md-offset-0 ncss-col-sm-offset-0">
 						<div>
 							<div class="sticky-outer-wrapper"><!-- sticky-outer-wrapper active -->
 								<!-- height: 104px; / height: 60px; -->
@@ -233,13 +233,13 @@
 										<div class="_1uZt26F-" style="overflow:hidden;">
 											<ul class="_AKr_3ox">
 												<li>
-													<a href="#" data-analytics-action-id="0be74554-50ae-4319-933a-e85f86864ddd" class="JSftBPEZ">รองเท้า</a>
+													<a href="#" class="JSftBPEZ">รองเท้า</a>
 												</li>
 												<li>
-													<a href="#" data-analytics-action-id="544a8390-dad6-4bc3-9117-d67a286a6e33" class="JSftBPEZ">เสื้อผ้า</a>
+													<a href="#" class="JSftBPEZ">เสื้อผ้า</a>
 												</li>
 												<li>
-													<a href="#" data-analytics-action-id="496074f4-53a2-472c-b6b4-847a00b34375" class="JSftBPEZ">อุปกรณ์</a>
+													<a href="#" class="JSftBPEZ">อุปกรณ์</a>
 												</li>
 											</ul>
 										</div>
@@ -257,9 +257,18 @@
 					<div class="col-sm-12 col-md-12 col-lg-12">
 						<div>
 							<figure class="figure">
-								<div class="_2vrtOptK _12NrIYxy media-container"><!-- _1J1k7Sv3 -->
+								<div class="one-img-section"><!-- _1J1k7Sv3 -->
 									<div style="width:100%;height:100%">
-										<img src="https://static.nike.com/a/images/f_auto/dpr_1.0/w_1471,c_limit/922cbcf2-4ed7-4430-91a8-c699931460ff/-.jpg" class="figure-img img-fluid rounded" alt="A figure.">
+<!--		
+https://static.nike.com/a/images/f_auto/dpr_1.0/h_700,c_limit/49d45f05-1638-433d-bbb8-1f95239b9427/mens-shoes-clothing-accessories.jpg
+<img srcset="elva-fairy-480w.jpg 480w,elva-fairy-800w.jpg 800w"sizes="(max-width: 600px) 480px,800px" src="elva-fairy-800w.jpg" alt="Elva dressed as a fairy">
+<img src="https://static.nike.com/a/images/f_auto/dpr_1.0/w_1471,c_limit/922cbcf2-4ed7-4430-91a8-c699931460ff/-.jpg" class="figure-img img-fluid rounded" alt="A figure.">
+-->
+<picture>
+	<source media="(min-width: 640px)" srcset="https://static.nike.com/a/images/f_auto/dpr_1.0/w_1471,c_limit/922cbcf2-4ed7-4430-91a8-c699931460ff/-.jpg">
+	<img src="https://static.nike.com/a/images/f_auto/dpr_1.0/h_700,c_limit/49d45f05-1638-433d-bbb8-1f95239b9427/mens-shoes-clothing-accessories.jpg">
+  </picture>
+
 									</div>
 								</div>
 								<figcaption class="figure-caption">A caption for the above image.</figcaption>

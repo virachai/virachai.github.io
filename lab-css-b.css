@@ -106,7 +106,7 @@
     transition: padding .2s;
     flex-direction: column;
     position: relative;
-    background: #fff;
+	background: #fff;
 }
 @media only screen and (min-width: 640px){
 	._1gSEALx7 {
@@ -145,7 +145,10 @@
     font-size: 24px;
     font-weight: 500;
     padding: 0 20px;
-    align-self: flex-start;
+	align-self: flex-start;
+	/* 2021 */
+	align-self: auto;
+	padding-left: 0px;
 }
 @media only screen and (min-width: 640px){
 	._1ZsY6zh2 {
@@ -414,3 +417,34 @@ div.sticky {
 	}
 }
 
+/* New CSS 2021 */
+img-fit-cover {
+	object-fit: cover;
+}
+
+.one-img-section {
+	height: 500px;
+	background-color: #e5e5e5;
+	margin: 0;
+    padding: 0;
+    width: 100%;
+    position: relative;
+}
+.one-img-section img {
+	opacity: 1;
+	-o-object-position: 50% 50%;
+    object-position: 50% 50%;
+    font-family: "object-fit:cover;object-position:50% 50%";
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    font-family: "object-fit:cover", "object-fit:cover";
+    /*transition: opacity 1s ease .3s;
+    opacity: 0;*/
+}
+@media only screen and (min-width: 1024px){
+	.one-img-section {
+		height: 700px;
+	}
+}
