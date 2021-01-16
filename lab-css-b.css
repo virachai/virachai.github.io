@@ -364,3 +364,53 @@ div.sticky {
 	/* Edited by Virachai */
 	._13xDDA0A{position: relative;}
 }
+
+._2minRfAM {
+    padding: 8px 28px;
+}
+.dz_xjzja {
+    transition: color .5s ease-out;
+    position: relative;
+    z-index: 1;
+    margin-left: 0;
+    margin-right: 6px;
+    margin-top: 6px;
+    max-width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.css-8fcif {
+    margin-top: 84px;
+}
+/*@media only screen and (min-width: 0px){
+	._1WKaQgke {
+		display: none;
+	}
+}
+@media only screen and (min-width: 640px){
+	._1WKaQgke {
+		display: block;
+	}
+}*/
+@media (min-width: 640px){
+	.css-1wf7v22 {
+    	margin-top: 84px;
+	}	
+}
+
+@media only screen and (min-width: 640px){
+	.col-md-6 {
+		width: 50%;
+		display: inline-block;
+	}
+}
+
+
+@media only screen and (min-width: 640px){
+	.grid>.grid-row>.grid-col.ncss-col-lg-12.ncss-col-md-12 div>.image-card ._13xDDA0A._2p2-DY4s, .grid>.grid-row>.grid-col.ncss-col-lg-12.ncss-col-md-12 div>.image-card ._13xDDA0A._2n345FhB, .grid>.grid-row>.grid-col.ncss-col-lg-12.ncss-col-md-12 div>.video-card ._13xDDA0A._2p2-DY4s, .grid>.grid-row>.grid-col.ncss-col-lg-12.ncss-col-md-12 div>.video-card ._13xDDA0A._2n345FhB {
+		width: 40%;
+	}
+}
+
