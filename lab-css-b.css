@@ -623,8 +623,8 @@ $moveLeft = -($tileWidth * ($growFactor - 1) / 2)
 $moveRight = $tileWidth * ($growFactor - 1)
 */
 .carousel-card .row {	
-	overflow-x: scroll;
-	overflow-y: none;
+	/*overflow-x: scroll;
+	overflow-y: none;*/
 	width: 100%;
 	margin: 0;
 }
@@ -640,21 +640,21 @@ $moveRight = $tileWidth * ($growFactor - 1)
 .carousel-card .tile {
 	position: relative;
 	display: inline-block;
-	width: 400px;
-	height: 400px;
+	width: 540px;
+	height: 480px;
 	margin-right: 10px;
 	margin-right: 16px;
 	font-size: 20px;
 	cursor: pointer;
 	transition: 450ms all;
 	transform-origin: center left;
-	min-width: 380px;
+	min-width: 300px;
 }
 
 
 .carousel-card .tile__img {
-	width: 400px;
-	height: 400px;
+	width: 540px;
+	height: 480px;
 	object-fit: cover;
 }
 
@@ -713,7 +713,22 @@ $moveRight = $tileWidth * ($growFactor - 1)
 
 
 /* swiper-container */
-.swiper-container-horizontal>.swiper-scrollbar {
+.carousel-card .swiper-scrollbar {
+    opacity: 0;
+    transition: opacity .2s ease-in;
+}
+.carousel-card:hover .swiper-scrollbar {
+	opacity: 0.8;
+}
+.carousel-card .swiper-container-horizontal > .swiper-scrollbar {
+    position: absolute;
+    left: 1%;
+    bottom: 3px;
+    z-index: 50;
+    height: 5px;
+    width: 98%;
+}
+.carousel-card .swiper-container-horizontal > .swiper-scrollbar {
     width: calc(66.66% - 96px);
     margin: 30px auto 10px;
     height: 4px;
@@ -723,31 +738,19 @@ $moveRight = $tileWidth * ($growFactor - 1)
     left: inherit;
     bottom: inherit;
 }
-.swiper-container-horizontal>.swiper-scrollbar {
-    position: absolute;
-    left: 1%;
-    bottom: 3px;
-    z-index: 50;
-    height: 5px;
-    width: 98%;
-}
-.swiper-scrollbar {
-    opacity: 0;
-    transition: opacity .2s ease-in;
-}
-.swiper-scrollbar {
+.carousel-card .swiper-scrollbar {
     border-radius: 10px;
     position: relative;
     /*-ms-touch-action: none;*/
     background: rgba(0,0,0,.1);
 }
 @media only screen and (min-width: 1024px){
-	.swiper-container-horizontal>.swiper-scrollbar {
+	.carousel-card .swiper-container-horizontal > .swiper-scrollbar {
 		display: block;
 	}
 }
 
-.swiper-container .swiper-notification {
+.carousel-card .swiper-container .swiper-notification {
     position: absolute;
     left: 0;
     top: 0;
@@ -756,17 +759,7 @@ $moveRight = $tileWidth * ($growFactor - 1)
     z-index: -1000;
 }
 
-
-
-
-.swiper-container-horizontal>.swiper-scrollbar .swiper-scrollbar-drag {
-    background: #757575;
-	cursor: pointer;
-	transform: translate3d(0px, 0px, 0px);
-    transition-duration: 100ms;
-    width: 750.558px;
-}
-.swiper-scrollbar-drag {
+.carousel-card .swiper-scrollbar-drag {
     height: 100%;
     width: 100%;
     position: relative;
@@ -775,13 +768,39 @@ $moveRight = $tileWidth * ($growFactor - 1)
     left: 0;
     top: 0;
 }
-
-.swiper-container-horizontal > .swiper-scrollbar .swiper-scrollbar-drag:active {
-    background: #111;
+.carousel-card .swiper-container-horizontal > .swiper-scrollbar .swiper-scrollbar-drag {
+    background: #757575;
+	cursor: pointer;
+	transform: translate3d(0px, 0px, 0px);
+    transition-duration: 100ms;
+    width: 750.558px;
 }
-
-.swiper-container-horizontal > .swiper-scrollbar:active {
-    background-color: #e5e5e5;
+.carousel-card .swiper-container-horizontal > .swiper-scrollbar:active {
+	background-color: #e5e5e5;
+}
+.carousel-card .swiper-container-horizontal > .swiper-scrollbar .swiper-scrollbar-drag:active {
+	background: #111;
+}
+.carousel-card .swiper-container-horizontal > .swiper-scrollbar:active {
+	background-color: #e5e5e5;
+}
+.carousel-card .swiper-container-horizontal > .swiper-scrollbar .swiper-scrollbar-drag:active {
+	background: #111;
+}
+.carousel-card .swiper-container-horizontal>.swiper-scrollbar .swiper-scrollbar-drag:before {
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    content: "";
+    top: -5px;
+}
+.carousel-card .swiper-container-horizontal>.swiper-scrollbar .swiper-scrollbar-drag:after {
+    content: "";
+    position: absolute;
+    top: -5px;
+    bottom: -5px;
+    left: -5px;
+    right: -5px;
 }
 
 /*
@@ -803,3 +822,34 @@ $moveRight = $tileWidth * ($growFactor - 1)
 {
 	background-color: #000000;
 }
+
+.carousel-card {
+	margin-left: 8px;
+	margin-right: 8px;
+
+}
+
+.carousel-card .tile, .carousel-card .swiper-slide {
+	flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition-property: transform;
+    margin-right: 8px;
+    width: 300px;
+}
+@media only screen and (min-width: 640px){
+	.carousel-card .tile, .carousel-card .swiper-slide {
+		margin-right: 16px;
+		width: 330px;
+	}
+}
+
+@media only screen and (min-width: 1024px){
+	.carousel-card .tile, .carousel-card .swiper-slide {
+		width: calc((100% - 144px)/3);
+		max-width: 586px;
+	}
+}
+
+
