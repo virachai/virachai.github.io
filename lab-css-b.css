@@ -448,3 +448,358 @@ img-fit-cover {
 		height: 700px;
 	}
 }
+
+.one-img-figure.figure-caption {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    word-wrap: break-word;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: left;
+    top: 24px;
+    /* left: 24px; */
+    width: calc(100% - 60px);
+	height: calc(100% - 48px);
+	width: 40vw;
+	left: 46px;
+	justify-content: flex-start;
+    top: 36px;
+    height: calc(100% - 36px);
+}
+
+.figure-caption-title {
+    color: #111111;
+    font-weight: 500;
+    margin-bottom: 8px;
+    font-size: 72px;
+    line-height: 1;
+    font-size: 48px;
+    line-height: 1;
+    font-family: "Nike Futura","Helvetica Neue",Helvetica,"Arial Bold",Arial,Tahoma,Thonburi,Ayuthaya,sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.figure-caption-body-2 {
+	color: #111111;
+    font-size: 16px;
+    line-height: 1.5;
+}
+@media only screen and (min-width: 1024px)
+{
+	.figure-caption-title { 
+    	font-size: 72px;
+    	line-height: 1;
+	}
+}
+
+.one-img-figure.figure-caption > p > span {white-space: nowrap;}
+@media only screen and (min-width: 640px){
+	.one-img-section .figure-caption {
+		justify-content: flex-start;
+    	top: 36px;
+    	height: calc(100% - 36px);
+	}
+}
+
+.one-img-figure .hasText{
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-font-smoothing: antialiased;
+	color: #111;
+	text-align: left;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	margin-top: 18px;
+}
+.one-img-figure.figure-caption.two-img {	
+	justify-content: flex-end;
+    top: calc(66.66667% - 36px);
+    height: 33.33333%;
+}
+
+.one-img-figure .hasText .caption-link-shop{
+	transition: color .5s ease-out;
+	position: relative;
+	z-index: 1;
+	margin-left: 0;
+	margin-right: 6px;
+	margin-top: 6px;
+	max-width: 100%;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	padding: 8px 28px;
+	padding-top: 3px;
+}
+/*.one-img-figure .hasText .caption-link-shop-light {
+    border-radius: 20px;
+    background: #fff;
+    color: #111;
+}*/
+
+@media only screen and (max-width: 640px){
+	.one-img-figure.figure-caption {
+		text-align: left;
+		width: calc(100% - 48px);
+		justify-content: flex-start;
+		position: relative;
+		top: 0;
+		left: 0;
+		margin-top: 24px;
+		margin-bottom: 24px;
+	}
+	.one-img-figure.two-img {
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		position: absolute;
+		word-wrap: break-word;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		text-align: left;
+		top: 24px;
+		left: 24px;
+		width: calc(100% - 60px);
+		height: calc(100% - 48px);
+	}
+}
+.headline-4 {
+	font-size: 20px;
+	line-height: 1.2;
+	font-weight: 500;
+	margin-bottom: 8px;
+	color: #FFFFFF;
+}
+
+
+.link-shop-all {
+	-webkit-font-smoothing: antialiased;
+	box-sizing: border-box;
+	margin: 0;
+	border: 0;
+	font: inherit;
+	display: inline-block;
+	vertical-align: top;
+	white-space: nowrap;
+	text-align: center;
+	text-decoration: none;
+	font-weight: 500;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	background: 0 0;
+	font-size: 16px;
+	line-height: 1.5;
+	cursor: pointer;
+	transition: all .2s ease;
+	color: #111;
+	padding: 0;
+	margin-left: 20px;
+}
+
+.section-product {
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+}
+
+/* sass */
+/*
+https://speckyboy.com/open-source-carousel-sliders-css/
+$duration = 450ms
+$tileWidth = 250px
+$tileHeight = ($tileWidth / (16/9))
+$tileHeight = 444
+$iconSize = 50px
+$growFactor = 1.5 // 1.5 times the original size
+
+$moveLeft = -($tileWidth * ($growFactor - 1) / 2)
+$moveRight = $tileWidth * ($growFactor - 1)
+*/
+.carousel-card .row {	
+	overflow-x: scroll;
+	overflow-y: none;
+	width: 100%;
+	margin: 0;
+}
+  
+.carousel-card .row__inner {
+	transition: 450ms transform;
+	font-size: 0;
+	white-space: nowrap;
+	margin: 0 auto;/*222px 0 */
+	padding-bottom: 10px;
+}
+
+.carousel-card .tile {
+	position: relative;
+	display: inline-block;
+	width: 400px;
+	height: 400px;
+	margin-right: 10px;
+	margin-right: 16px;
+	font-size: 20px;
+	cursor: pointer;
+	transition: 450ms all;
+	transform-origin: center left;
+	min-width: 380px;
+}
+
+
+.carousel-card .tile__img {
+	width: 400px;
+	height: 400px;
+	object-fit: cover;
+}
+
+
+.carousel-card .tile__details {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	top: 0;
+	font-size: 10px;
+	opacity: 0;
+	background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+	transition:  450ms opacity;
+}
+  
+.carousel-card .tile__details:before {
+	content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: black;
+}
+
+
+.carousel-card .tile__details:after {
+    margin-top: -25px;
+    margin-left: -25px;
+    width: 50px;
+    height: 50px;
+    border: 3px solid #ecf0f1;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1;
+}
+
+
+.carousel-card .tile__details:before {
+	content: '▶';
+    left: 0;
+    width: 100%;
+    font-size: 30px;
+    margin-left: 7px;
+    margin-top: -18px;
+    text-align: center;
+    z-index: 2;
+}
+
+.carousel-card .tile__title {
+	position: absolute;
+	bottom: 0;
+	padding: 10px;
+}
+
+
+/* swiper-container */
+.swiper-container-horizontal>.swiper-scrollbar {
+    width: calc(66.66% - 96px);
+    margin: 30px auto 10px;
+    height: 4px;
+    background-color: #f5f5f5;
+    display: none;
+    position: relative;
+    left: inherit;
+    bottom: inherit;
+}
+.swiper-container-horizontal>.swiper-scrollbar {
+    position: absolute;
+    left: 1%;
+    bottom: 3px;
+    z-index: 50;
+    height: 5px;
+    width: 98%;
+}
+.swiper-scrollbar {
+    opacity: 0;
+    transition: opacity .2s ease-in;
+}
+.swiper-scrollbar {
+    border-radius: 10px;
+    position: relative;
+    /*-ms-touch-action: none;*/
+    background: rgba(0,0,0,.1);
+}
+@media only screen and (min-width: 1024px){
+	.swiper-container-horizontal>.swiper-scrollbar {
+		display: block;
+	}
+}
+
+.swiper-container .swiper-notification {
+    position: absolute;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    opacity: 0;
+    z-index: -1000;
+}
+
+
+
+
+.swiper-container-horizontal>.swiper-scrollbar .swiper-scrollbar-drag {
+    background: #757575;
+	cursor: pointer;
+	transform: translate3d(0px, 0px, 0px);
+    transition-duration: 100ms;
+    width: 750.558px;
+}
+.swiper-scrollbar-drag {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background: rgba(0,0,0,.5);
+    border-radius: 10px;
+    left: 0;
+    top: 0;
+}
+
+.swiper-container-horizontal > .swiper-scrollbar .swiper-scrollbar-drag:active {
+    background: #111;
+}
+
+.swiper-container-horizontal > .swiper-scrollbar:active {
+    background-color: #e5e5e5;
+}
+
+/*
+ *  STYLE 3
+ */
+#style-3::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+#style-3::-webkit-scrollbar
+{
+	width: 6px;
+	background-color: #F5F5F5;
+}
+
+#style-3::-webkit-scrollbar-thumb
+{
+	background-color: #000000;
+}

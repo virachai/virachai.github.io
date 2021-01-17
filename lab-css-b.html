@@ -53,6 +53,8 @@
     			font-size: 16px;
 			}			
 		}
+
+		a:focus, a:hover {text-decoration: none;}
 	</style>
 	<!-- /(href\="https\:\/\/www\.nike\.com\/((?!\s).)*)/ -->
 </head>
@@ -76,7 +78,7 @@
 							<div class="pre-help-dropdown pre-l-logo" data-pre="DesktopHelpDropdown">
 								<div id="HelpMenuDropdown" class="pre-dropdown-menu" data-pre="DropdownMenu">
 									<a role="listbox" aria-expanded="false" aria-controls="HelpMenuDropdown-Menu" data-var="ctrl" aria-label="ความช่วยเหลือ" data-type="click_navHelpMenuV2" data-path="help" class="pre-help-button body-4 u-bold" href="#" data-pre="ILink">
-										<span id="hf_header_label_help">ความช่วยเหลือ</span>
+										<span id="hf_header_label_help">Help</span>
 									</a>
 								</div>
 							</div>
@@ -108,8 +110,8 @@
 				<div>
 					<div class="pre-l-wrapper mauto-sm d-sm-flx">
 						<div class="pre-l-logo prl0-sm top-stack-context" data-var="swooshLogo">
-							<a aria-label="โฮมเพจ Nike" data-brand="nike" data-type="click_headerLogo" data-path="home" class="d-sm-b prl2-sm prl3-lg" href="#" data-pre="ILink">
-								<span class="d-sm-h">โฮมเพจ Nike</span>
+							<a aria-label="Nike" data-brand="nike" data-type="click_headerLogo" data-path="home" class="d-sm-b prl2-sm prl3-lg" href="#" data-pre="ILink">
+								<span class="d-sm-h">Nike</span>
 								<img src="https://cdn.iconscout.com/icon/free/png-64/nike-16-896223.png" height="60px" width="60px" alt="Homepage Nike">
 					<!-- <svg class="pre-logo-svg" height="60px" width="60px" fill="#111" viewBox="0 0 69 32">
 					<path d="M68.56 4L18.4 25.36Q12.16 28 7.92 28q-4.8 0-6.96-3.36-1.36-2.16-.8-5.48t2.96-7.08q2-3.04 6.56-8-1.6 2.56-2.24 5.28-1.2 5.12 2.16 7.52Q11.2 18 14 18q2.24 0 5.04-.72z">
@@ -162,7 +164,7 @@
 						</div>
 					
 						<div class="pre-acct-btn-group pt2-sm pt3-lg d-sm-ib ta-sm-r flx-gro-sm-1 flx-gro-lg-0" data-pre="HeaderButtonGroup">
-							<a aria-label="รายการโปรด" title="รายการโปรด" data-var="favoritesLink" data-type="click_navShortcut" data-path="favorites" class="pre-btn-header ripple mr3-sm d-sm-h d-lg-ib" href="#" data-pre="ILink">
+							<a aria-label="favorites" title="favorites" data-var="favoritesLink" data-type="click_navShortcut" data-path="favorites" class="pre-btn-header ripple mr3-sm d-sm-h d-lg-ib" href="#" data-pre="ILink">
 								<svg width="24px" height="24px" fill="#111" viewBox="0 0 24 24">
 									<path d="M21.11 4a6.6 6.6 0 0 0-4.79-1.92A6.27 6.27 0 0 0 12 3.84 6.57 6.57 0 0 0 2.89 4c-2.8 2.68-2.45 7.3.88 10.76l6.84 6.63A2 2 0 0 0 12 22a2 2 0 0 0 1.37-.54l.2-.19.61-.57c.6-.57 1.42-1.37 2.49-2.41l2.44-2.39 1.09-1.07c3.38-3.55 3.8-8.1.91-10.83zm-2.35 9.4l-.25.24-.8.79-2.44 2.39c-1 1-1.84 1.79-2.44 2.36L12 20l-6.83-6.68c-2.56-2.66-2.86-6-.88-7.92a4.52 4.52 0 0 1 6.4 0l.09.08a2.12 2.12 0 0 1 .32.3l.9.94.9-.94.28-.27.11-.09a4.52 4.52 0 0 1 6.43 0c1.97 1.9 1.67 5.25-.96 7.98z">
 									</path>
@@ -208,8 +210,7 @@
 								<div class="_2CVsKbIX" aria-hidden="false">
 									<span class="_2vXfoh-O"></span>
 									<div class="_8gPPHhHw">
-										<p>COVID-19: ข้อมูลเกี่ยวกับร้าน Nike 
-											และการจัดส่ง&nbsp;สามารถดูได้<a class="_2trpWJ_I" data-analytics-action-id="" href="#">ที่นี่</a>
+<p>COVID-19: ข้อมูลเกี่ยวกับร้าน Nike และการจัดส่ง&nbsp;สามารถดูได้<a class="_2trpWJ_I" data-analytics-action-id="" href="#">ที่นี่</a>
 										</p>
 									</div>
 								</div>
@@ -253,7 +254,8 @@
 			</div><!-- local_menu -->
 			
 			<div class="grid fixed-fluid ncss-container">
-				<div class="row" style="border: 1px solid orange;">
+
+				<div class="row">
 					<div class="col-sm-12 col-md-12 col-lg-12">
 						<div>
 							<figure class="figure">
@@ -267,11 +269,21 @@ https://static.nike.com/a/images/f_auto/dpr_1.0/h_700,c_limit/49d45f05-1638-433d
 <picture>
 	<source media="(min-width: 640px)" srcset="https://static.nike.com/a/images/f_auto/dpr_1.0/w_1471,c_limit/922cbcf2-4ed7-4430-91a8-c699931460ff/-.jpg">
 	<img src="https://static.nike.com/a/images/f_auto/dpr_1.0/h_700,c_limit/49d45f05-1638-433d-bbb8-1f95239b9427/mens-shoes-clothing-accessories.jpg">
-  </picture>
+</picture>
 
 									</div>
 								</div>
-								<figcaption class="figure-caption">A caption for the above image.</figcaption>
+								<figcaption class="one-img-figure figure-caption">
+									<p data-qa="title" class="figure-caption-title ">
+										<span>THE NEW REACT</span>
+										<span>INFINITY RUN 2</span>
+									</p>
+									<p class="figure-caption-body-2">Designed to help reduce injuries and keep you on the run.</p>
+									<div class="hasText">
+										<a href="#" target="_self" class="caption-link-shop ncss-btn-primary-dark" tabindex="0" aria-label="Shop">Shop</a>
+									</div>									
+								</figcaption>
+								<a href="#" target="_self" aria-label="Visit"></a>	
 							</figure>
 						</div>
 					</div>
@@ -280,6 +292,7 @@ https://static.nike.com/a/images/f_auto/dpr_1.0/h_700,c_limit/49d45f05-1638-433d
 			
 
 			<!-- one image -->
+			<!--
 			<div class="grid Z25uR9U5 fixed-fluid ncss-container _1WKaQgke css-1vtn5w7" style="position:relative">
 				<div data-qa="grid-row" class="ncss-row grid-row" style="border: 1px solid orange;">
 					<div data-qa="grid-col" class="grid-col va-sm-t ncss-col-lg-12 ncss-col-md-12 ncss-col-sm-12 ncss-col-lg-offset-0 ncss-col-md-offset-0 ncss-col-sm-offset-0">
@@ -302,13 +315,14 @@ https://static.nike.com/a/images/f_auto/dpr_1.0/h_700,c_limit/49d45f05-1638-433d
 					</div>					
 				</div>					
 				
-			</div><!-- one image -->
+			</div>--><!-- one image -->
 
 			<!-- two image -->
-			<div id="" data-qa="grid" data-container-type="image" data-fluid-grid="false" class="grid Z25uR9U5 fixed-fluid ncss-container _2OZV8M5x _1gYnKOgX css-1gfb4pw css-1wf7v22" style="position:relative">
+			<div class="grid fixed-fluid ncss-container" style="position:relative;margin-top: 60px;">
+			<!-- <div id="" data-qa="grid" data-container-type="image" data-fluid-grid="false" class="grid Z25uR9U5 fixed-fluid ncss-container _2OZV8M5x _1gYnKOgX css-1gfb4pw css-1wf7v22" style="position:relative;margin-top: 60px;"> -->
 				
-				<div id="" data-qa="grid-row" class="ncss-row grid-row">
-					<div id="" data-qa="grid-col" class="grid-col va-sm-t ncss-col-lg-12 ncss-col-md-12 ncss-col-sm-12 ncss-col-lg-offset-0 ncss-col-md-offset-0 ncss-col-sm-offset-0">
+				<div class="ncss-row grid-row" style="margin-bottom: -10px;">
+					<div class="grid-col va-sm-t ncss-col-lg-12 ncss-col-md-12 ncss-col-sm-12 ncss-col-lg-offset-0 ncss-col-md-offset-0 ncss-col-sm-offset-0">
 						<div>
 							<div class="_355YWnGn mb6-sm">
 								<h2 class="_2PzKMD0A headline-3 text-color-primary-dark card">Trending Now</h2>
@@ -316,16 +330,111 @@ https://static.nike.com/a/images/f_auto/dpr_1.0/h_700,c_limit/49d45f05-1638-433d
 						</div>
 					</div>
 				</div>
+
 				<div class="row">
-					<div class="col-sm-12 col-md-6 col-lg-6">
-					1 of 2
+					<div class="col-sm-12 col-md-6 col-lg-6" style="margin-top: 10px; margin-bottom: 10px;">
+						<div>
+							<figure class="figure">
+								<div class="one-img-section">
+									<div style="width:100%;height:100%">
+<img alt="Nike" class="" src="https://static.nike.com/a/images/f_auto/dpr_1.0/h_500,c_limit/682f3f2e-94c0-4ff1-90bd-f00b25988580/mens-shoes-clothing-accessories.jpg">
+									</div>
+								</div>
+								<figcaption class="one-img-figure figure-caption two-img">
+									<p data-qa="title" class="figure-caption-title"></p>
+									<p class="figure-caption-body-2 headline-4">HIIT Harder in the SuperRep 2</p>
+									<div class="hasText">
+										<a href="#" target="_self" class="caption-link-shop ncss-btn-primary-light" tabindex="0" aria-label="Shop">Shop</a>
+									</div>									
+								</figcaption>
+								<a href="#" target="_self" aria-label="Visit Nike"></a>
+							</figure>
+						</div>
+					</div><div class="col-sm-12 col-md-6 col-lg-6" style="margin-top: 10px; margin-bottom: 10px;">
+						<div>
+							<figure class="figure">
+								<div class="one-img-section">
+									<div style="width:100%;height:100%">
+<img alt="Nike" class="" src="https://static.nike.com/a/images/f_auto/dpr_1.0/w_511,c_limit/f7f1a551-a58e-4ad7-a821-506d86091c9a/mens-shoes-clothing-accessories.jpg">
+									</div>
+								</div>
+								<figcaption class="one-img-figure figure-caption two-img">
+									<p data-qa="title" class="figure-caption-title"></p>
+									<p class="figure-caption-body-2 headline-4" style="color: black;"><span>New Arrivals</span> <span>for the New Year</span></p>
+									<div class="hasText">
+										<a href="#" target="_self" class="caption-link-shop ncss-btn-primary-dark" tabindex="0" aria-label="Shop">Shop</a>
+									</div>									
+								</figcaption>
+								<a href="#" target="_self" aria-label="Visit Nike"></a>
+							</figure>
+						</div>
 					</div>
-					<div class="col-sm-12 col-md-6 col-lg-6">
-					  2 of 2
+
+				</div>	
+			</div><!-- two image -->
+
+			<!-- Slider image -->
+			<div class="grid fixed-fluid ncss-container" style="border: 1px solid orange;position:relative;margin-top: 60px;">
+				<div class="ncss-row grid-row">
+					<div class="grid-col va-sm-t ncss-col-lg-12 ncss-col-md-12 ncss-col-sm-12 ncss-col-lg-offset-0 ncss-col-md-offset-0 ncss-col-sm-offset-0">
+						<div><!-- product-container -->
+							<div class="_355YWnGn mb6-sm section-product">
+								<h2 class="_2PzKMD0A headline-3 text-color-primary-dark card">The Latest & Greatest</h2>
+								<a href="#" target="_self" class="link-shop-all" aria-label="Visit Nike">Shop All</a>
+							</div>
+						</div>
 					</div>
 				</div>
+				<div class="ncss-row grid-row">
+					<!-- https://codepen.io/joshhunt/pen/LVQZRa -->
+					<figure data-qa="carousel-card" class="carousel-card">
+
+						<div class="row">
+							<div class="row__inner swiper-container" id="style-3">
+								
+								<div class="swiper-wrapper"><!--  style="transition-duration: 100ms; transform: translate3d(56px, 0px, 0px);" -->
+								
+									<div class="tile">
+										<div class="tile__media">
+											  <img class="tile__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-1.jpg" alt=""  />
+										</div>
+										<div class="tile__details">
+											  <div class="tile__title">
+												Top Gear
+											</div>
+										</div>
+									</div>
+									  
+									<div class="tile">
+										<div class="tile__media">
+											  <img class="tile__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-1.jpg" alt=""  />
+										</div>									
+									  </div>
+									  
+									<div class="tile">
+										<div class="tile__media">
+											  <img class="tile__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-1.jpg" alt=""  />
+										</div>									
+									</div>
+									
+									<div class="tile">
+										<div class="tile__media">
+											  <img class="tile__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-1.jpg" alt=""  />
+										</div>									
+									</div>
+								
+								</div>
+								<div class="swiper-scrollbar" style="transition-duration: 0ms;">
+									<div class="swiper-scrollbar-drag"></div>
+								</div>
+							  	
+							</div>
+						</div>
+
+					</figure>
+				</div>
 				<div style="height:1000px"></div>	
-			</div><!-- two image -->
+			</div><!-- Slider image -->
 			
 		</div>
 	</div><!-- ciclp-app -->
