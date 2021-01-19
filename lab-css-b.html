@@ -18,7 +18,6 @@
 	<link rel="stylesheet" href="https://www.nike.com/assets/ncss/3.2/dotcom/desktop/css/ncss.th-th.min.css">
 	<link rel="stylesheet" href="https://www.nike.com/assets/dotcom/nav/4.44.2/dotcom-nav-client.css">
 	<link rel="stylesheet" href="lab-css-b.css">
-	<script src="lab-css-b.js"></script>
 	<script>
 		$("*[src^='lab-css-b.js']").attr('src' ,'lab-css-b.js?s=' + new Date().getTime());
 		$("*[href^='lab-css-b.css']").attr('href' ,'lab-css-b.css?s=' + new Date().getTime());
@@ -59,6 +58,7 @@
 	<!-- /(href\="https\:\/\/www\.nike\.com\/((?!\s).)*)/ -->
 </head>
 <body style="overflow-y: scroll;">
+	<script src="lab-css-b.js"></script>
 	<div id="gen-nav-commerce-header-v2">
 		<div class="pre-l-header-container _1BHsIGzZ" style="position: relative;">
 			<div class="pre-l-brand-header d-sm-h d-lg-b z3" data-pre="BrandHeader">
@@ -374,7 +374,7 @@ https://static.nike.com/a/images/f_auto/dpr_1.0/h_700,c_limit/49d45f05-1638-433d
 			</div><!-- two image -->
 
 			<!-- Slider image -->
-			<div class="grid fixed-fluid ncss-container" style="border: 1px solid orange;position:relative;margin-top: 60px;">
+			<div class="grid fixed-fluid ncss-container" style="position:relative;margin-top: 60px;">
 				<div class="ncss-row grid-row">
 					<div class="grid-col va-sm-t ncss-col-lg-12 ncss-col-md-12 ncss-col-sm-12 ncss-col-lg-offset-0 ncss-col-md-offset-0 ncss-col-sm-offset-0">
 						<div><!-- product-container -->
@@ -390,9 +390,9 @@ https://static.nike.com/a/images/f_auto/dpr_1.0/h_700,c_limit/49d45f05-1638-433d
 					<figure data-qa="carousel-card" class="carousel-card">
 
 						<div class="row">
-							<div class="row__inner swiper-container swiper-container-horizontal">
+							<div class="row__inner swiper-container swiper-container-horizontal" id="move-horizontal">
 								
-								<div class="swiper-wrapper"><!--  style="transition-duration: 100ms; transform: translate3d(56px, 0px, 0px);" -->
+								<div class="swiper-wrapper" id="id-swiper-wrapper"><!--  style="transition-duration: 100ms; transform: translate3d(56px, 0px, 0px);" -->
 								
 									<div class="tile wiper-slide">
 										<div class="tile__media">
@@ -436,10 +436,17 @@ https://static.nike.com/a/images/f_auto/dpr_1.0/h_700,c_limit/49d45f05-1638-433d
 									</div>
 								
 								</div>
+								<div class="swiper-button-prev swiper-button-disabled" tabindex="0" role="button" aria-label="Previous slide" aria-disabled="true">
+									<span class="_3lG9nsip"></span>
+									<span class="buttonIcon" style="top: 240px"></span>
+								</div>
+								<div class="swiper-button-next swiper-button-disabled" tabindex="0" role="button" aria-label="Next slide" aria-disabled="true">
+									<span class="_3lG9nsip"></span>
+									<span class="buttonIcon" style="top: 240px"></span>
+								</div>						
 								<div class="swiper-scrollbar" style="transition-duration: 0ms;">
 									<div class="swiper-scrollbar-drag"></div>
-								</div>
-							  	
+								</div>								
 							</div>
 						</div>
 

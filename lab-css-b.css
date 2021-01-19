@@ -717,8 +717,11 @@ $moveRight = $tileWidth * ($growFactor - 1)
     opacity: 0;
     transition: opacity .2s ease-in;
 }
-.carousel-card:hover .swiper-scrollbar {
+.carousel-card:active .swiper-scrollbar, .carousel-card:hover .swiper-scrollbar {
 	opacity: 0.8;
+}
+.carousel-card:hover div[class^=swiper-button] {
+	display: block;
 }
 .carousel-card .swiper-container-horizontal > .swiper-scrollbar {
     position: absolute;
@@ -739,7 +742,7 @@ $moveRight = $tileWidth * ($growFactor - 1)
     bottom: inherit;
 }
 .carousel-card .swiper-scrollbar {
-    border-radius: 10px;
+    /*border-radius: 10px;*/
     position: relative;
     /*-ms-touch-action: none;*/
     background: rgba(0,0,0,.1);
@@ -773,7 +776,7 @@ $moveRight = $tileWidth * ($growFactor - 1)
 	cursor: pointer;
 	transform: translate3d(0px, 0px, 0px);
     transition-duration: 100ms;
-    width: 750.558px;
+	/*width: 750.558px;*/
 }
 .carousel-card .swiper-container-horizontal > .swiper-scrollbar:active {
 	background-color: #e5e5e5;
@@ -808,7 +811,7 @@ $moveRight = $tileWidth * ($growFactor - 1)
  */
 #style-3::-webkit-scrollbar-track
 {
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	/*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);*/
 	background-color: #F5F5F5;
 }
 
@@ -826,7 +829,6 @@ $moveRight = $tileWidth * ($growFactor - 1)
 .carousel-card {
 	margin-left: 8px;
 	margin-right: 8px;
-
 }
 
 .carousel-card .tile, .carousel-card .swiper-slide {
@@ -853,3 +855,145 @@ $moveRight = $tileWidth * ($growFactor - 1)
 }
 
 
+.swiper-button-next, .swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    width: 27px;
+    height: 44px;
+    margin-top: -22px;
+    z-index: 10;
+    cursor: pointer;
+    background-size: 27px 44px;
+    background-position: 50%;
+    background-repeat: no-repeat;
+}
+.swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+	/*background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 44'%3E%3Cpath d='M0 22L22 0l2.1 2.1L4.2 22l19.9 19.9L22 44 0 22z' fill='%23007aff'/%3E%3C/svg%3E);*/
+	left: 10px;
+    right: auto;
+}
+.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled {
+    opacity: .35;
+    cursor: auto;
+    pointer-events: none;
+}
+.carousel-card div[class^=swiper-button] {
+    position: absolute;
+    top: 0;
+	padding: 48px;
+	padding: 0px;
+    z-index: 2;
+    height: calc(100% - 50px);
+    background: none;
+    transition: all .2s ease-in;
+    opacity: 1;
+    border: 0;
+    outline: none;
+    color: #111;
+    font-size: 26px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    margin-top: 0;
+}
+@media only screen and (min-width: 1024px){
+	.carousel-card div[class^=swiper-button] {
+		display: block;
+	}
+}
+.carousel-card div[class^=swiper-button].swiper-button-disabled {
+    pointer-events: all;
+}
+.carousel-card div[class^=swiper-button].swiper-button-prev {
+    left: 0;
+    padding-right: 8vw;
+}
+.carousel-card div[class^=swiper-button].swiper-button-next {
+    right: 0;
+    padding-left: 8vw;
+}
+
+._3lG9nsip {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.carousel-card div[class^=swiper-button] .buttonIcon {
+    font-family: nike-glyphs;
+    display: block;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    background-color: #fff;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    position: absolute;
+    transform: translateY(-50%);
+}
+.carousel-card div[class^=swiper-button].swiper-button-disabled .buttonIcon {
+    background-color: hsla(0,0%,100%,.36);
+}
+.carousel-card div[class^=swiper-button].swiper-button-prev .buttonIcon {
+	left: 84px;
+	left: 28px;
+}
+.carousel-card div[class^=swiper-button].swiper-button-next .buttonIcon {
+	right: 28px;
+}
+.carousel-card div[class^=swiper-button].swiper-button-disabled .buttonIcon:after {
+    color: #757575;
+}
+.carousel-card div[class^=swiper-button].swiper-button-prev .buttonIcon:after {
+    content: "\E608";
+}
+.carousel-card div[class^=swiper-button].swiper-button-next .buttonIcon:after {
+    content: "\E609";
+}
+
+.carousel-card .swiper-container-horizontal > .swiper-scrollbar {
+	overflow-y: hidden;
+	overflow-x: scroll;
+	height: 4px;
+}
+
+.carousel-card .swiper-container-horizontal > .swiper-scrollbar .swiper-scrollbar-drag{
+	max-height: 4px;
+	min-height: 4px;
+	height: 4px;
+	width: auto;
+}
+
+.carousel-card .swiper-container-horizontal > .swiper-scrollbar::-webkit-scrollbar
+{
+/*background-color: white;*/
+height: 4px;
+}
+
+.carousel-card .swiper-container-horizontal > .swiper-scrollbar::-webkit-scrollbar-track {
+	background: #f1f1f1;
+  }
+  
+  /* Handle */
+  .carousel-card .swiper-container-horizontal > .swiper-scrollbar::-webkit-scrollbar-thumb {
+	background: #888;
+  }
+  
+  /* Handle on hover */
+  .carousel-card .swiper-container-horizontal > .swiper-scrollbar::-webkit-scrollbar-thumb:hover {
+	background: #555;
+  }
+
+/*
+.slide:nth-child(1) {background-image: url(http://fakeimg.pl/640x480/);}
+.slide:nth-child(2) {background-image: url(http://fakeimg.pl/641x480/);}
+.slide:nth-child(3) {background-image: url(http://fakeimg.pl/642x480/);}
+.slide:nth-child(4) {background-image: url(http://fakeimg.pl/643x480/);}
+.slide:nth-child(5) {background-image: url(http://fakeimg.pl/644x480/);} 
+*/
+
+.carousel-card .tile:last-child, .carousel-card .swiper-slide:last-child {margin-right: 0px;}
