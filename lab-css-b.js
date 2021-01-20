@@ -26,8 +26,8 @@ $( document ).ready(function() {
   
   var toggleClassName = ['hideChild'];//['is-hidden', 'is-fixed']; //hideChild
   //document.title = stickyTop;
-
-  setTimeout(function(){ carouselSlide(); }, 3000);
+  setTimeout(function(){ carouselSlide(); }, 500);	
+  setTimeout(function(){ carouselSlide(); }, 2000);
   
   $( "#move-horizontal div.swiper-scrollbar" ).mouseover( function() {
     $( this ).on("scroll", scroll2slide );
