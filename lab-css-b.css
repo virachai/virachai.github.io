@@ -1232,3 +1232,20 @@ height: 4px;
 	display: grid;
 	grid-column-gap: 50px;
 }
+
+#hf_header_label_copyright{
+	/*-webkit-font-smoothing: antialiased;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	vertical-align: baseline;
+	display: inline-block;
+	margin-left: 16px;
+	padding-top: 20px;
+	padding-bottom: 0;
+	color: #7e7e7e;
+	line-height: 1!important;
+	font-size: 10px;*/
+}
