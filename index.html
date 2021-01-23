@@ -13,29 +13,30 @@
         <link rel="icon" class="js-site-favicon" type="image/svg+xml" href="https://github.githubassets.com/favicons/favicon.svg">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="./index.css">
         <!--<link rel="stylesheet" href="https://raw.githubusercontent.com/virachai/virachai.github.io/main/node_modules/main.css" crossorigin="anonymous">
         <link rel="stylesheet" href="https://raw.githack.com/virachai/virachai.github.io/main/node_modules/main.css">-->
-        <script src="github_white_favicon.user.js"></script>
+        <!-- <script src="github_white_favicon.user.js"></script> -->
     </head>
-	<body><a id="lab001"></a>
-	<div id="fixFullScr" style="display: none;"></div>
-	<!-- <div class="alert alert-info centered-horizontally" id="infoBarMain" style="display: none;">
-		<a href="#" class="close" id="idClose" data-dismiss="alert" aria-label="close" title="close alert messages"><small>(9)</small>&nbsp;&times;</a>
-		<strong>Info!</strong> <span>This alert box indicates a neutral informative change or action.</span>
-	</div> -->
+	<body>
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 	<!-- <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a> -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-	<script src="index.js"></script>
+	<script src="./index.js"></script>
 
 	<script>
-		$("*[src^='index.js']").attr('src' ,'index.js?s=' + new Date().getTime());
-		$("*[src^='index.css']").attr('src' ,'index.css?s=' + new Date().getTime());
+		$("*[src^='./index.js']").attr('src' ,'./index.js?s=' + new Date().getTime());
+		$("*[href^='./index.css']").attr('href' ,'./index.css?s=' + new Date().getTime());
 	</script>
+		<a id="lab001"></a>
+	<div id="fixFullScr" style="display: none;"></div>
+	<!-- <div class="alert alert-info centered-horizontally" id="infoBarMain" style="display: none;">
+		<a href="#" class="close" id="idClose" data-dismiss="alert" aria-label="close" title="close alert messages"><small>(9)</small>&nbsp;&times;</a>
+		<strong>Info!</strong> <span>This alert box indicates a neutral informative change or action.</span>
+	</div> -->
 
 	<div id="root">
         <nav class="fixed-top navbar-transparent navbar navbar-expand-lg navbar-light" id="menuToggle">
@@ -115,7 +116,35 @@
 				<a class="btn btn-outline-light btn-lg " href="#aboutme" role="button" aria-label="Learn more about me">More about me</a>
 			</div>
 		</div>
-		<!-- /Main Section -->		
+		<!-- /Main Section -->
+		
+		<!-- aboutme Section -->
+		<div id="aboutme" class="jumbotron jumbotron-fluid m-0">
+			<div class="container container-fluid">
+				<div class="row">
+					<div class="col-5 d-none d-lg-block align-self-center">
+						<img class="border border-secondary rounded-circle" src="./profile-virachai.jpg" alt="profile picture" width="338" height="338">
+					</div>
+
+					<div class="col-lg-7">
+						<h2 class="display-4 mb-5 text-center">About Me</h2>
+						<p class="lead text-center">My name is Virachai Wongsena. I’m a graduate of 2008 from King Mongkut’s University of Technology North Bangkok with a degree in Electronics Computer Technology.</p>
+						<p class="lead text-center">I’m currently learning Front-End, Back-End, DevOps & more. I want to develop myself personally into a professional developer.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /aboutme Section -->
+
+		<!-- resume Section -->
+		<div id="resume" class="bg-light m-0 jumbotron jumbotron-fluid" style="min-height: 400px;">
+			<div class="container">
+				<h2 class="display-4 pb-5 text-center">My Resume</h2>
+			</div>
+			<div class="row"></div>
+		</div>
+		<!-- /resume Section -->
+
 		<footer class="mt-auto py-5 text-center " style="background-color: rgb(245, 245, 245);">
 			<div class="container">
 				<h2 class="display-4 pb-3 text-center">Get In Touch</h2>
