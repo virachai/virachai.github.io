@@ -370,3 +370,65 @@ div.centered-horizontally{
 }*/
 
 div#infoBarMain > a > small {font-size: 65%;}
+
+/* about section */
+#aboutme .m-0 {
+  margin: 0!important;
+}
+#aboutme .jumbotron-fluid {
+  padding-right: 0;
+  padding-left: 0;
+  border-radius: 0;
+}
+
+#aboutme .jumbotron {
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  background-color: #e9ecef;
+  border-radius: .3rem;
+}
+@media (min-width: 576px) {
+  #aboutme .jumbotron {
+    padding: 4rem 2rem;
+  }
+}
+
+#aboutme .align-self-center {
+  align-self: center!important;
+}
+#aboutme .d-none {
+  display: none!important;
+}
+@media (min-width: 992px){
+  #aboutme .d-lg-block {
+    display: block!important;
+  }
+}
+
+#aboutme .col-5 {
+  flex: 0 0 41.66667%;
+  max-width: 41.66667%;
+}
+#aboutme .rounded-circle {
+  border-radius: 50%!important;
+}
+#aboutme .border-secondary {
+  border-color: #6c757d!important;
+}
+#aboutme .border {
+  border: 1px solid #dee2e6!important;
+}
+
+#resume .display-4 {
+  font-size: 3.48832rem;
+}
+@media (min-width: 576px){
+  #resume .display-4 {
+      font-size: 3.48832rem;
+  }
+}
+@media (min-width: 768px){
+  #resume .display-4 {
+    font-size: 3.48832rem;
+  }
+}
