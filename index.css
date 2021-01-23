@@ -423,8 +423,7 @@ div#infoBarMain > a > small {font-size: 65%;}
   font-size: 3.48832rem;
 }
 @media (min-width: 576px){
-}
-#resume .display-4 {
+  #resume .display-4 {
       font-size: 3.48832rem;
   }
 }
