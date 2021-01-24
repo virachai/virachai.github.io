@@ -230,11 +230,17 @@ function onLab(hash){
 			setInfoMsgBar(hash);
 			fnNavBarTop();
 			var containerBtnFirst = $(".container > a.btn:first");
-			const btnOldText = containerBtnFirst.text();
-			const btnOldHref = containerBtnFirst.attr("href");
-			containerBtnFirst.text('Echo Hello world').attr("href", "#hello");
-			containerBtnFirst.addClass("btnEchoHello");
-			
+			containerBtnFirst.hide();
+			var containerBtnHello = $(".container > a.btnEchoHello");
+			containerBtnHello.show();
+			//const btnOldText = containerBtnFirst.text();
+			//const btnOldHref = containerBtnFirst.attr("href");
+			//containerBtnFirst.text('Echo Hello world').attr("href", "#hello");
+			//containerBtnFirst.text('Echo Hello world');
+			//containerBtnFirst.addClass("btnEchoHello");
+			//var display1H1 = document.querySelector('.container > h1.display-1');
+			//strDisplay = strDisplay.replace(str, echoText);
+			//display1H1.innerHTML = strDisplay;
 			//More about me
 			var runLab002 = () => {
 				
@@ -253,27 +259,20 @@ function onLab(hash){
 				strDisplay = strDisplay.replace(str, echoText);
 				display1H1.innerHTML = strDisplay;
 				if(document.querySelector("#infoBarMain a") !== null) document.querySelector("#infoBarMain a").click();
-				containerBtnFirst.text(btnOldText).attr("href", btnOldHref);
+				//containerBtnFirst.text(btnOldText).attr("href", btnOldHref);
 				//setTimeout(function(){containerBtnFirst.focusout();}, 1000);
-				containerBtnFirst.removeClass("echoHello");
-				setTimeout(function(){ display1H1.innerHTML = displayText;}, 12000);
+				//containerBtnFirst.removeClass("echoHello");
+				setTimeout(function(){ display1H1.innerHTML = displayText;}, 10000);
 				runLab001();
-				$(".container > a.btn:first").unbind( "click", runLab002 );
+				//$(".container > a.btn:first").unbind( "click", runLab002 );
+				
 			}
-			containerBtnFirst.bind( "click", runLab002 );
-			//containerBtnFirst.text( "Can Click!" );
-			$('container > a.echoHello').click(function() {
-				//alert('Hello world');
-				//display-1
-				//$(this).bind( "click", runLab002 )
-    			//$(this).text( "Can Click!" );
-				//runLab002();
-				//runLab001();
-				// runLab002 = () => {};
-				//
+			containerBtnHello.click(function() {
+				runLab002();
+				containerBtnHello.hide();			
+				containerBtnFirst.show();
 			});
-			//alert('Hello world');
-			//$(".container > a.btn:first") = btnOld;
+			//containerBtnFirst.bind( "click", runLab002 );
 		// code block
 		case 'lab003':
 			//container
