@@ -7,7 +7,6 @@ var barShow = false;
 var myVar;
 var runLab002 = () => {};
 $( document ).ready(function() {
-
 	/*const classChildren = x => document.getElementsByClassName('navbar-${x}')[0];
 
 	classChildren('toggler').addEventListener('click', () => {
@@ -144,6 +143,11 @@ window.addEventListener('scroll', function() {
        setTimeout(function(){
 			$( "body" ).prepend( oldBar );
 		 }, 2000);
+	});
+
+	$( 'ul.navbar-nav a:not(.dropdown-toggle)' ).click(function() {
+		let elmToggler = document.querySelector('#menuToggle div.navbar-collapse.collapse') !== null;
+		if(!elmToggler) document.querySelector("button.navbar-toggler").click();
 	});
 
 }); //$( document ).ready
@@ -402,4 +406,3 @@ function sleep(ms) {
   }
   
  // demo();
-  
