@@ -1,0 +1,476 @@
+<html lang="en">    
+    <head>
+		<!-- https://preview.colorlib.com/theme/meetme/ -->
+        <meta charset="utf-8">
+        <meta name="robots" content="noindex">
+        <meta name="googlebot" content="noindex">
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" >
+        <meta http-equiv="Pragma" content="no-cache" >
+        <meta http-equiv="Expires" content="0" >        
+        <meta name="viewport" content="width=device-width">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Homework #001 - Online CodeCamp#8 by Virachai Wongsena</title>
+        <link rel="alternate icon" class="js-site-favicon" type="image/png" href="https://github.githubassets.com/favicons/favicon.png">
+        <link rel="icon" class="js-site-favicon" type="image/svg+xml" href="https://github.githubassets.com/favicons/favicon.svg">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+		<style>
+			body {
+				line-height: 26px;
+				font-size: 16px;
+				font-family: "Roboto", sans-serif;
+				font-weight: normal;
+				color: #777777;
+				background-color: #fff;
+				padding: 0;
+				margin: 0;
+			}
+			h1, h2, h3, h4, h5, h6 {
+				font-family: "Heebo", sans-serif;
+				font-weight: bold;
+			}
+			a {
+				text-decoration: none;
+				transition: all 0.3s ease-in-out;
+			}
+			.home_banner_area {
+				position: relative;
+				z-index: 1;
+				background-image: -moz-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
+				background-image: -webkit-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
+				background-image: -ms-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
+				/*margin-bottom: 200px;*/
+				height: 100%;
+				width: 100%;
+				padding: 0;
+				padding-top: 50px;
+				padding-bottom: 50px;
+				margin: 0;
+			}
+			.home_banner_area .box_1620 {
+				min-height: 700px;
+				border-radius: 12px;
+				position: relative;
+				/*bottom: -200px;*/
+				background: #fff;
+				padding: 30px;
+				box-shadow: 0px 20px 80px 0px rgba(153, 153, 153, 0.3);
+				/*max-width: 1170px;*/
+				max-width: 960px;
+				min-width: 960px;
+				margin: 0 auto;
+				/*bottom: -200px;*/
+			}
+			.home_banner_area .banner_inner {
+				position: relative;
+				width: 100%;
+				min-height: 700px;				
+				align-items: center !important;
+			}
+			.home_banner_area .banner_inner .banner_content {
+				color: #222222;
+				vertical-align: middle;
+				align-self: center;
+				text-align: left;
+			}
+			.d-flex {
+				min-width: 340px;
+				width: auto;		
+				padding-right: 40px;
+			}
+			.d-flex img{
+				border-radius: 12px;
+			}
+			.d-flex figure {
+				margin: 0;
+
+			}
+			.d-flex figure figcaption{
+				margin: 0.55rem;
+				text-align: center;
+			}
+			.media-body {
+				width: 60%;
+				min-width: 570px;
+			}
+			.p-5 {
+				/*width: 60px;
+				min-width: 60px;*/
+				padding: 0rem 0;		
+				text-align: center;		
+			}
+			.p-5 > a {				
+				color: #3e64ff;
+				text-decoration: none;
+				background-color: transparent;
+				/*background: #e8e8e8;*/
+				border-radius: 5px;
+				display: inline-block;
+				text-align: center;
+				color: #fff;
+			}
+			.p-5 > a > .socialicons {
+				color: #B0B0B0;
+			}
+			.p-5 > a > .socialicons, .p-5 > a > .socialicons:hover {
+				padding-left: 5px;
+				padding-right: 5px;
+				transition: all .8s;
+				margin: 5px;
+			}
+			.p-5 > a > .socialicons:hover {
+				color: #505050;
+			}
+			div.inline { float:left; }
+			.clearBoth { clear:both; }
+			.personal_text h6 {
+				font-size: 14px;
+				font-family: "Roboto", sans-serif;
+				text-transform: uppercase;
+				letter-spacing: 1.6px;
+				font-weight: normal;
+				margin-bottom: 0;
+				color: #222222;				
+				min-width: 440px;
+				padding: 0;
+			}
+			.personal_text h3 {
+				font-size: 36px;
+				text-transform: uppercase;
+				margin-bottom: 15px;
+				color: #222222;
+				padding: 0;				
+				margin-top: 15px;
+			}
+			.personal_text h4 {
+				text-align: left;
+				box-sizing: border-box;
+				margin-top: 0;
+				line-height: 1.2;
+				font-size: 16px;
+				font-weight: 600;
+				font-family: "Roboto", sans-serif;
+				/*text-transform: uppercase;*/
+				margin-bottom: 20px;
+				color: #222222;
+			}
+
+			.list {
+				list-style: none;
+				margin: 0px;
+				padding: 0px;
+				padding-left: 30px;
+			}
+			.personal_text .basic_info li {
+				margin-bottom: 25px;
+			}
+			.personal_text .basic_info li a {
+				position: relative;
+				padding-left: 50px;
+				font-size: 18px;
+				color: #777777;				
+			}
+			.personal_text .basic_info li a i {
+				position: absolute;
+				left: 0px;
+				top: 50%;
+				transform: translateY(-60%);
+				/*font-size: 24px;*/
+				color: #766dff;
+				color: black;
+				opacity: 0.75;
+			}
+			.d-flex figcaption span {				
+				font-size: 18px;
+				color: #777777;
+			}
+			.d-flex figcaption span:first-child {
+				font-weight: 600;
+				color: #000;
+				padding-right: 5px;
+			}
+			.main_btn {
+				display: inline-block;
+				background-image: linear-gradient(to right, #766dff 0%, #86e8ff 48%, #766dff 100%);
+				background-size: 200% auto;
+				padding: 0px 40px;
+				color: #fff;
+				font-family: "Roboto", sans-serif;
+				font-size: 13px;
+				font-weight: 500;
+				line-height: 48px;
+				border-radius: 0px;
+				outline: none !important;
+				box-shadow: none !important;
+				text-align: center;
+				cursor: pointer;
+				border-radius: 5px;
+				transition: all 300ms linear 0s;
+			}
+			.favourite-hobby {
+				height: 190px;				
+				background: #BADA55;
+				padding: 20px;
+				position: absolute;
+				bottom: 0;
+				width: calc(50% - 50px);
+				vertical-align: top;
+				background-image: linear-gradient(to top,#86e8ff 0%, #766dff 100%);
+				opacity: 0.85;
+				border-radius: 18px 0px 18px 0px;
+			}			
+			.favourite-hobby h4{
+				color: whitesmoke;
+				padding: 0;
+				margin: 0;
+				text-align: center;
+			}
+			.hobby-item-list {
+				text-align: center;
+			}
+			.hobby-item-list i {
+				padding-left: 10px;
+				padding-right: 10px;
+				transition: all .8s;
+				margin: 8px;
+				transform: rotate(30deg);
+			}
+			.hobby-item {
+				padding: 25px 0;
+			}
+			.list.hobby-item-list {
+				list-style: none;
+				margin: 0px;
+				padding: 0px;	
+			}
+			ul.hobby-item-list > li {
+    			display: inline-block;
+			}
+			ul.hobby-item-list > li p{
+				font-size: 16px;
+				font-weight: 600;
+				padding: 3px;
+				margin: 0;				
+				color: #585858;
+			}
+			ul.hobby-item-list > li i{
+				color: #F8F8F8;
+			}
+			.tools_expert {
+				padding: 0px;
+				text-align: left;
+				margin-top: -10px;
+			}
+			.tools_expert .skill_main .skill_item:last-child {
+				margin-bottom: 0px;
+			}			
+			.tools_expert .skill_main .skill_item h4 {
+				text-align: left;
+				font-size: 14px;
+				font-family: "Roboto", sans-serif;
+				font-weight: 600;
+				color: #222222;
+				margin-bottom: 2px;
+				margin-top: 8px;
+			}
+			.tools_expert .skill_main .skill_item .progress_br {
+				border: 1px solid #eeeeee;
+				padding: 4px;
+				border-radius: 8px;
+			}
+			.tools_expert .skill_main .skill_item .progress {
+				height: 8px;
+				border-radius: 8px;
+				background: #e8e8e8;
+			}
+			.tools_expert .skill_main .skill_item .progress .progress-bar {
+				width: 0%;
+				transition: width .6s ease;
+				height: 8px;
+				border-radius: 4px;
+				vertical-align: middle;
+				align-self: center;
+				background-image: -moz-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
+				background-image: -webkit-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
+				background-image: -ms-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
+			}
+			.personal_text {
+				background-image: url('https://github.githubassets.com/images/modules/logos_page/Octocat.png');
+				background-position: bottom right;
+				background-repeat: no-repeat;
+ 				background-size: 240px;
+			}
+
+			/* CSS Header */
+			.header_area {
+				position: absolute;
+				width: 100%;
+				top: 0;
+				left: 0;
+				z-index: 99;
+				transition: background 0.4s, all 0.3s linear;
+			}
+			.header_area .navbar {
+				background: transparent;
+				padding: 0px;
+				border: 0px;
+				border-radius: 0px;
+			}
+			.header_area .container {
+				max-width: 960px;
+				min-width: 960px;
+				margin: 0 auto;
+			}
+			.header_area .navbar-nav {				
+				padding-left: 0;
+				margin-bottom: 0;
+				list-style: none;				
+			}
+			.header_area .navbar-nav li {				
+				display: inline-block;
+			}
+			.header_area .navbar .nav .nav-item {
+				margin-right: 45px;
+			}
+			.header_area .navbar .nav .nav-item:last-child {
+				margin-right: 0;
+			}
+			.header_area .navbar .nav .nav-item:hover .nav-link, .header_area .navbar .nav .nav-item.active .nav-link {
+				color: #fff;
+			}
+			.header_area .navbar .nav .nav-item .nav-link {
+				font: 700 12px/120px "Roboto", sans-serif;
+				font: 700 12px/48px "Roboto", sans-serif;
+				text-transform: uppercase;
+				color: #fff;
+				padding: 0px;
+				display: inline-block;
+			}
+			.container.box_1620 {
+				text-align: right;
+			}
+			.header_area {
+				position: sticky;
+				top: 0;
+				background-color: black;
+			}
+		</style>
+    </head>
+	<body style="overflow-y: scroll;">
+		<header class="header_area"><div class="main_menu">
+				<nav class="navbar navbar-expand-lg navbar-light">
+					<div class="container box_1620">
+						<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+							<ul class="nav navbar-nav menu_nav ml-auto" style="padding: 0;margin: 0;">
+								<li class="nav-item"><a class="nav-link" href="index.html">Homepage</a></li>
+								<li class="nav-item active"><a class="nav-link" href="profile.html">Profile</a></li>
+								<li class="nav-item"><a class="nav-link" href="friends.html">Friends</a></li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</header>
+		
+		<div class="home_banner_area">
+			<div class="container box_1620">
+				<div class="banner_inner">
+					<div class="banner_content">
+						<div class="media">
+
+							<div class="d-flex inline">
+								<figure>
+									<img src="./profile-virachai.jpg" alt="profile picture virachai" style="width:100%">									
+									<figcaption>
+										<span>Nick Name:</span> 
+										<span>Chai</span>
+									</figcaption>
+								  </figure>
+								
+								<div class="p-5">
+									<a target="_blank" rel="noopener noreferrer" href="https://github.com/virachai" aria-label="virachai (Virachai Wongsena) - GitHub">
+										<i class="fab fa-github fa-3x socialicons"></i>
+									</a>
+									<a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/virachai.wongsena" aria-label="My facebook">
+										<i class="fab fa-facebook fa-3x socialicons"></i>
+									</a>
+									<a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/wvirachai/" aria-label="My instagram">
+										<i class="fab fa-instagram fa-3x socialicons"></i>
+									</a>
+									<a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/virachai/" aria-label="My linkedin">
+										<i class="fab fa-linkedin fa-3x socialicons"></i>
+									</a>
+									<a target="_blank" rel="noopener noreferrer" href="https://twitter.com/wvirachai" aria-label="My twitter">
+										<i class="fab fa-twitter fa-3x socialicons"></i>
+									</a>
+								</div>
+							</div>
+
+							<div class="media-body inline">
+								<div class="personal_text">
+									<h6>Hello Everybody, i am</h6>
+									<h3>Virachai Wongsena</h3>									
+									<h4>Online CodeCamp#8</h4>
+									<p>I’m currently learning Front-End, Back-End, DevOps & more. I want to develop myself personally into a professional developer.</p>
+									<br>
+									<ul class="list basic_info">
+										<li><a href="#"><i class="fa fa-2x fa-calendar"></i> April, 1984</a></li>
+										<li><a href="#"><i class="fas fa-2x fa-phone-square"></i> 087-808-2159</a></li>
+										<li><a href="#"><i class="fas fa-2x fa-home"></i> Sisaket, Thailand</a></li>
+										<li><a href="mail:wvirachai@gmail.com"><i class="fas fa-2x fa-envelope"></i> wvirachai@gmail.com</a></li>
+									</ul>
+								</div>
+							</div>
+							
+							<br class="clearBoth" />
+							<div class="favourite-hobby inline">
+								<h4>My Favorite Hobby</h4>
+								<div class="hobby-item">
+									<ul class="list hobby-item-list">
+										<li><i class="fas fa-5x fa-gamepad"></i><p>Gaming</p></li>
+										<li><i class="fas fa-5x fa-futbol"></i><p>Football</p></li>
+										<li><i class="fab fa-5x fa-youtube"></i><p>Youtube</p></li>										
+									</ul>
+								</div>
+							</div>	
+							<div class="favourite-hobby inline" style="right: 0;">
+								<h4>My Skills</h4>
+								<div class="tools_expert">
+									<div class="skill_main">
+										<div class="skill_item">
+											<h4>HTML <span class="counter">8</span>%</h4>
+											<div class="progress_br">
+												<div class="progress">
+													<div class="progress-bar" role="progressbar" aria-valuenow="8" aria-valuemin="0" aria-valuemax="100" style="width: 8%;"></div>
+												</div>
+											</div>
+										</div>	
+										
+										<div class="skill_item">
+											<h4>CSS <span class="counter">8</span>%</h4>
+											<div class="progress_br">
+												<div class="progress">
+													<div class="progress-bar" role="progressbar" aria-valuenow="8" aria-valuemin="0" aria-valuemax="100" style="width: 8%;"></div>
+												</div>
+											</div>
+										</div>	
+
+										<div class="skill_item">
+											<h4>JavaScript <span class="counter">8</span>%</h4>
+											<div class="progress_br">
+												<div class="progress">
+													<div class="progress-bar" role="progressbar" aria-valuenow="8" aria-valuemin="0" aria-valuemax="100" style="width: 8%;"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<br class="clearBoth" />
+						</div>						
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
