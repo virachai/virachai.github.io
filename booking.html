@@ -1,0 +1,197 @@
+<html lang="en">    
+    <head>
+		<!-- https://preview.colorlib.com/theme/meetme/ -->
+        <meta charset="utf-8">
+        <meta name="robots" content="noindex">
+        <meta name="googlebot" content="noindex">
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" >
+        <meta http-equiv="Pragma" content="no-cache" >
+        <meta http-equiv="Expires" content="0" >        
+        <meta name="viewport" content="width=device-width">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Homework #002 - Online CodeCamp#8 by Virachai Wongsena</title>
+        <link rel="alternate icon" class="js-site-favicon" type="image/png" href="https://github.githubassets.com/favicons/favicon.png">
+        <link rel="icon" class="js-site-favicon" type="image/svg+xml" href="https://github.githubassets.com/favicons/favicon.svg">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+            div.main-section, .main-section form {
+                margin: 0;
+                padding: 0;                
+            }
+            div.row {
+                margin: 10px 5px;
+                padding: 3px 10px; 
+                font-weight: 600;
+            }
+            div.row > div {
+                float: left;
+                /*border: 1px dotted red; */
+                padding: 3px 6px;  
+                padding-left: 0;               
+                width: auto;
+            }
+            div.row:last-of-type {
+                margin: 0;
+                padding: 0;
+                border-top: 1px solid #DCDCDC;
+                background-color: #F7F7F7;
+                width: 100%;                 
+                padding: 10px 9px;                
+            } 
+            div.row > div.w50 {
+                width: 50%;
+            }        
+            div.row > div.w25 {
+                width: 25%;
+                padding-left: 0;            
+                padding-right: 3px;
+            }
+            div.row > div:last-of-type {
+                margin-right: 0;
+            }
+            div.row > div.w25 input {
+                max-width: 96%;
+            }
+            div.row > div input, div.row select{
+                max-width: 100%;
+                margin: 3px 0; 
+                padding: 3px;
+            }
+            div.row > p.clear {
+                clear: both;
+                margin:0;
+                padding: 0;
+            }
+            .main-section {
+                padding: 5px;
+                padding-left: 10px;
+
+            }
+            .bt-search {
+                background-image: linear-gradient(to top right, #F05E32, #FD6331);
+                border-color: #d65629;
+                border-radius: 5px;
+                color: white;
+                font-weight: 600;
+                text-transform: uppercase;                
+                border-style: groove;
+                border-width: 1px;
+            } 
+            #returning, #departing {                
+                /*background-color: #777777;
+                border-style: groove;
+                border-width: 1px;*/                
+                padding: 4px;
+                /*background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
+                background-color: #DCDCDC;*/
+                border-width: 1px;    
+                border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+            }
+            #departing {
+                background-color: #DCDCDC;
+                color: black;
+            }
+            #departing::-webkit-datetime-edit-month-field {
+                color: black;
+            }
+            #departing::-webkit-datetime-edit-day-field {
+                color: black;
+            }
+            #departing::-webkit-datetime-edit-year-field {
+                color: black;
+            }
+            /* Chrome, Safari, Edge, Opera */
+            input::-webkit-outer-spin-button,
+            input::-webkit-inner-spin-button {
+                    opacity: 1;
+            }
+        </style>
+    </head>
+    <body style="overflow-y: scroll;overflow-x: none;">
+        <div style="width: 400px;height: auto;border: 1px solid gray;" class="main-section">
+            <form action="booking.html" method="POST">
+                <div class="row">
+                    <div class="w50">
+                        <label for="flyFrom">Flying from</label><br>                        
+                        <select style="width: 100%;padding: 6px;" id="flyFrom" name="flyFrom">
+                            <option value="1">Karachi, Pakistan</option>
+                            <option value="2"> Chiang Mai, Thailand</option>
+                            <option value="3">Bangkok, Thailand</option>
+                            <option value="4">Islamabad, Pakistan</option>
+                        </select>
+                        <!--<input type="text" id="flyFrom" name="flyFrom"> -->
+                    </div>
+                    <div class="w50">
+                        <label for="flyTo">To</label><br>
+                        <select style="width: 100%;padding: 6px;" id="flyTo" name="flyTo">
+                            <option value="1">Islamabad, Pakistan</option>
+                            <option value="2"> Chiang Mai, Thailand</option>
+                            <option value="3">Bangkok, Thailand</option>
+                            <option value="4">Karachi, Pakistan</option>
+                        </select>
+                        <!-- <input type="text" id="flyTo" name="flyTo"> -->
+                    </div>
+                    <p class="clear"></p>
+                </div>
+                <div class="row">
+                    <div class="w50">
+                        <label for="departing">Departing</label><br>
+<input type="date" id="departing" name="departing" style="width: 100%;text-align: center;">
+                    </div>
+                    <div class="w50">
+                        <label for="returning">Returning</label><br>
+<input type="date" id="returning" name="returning" style="width: 100%;text-align: center;">
+                    </div>
+                    <p class="clear"></p>
+                </div>
+                <div class="row">
+                    <div class="w25">
+                        <label for="typeAdult">Adult</label><br>
+                        <input type="number" id="typeAdult" name="typeAdult" min="0" max="9" value="1" step="1" style="text-align: center;">
+                    </div>
+                    <div class="w25">
+                        <label for="typeChild">Child</label><br>
+                        <input type="number" id="typeChild" name="typeChild" min="0" max="9" value="0" step="1" style="text-align: center;" >
+                    </div>
+                    <div class="w25">
+                        <label for="typeInfant">Infant</label><br>
+                        <input type="number" id="typeInfant" name="typeInfant" min="0" max="9" value="0" step="1" style="text-align: center;">
+                    </div>
+                    <div class="w25">
+                        <label for="typeCurrency" style="color: #ff4500;">Currency</label><br>
+                        <select style="width: 100%;padding: 4px;" id="typeCurrency" name="typeCurrency">
+                            <option>PKR</option>
+                            <option>USD</option>
+                            <option>EURO</option>
+                            <option>THB</option>
+                        </select>
+                        <!--<input type="text" id="typeCurrency" name="typeCurrency">-->
+                    </div>
+                    <p class="clear"></p>
+                </div>
+                <div class="row">
+                    <div class="w100">
+                        <input type="submit" value="Search" style="padding: 8px 25px;" class="bt-search">
+                    </div>
+                    <p class="clear"></p>
+                </div>
+                
+            </form>
+        </div>
+        <script>
+            var dateControl = document.querySelector('input#departing[type="date"]');
+            var returningDate = document.querySelector('input#returning[type="date"]');
+            let [month, date, year]    = new Date().toLocaleDateString("en-US").split("/")
+            let strMonth = "00" + month*1;
+            let mm = strMonth.substr(strMonth.length-2, 2);
+            let minDate = `${year}-${mm}-${date}`;
+            dateControl.min = minDate;
+            dateControl.max = minDate;
+            dateControl.value = minDate;//'2017-06-01';
+            returningDate.min = minDate;
+        </script>
+    </body>
+</html>
