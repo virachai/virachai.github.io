@@ -352,7 +352,7 @@
 				text-align: center;
 			}
 			/* https://www.eggradients.com/shades-of-green-color */
-			.pink, .for-js:nth-child(6n+1) .avatar-img {
+			.pink, .for-js:nth-child(5n+1) .avatar-img {
 				position: relative;				
 				background-image: linear-gradient(135deg,#d387ab,#e899dc);
 				text-decoration: none;
@@ -362,31 +362,31 @@
 				background-image: linear-gradient(135deg,#161613,#2c2821 98%);
 				text-decoration: none;
 			}*/
-			.green, .for-js:nth-child(6n+2) .avatar-img {
+			.green, .for-js:nth-child(5n+2) .avatar-img {
 				position: relative;				
 				background-image: linear-gradient(135deg,#5aff15,#00b712 98%);
 				text-decoration: none;
 			}
-			.brown, .for-js:nth-child(6n+3) .avatar-img {
+			.brown, .for-js:nth-child(5n+3) .avatar-img {
 				position: relative;				
 				background-image: linear-gradient(135deg,#d58936,#69140e 98%);
 				text-decoration: none;
 			}
-			.gold, .for-js:nth-child(6n+4) .avatar-img {
+			.gold, .for-js:nth-child(5n+4) .avatar-img {
 				position: relative;				
 				background-image: linear-gradient(135deg,#fabc3c,#facc6b 98%);
 				text-decoration: none;
 			}
-			.purple, .for-js:nth-child(6n+5) .avatar-img {
+			.purple, .for-js:nth-child(5n+5) .avatar-img {
 				position: relative;				
 				background-image: linear-gradient(135deg,#a88beb,#f8ceec 98%);
 				text-decoration: none;
 			}
-			.blue, .for-js:nth-child(6n+6) .avatar-img {
+			/*.blue, .for-js:nth-child(6n+6) .avatar-img {
 				position: relative;				
 				background-image: linear-gradient(135deg,#009ffd,#2a2a72 98%);
 				text-decoration: none;
-			}
+			}*/
 
 			.user-info > div {
 				float: left;
@@ -462,6 +462,12 @@
 				min-width: 0px;
 				width: 100%;
 			}
+			.bt-link:hover, .bt-link:hover span {
+				background-color: rgb(202, 32, 85);
+				color: rgb(29, 161, 242);
+				background-color: white;
+				
+			}
 			.url-section {
 				padding: 10px 0;
 			}
@@ -506,9 +512,15 @@
 				border-bottom-width: 1px;
 				border-bottom-style: solid;
 				border-bottom-color: rgb(235, 238, 240);
-			}	
-			.for-js:last-child {				
-				border-bottom-width: 0;
+			}
+			.for-js:last-of-type {				
+				border-bottom-width: 0px;;
+			}
+			#myList3, .for-js-hide {
+				display: none;
+			}
+			#friend-office-id-00, #friend-id-00 {
+				opacity: 0;
 			}
 		</style>
     </head>
@@ -571,7 +583,7 @@
 					<div class="title-section">
 						<div class="title-area">
 							<div class="button-area">
-								<a href="#"><i class="fa fa-lg fa-arrow-left" aria-hidden="true"></i></a>
+								<a href="#" onclick="window.history.back();" title="previous state"><i class="fa fa-lg fa-arrow-left" aria-hidden="true"></i></a>
 							</div>
 							<div class="title-text" style="margin-left:60px">
 								<h2 class="header-text2">
@@ -588,16 +600,16 @@
 
 				<div class="tab-area">
 					<div class="tab-friend tablist">
-						<div class="presentation">
+						<div class="switchbar presentation">
 							<a href="#online" class="tabitem">
-								<div class="tab-friend-section tab-friend-online">
+								<div class="tab-friend-section" id="tab-friend-online">
 									<span>Online</span>
 								</div>
 							</a>
 						</div>		
-						<div>
+						<div class="switchbar">
 							<a href="#offline" class="tabitem">
-								<div class="tab-friend-section tab-friend-offline">
+								<div class="tab-friend-section" id="tab-friend-offline">
 									<span>Offline</span>
 								</div>
 							</a>
@@ -611,16 +623,14 @@
 				<div class="all-my-friends">
 					<!-- js position: relative; min-height: 2934px; -->
 					<div class="friend-lists">
-						<div class="friend-lists-online">
-
-							<div class="for-js">
+						<div class="friend-lists-online for-js-hide" id="myList2"><div class="for-js" id="friend-id-00">
 								<div class="user-cell">
 									<div class="user-area">
 										<div class="user-info">
 											<div class="user-avatar">
 												<a href="#" role="link-friend">
 													<div class="avatar-img container">													
-														<span class="vertical-center">01</span>
+														<span class="vertical-center">00</span>
 														<!-- https://abs.twimg.com/sticky/default_profile_images/default_profile_bigger.png -->
 													</div>													
 												</a>
@@ -630,12 +640,12 @@
 												<div class="data-section" style="position: relative;">
 													<div class="data-profile">
 														<div class="fullname">
-															<span>Virachai Wongsena</span>
+															<span>Fullname</span>
 														</div>
 														<div class="info-contact">
 															<ul class="no-bullets">
-																<li class="email-contact"><i class="far fa-envelope"></i> <span>wvirachai@gmail.com</span></li>
-																<li class="phone-contact"><i class="fas fa-phone"></i> <span>087-808-2159</span></li>
+																<li class="email-contact"><i class="far fa-envelope"></i> <span>Mail</span></li>
+																<li class="phone-contact"><i class="fas fa-phone"></i> <span>Phone</span></li>
 															</ul>
 														</div>
 													</div>
@@ -643,7 +653,7 @@
 														<a href="">
 															<div role="button" class="bt-link">
 																<div class="vertical-center">
-																	<span>Chai</span>
+																	<span>Nickname</span>
 																</div>
 															</div>
 														</a>														
@@ -656,8 +666,8 @@
 
 										<div class="url-section">	
 											<div class="link-github">
-												<span>Passionate to build a better future with technology.</span>
-												<i class="fa fa-link" aria-hidden="true"></i> <a href="https://virachai.github.io/" target="_blank">https://virachai.github.io/</a>
+												<span>motto ประจำตัว</span>
+												<i class="fa fa-link" aria-hidden="true"></i> <a href="#" target="_blank">https://usercodecamp.github.io/</a>										
 											</div>												
 										</div>
 										
@@ -665,7 +675,7 @@
 								</div>
 							</div>
 
-							<div class="for-js">
+							<div class="for-js-hide">
 								<div class="user-cell">
 									<div class="user-area">
 										<div class="user-info">
@@ -717,7 +727,7 @@
 								</div>
 							</div>
 
-							<div class="for-js">
+							<div class="for-js-hide">
 								<div class="user-cell">
 									<div class="user-area">
 										<div class="user-info">
@@ -769,7 +779,7 @@
 								</div>
 							</div>
 
-							<div class="for-js">
+							<div class="for-js-hide">
 								<div class="user-cell">
 									<div class="user-area">
 										<div class="user-info">
@@ -821,7 +831,7 @@
 								</div>
 							</div>
 
-							<div class="for-js">
+							<div class="for-js-hide">
 								<div class="user-cell">
 									<div class="user-area">
 										<div class="user-info">
@@ -873,7 +883,7 @@
 								</div>
 							</div>
 
-							<div class="for-js">
+							<div class="for-js-hide">
 								<div class="user-cell">
 									<div class="user-area">
 										<div class="user-info">
@@ -925,7 +935,7 @@
 								</div>
 							</div>
 
-							<div class="for-js">
+							<div class="for-js-hide">
 								<div class="user-cell">
 									<div class="user-area">
 										<div class="user-info">
@@ -977,7 +987,7 @@
 								</div>
 							</div>
 
-							<div class="for-js">
+							<div class="for-js-hide">
 								<div class="user-cell">
 									<div class="user-area">
 										<div class="user-info">
@@ -1022,6 +1032,58 @@
 											<div class="link-github">
 												<span>Passionate to build a better future with technology.</span>
 												<i class="fa fa-link" aria-hidden="true"></i> <a href="https://virachai.github.io/" target="_blank">https://virachai.github.io/</a>
+											</div>												
+										</div>
+										
+									</div>
+								</div>
+							</div>
+
+							<div class="for-js" id="friend-office-id-00">
+								<div class="user-cell">
+									<div class="user-area">
+										<div class="user-info">
+											<div class="user-avatar">
+												<a href="#" role="link-friend">
+													<div class="avatar-img container">													
+														<span class="vertical-center">00</span>
+														<!-- https://abs.twimg.com/sticky/default_profile_images/default_profile_bigger.png -->
+													</div>													
+												</a>
+											</div>
+
+											<div class="user-data">
+												<div class="data-section" style="position: relative;">
+													<div class="data-profile">
+														<div class="fullname">
+															<span>Fullname</span>
+														</div>
+														<div class="info-contact">
+															<ul class="no-bullets">
+																<li class="email-contact"><i class="far fa-envelope"></i> <span>Mail</span></li>
+																<li class="phone-contact"><i class="fas fa-phone"></i> <span>Phone</span></li>
+															</ul>
+														</div>
+													</div>
+													<div class="link-nickname">
+														<a href="">
+															<div role="button" class="bt-link">
+																<div class="vertical-center">
+																	<span>Nickname</span>
+																</div>
+															</div>
+														</a>														
+													</div>
+												</div>
+												
+											</div>
+											<br class="clearBoth" />
+										</div>
+
+										<div class="url-section">	
+											<div class="link-github">
+												<span>motto ประจำตัว</span>
+												<i class="fa fa-link" aria-hidden="true"></i> <a href="#" target="_blank">https://usercodecamp.github.io/</a>										
 											</div>												
 										</div>
 										
@@ -1031,10 +1093,261 @@
 
 						</div>
 
-						<div class="friend-lists-offline" style="display: none;"></div>
+						<div class="friend-lists-online" id="myList1" style="margin-bottom: 110px;"></div>							
+						
+
+						<div class="friend-lists-offline" id="myList3" style="margin-bottom: 110px;">							
+						</div>
+
+						
 					</div>
 				</div>
 			</div>
 		</main>	
+		<script>
+var showTabOnline = () => {
+	if(document.getElementById("myList3").style.display == 'none') return;
+
+	document.getElementById("myList3").style.display = 'none';
+	document.getElementById("myList1").style.display = 'block';
+
+	if(document.querySelector('.presentation') !== null ) document.querySelectorAll('.switchbar')[1].classList.remove("presentation");
+	document.querySelectorAll('.switchbar')[0].classList.add("presentation");
+	//if(itm.querySelector('presentation') !== null ) itm[1].classList.remove("presentation");
+	//itm[0].classList.add("presentation");
+	//presentation
+}
+
+var showTabOffline = () => {
+	if(document.getElementById("myList1").style.display == 'none') return;
+
+	document.getElementById("myList1").style.display = 'none';
+	document.getElementById("myList3").style.display = 'block';	
+
+	if(document.querySelector('.presentation') !== null ) document.querySelectorAll('.switchbar')[0].classList.remove("presentation");
+	document.querySelectorAll('.switchbar')[1].classList.add("presentation");
+	//let itm = document.querySelectorAll('.tablist > div');
+	//if(itm.querySelector('presentation') !== null ) itm[0].classList.remove("presentation");
+	//itm[1].classList.add("presentation");
+}
+
+var elmOrigin = () => {
+	//let itm = document.getElementById("myList2").firstChild;
+	let itm = document.querySelector('#myList2');
+	if( !(itm !== null )) return false;
+	//var itm = document.getElementById("myList2").firstChild;
+	// Copy the <li> element and its child nodes
+	let firstElm = itm.firstChild;
+	
+	if( !(firstElm !== null )) return false;	
+	return firstElm.cloneNode(true);
+}
+
+var elmOrigin2 = () => {
+	//let itm = document.getElementById("myList2").firstChild;
+	let itm = document.querySelector('#myList2');
+	if( !(itm !== null )) return false;
+	//var itm = document.getElementById("myList2").firstChild;
+	// Copy the <li> element and its child nodes
+	let firstElm = itm.querySelector('#friend-office-id-00');
+	//document = firstElm;
+	if( !(firstElm !== null )) return false;	
+	return firstElm.cloneNode(true);
+}
+
+var setElm = (item, index, nodesDiv) => {
+	//let nodesDiv = document.querySelectorAll('div[id^="friend-id-"]');
+	if( !(nodesDiv !== null ) ) return false;
+	//var first = nodesDiv[0];	
+	let intNum = parseInt(nodesDiv.length) - 1;
+	let str = "000" + intNum;
+	let subNum = 2;
+	let lastNum = str.substr(str.length - subNum, subNum);
+	let elmId = "friend-id-" + lastNum;
+	//let last = document.getElementById("friend-id-00").setAttribute("id", "friend-id-" + lastNum);
+	let lastElm = nodesDiv[intNum];
+	setDataElm(item, lastNum, lastElm);
+	let strId = nodesDiv[0].id;
+	let preId = strId.substr(0, strId.length - subNum);
+	//document.title = preId;
+	lastElm.setAttribute("id", preId + lastNum);
+	//document.title = lastNum;
+}
+
+var setDataElm = (item, index, elmId) => {
+	elmId.querySelector(".avatar-img > span").innerHTML = index;
+	elmId.querySelector(".data-profile > .fullname > span").innerHTML = item.fullname;
+	elmId.querySelector(".data-profile li.email-contact span").innerHTML = item.mail;
+	elmId.querySelector(".data-profile li.phone-contact span").innerHTML = item.phone;
+	elmId.querySelector(".user-data .bt-link > div > span").innerHTML = item.nickname;
+	//elmId.querySelector(".user-data .bt-link > div").href = "#";
+	if(index*1>1){
+		elmId.querySelector(".link-github > span").innerHTML = "-";
+		elmId.querySelector(".link-github > a").innerHTML = "-";
+	}
+	if(index*1==44){
+		elmId.querySelector(".link-github > span").innerHTML = "Passionate to build a better future with technology.";
+		elmId.querySelector(".link-github > a").innerHTML = "https://virachai.github.io/";
+		elmId.querySelector(".link-github > a").href = "https://virachai.github.io/";
+	}
+	//document.getElementById("demo").innerHTML
+}
+
+var cloneElm = (item, index) => {
+	let cln = elmOrigin();
+	if(!cln) return;
+
+	// Append the cloned <li> element to <ul> with id="myList1"
+	var divElm = document.querySelector('#myList1');
+	if( !(divElm !== null )) return false;
+	document.getElementById("myList1").appendChild(cln);
+	
+	let nodesDiv = document.querySelectorAll('div[id^="friend-id-"]')
+	setElm(item, index, nodesDiv);
+	//divElm.appendChild(cln);
+	//return;
+	//var $div = $('div[id^="friend-id-"]:last');	
+
+	//elmOriginValue = elmLast();
+	//let last = nodesDiv[nodesDiv.length- 1];
+
+	// Read the Number from that DIV's ID (i.e: 3 from "klon3")
+	// And increment that number by 1
+	//var num = parseInt( $div.prop("id").match(/\d+/g), 10 ) +1;
+
+	// Clone it and assign the new ID (i.e: from num 4 to ID "klon4")
+	//var $klon = $div.clone().prop('id', 'klon'+num );
+
+	// Finally insert $klon wherever you want
+	//$div.after( $klon.text('klon'+num) );
+}
+
+var cloneElmOffline = (item, index) => {
+	//document = index;
+	let cln = elmOrigin2();
+	if(!cln) return;
+
+	// Append the cloned <li> element to <ul> with id="myList1"
+	var divElm = document.querySelector('#myList3');
+	if( !(divElm !== null )) return false;
+	document.getElementById("myList3").appendChild(cln);
+	
+	let nodesDiv = document.querySelectorAll('div[id^="friend-office-id-"]')
+	setElm(item, index, nodesDiv);
+	
+}
+
+var getDataList = () => {
+	//let friendsCount = friendsData.length;
+	//let friendsCount = friendsOfflineData.length;
+	friendsData.forEach( cloneElm );
+	friendsOfflineData.forEach( cloneElmOffline );
+	//cloneElm(0, 0);
+	//setTimeout(function(){ cloneElm(); }, 1000, 0 ,0 );
+	//setTimeout(function(){ cloneElm(); }, 3000, 0 ,0 );
+	//cloneElm(0, 0);
+}
+setTimeout(function(){ getDataList(); }, 500 );
+
+var hashHandler = (e) => {
+		//var pathname = window.location.pathname; // Returns path only (/path/example.html)
+		let url      = window.location.href;     // Returns full URL (https://example.com/path/example.html)
+		//var origin   = window.location.origin;   // Returns base URL (https://example.com)
+		let hash = url.substring(url.indexOf("#")+1);
+		if(url.length > 1){
+			document.title = hash;
+			if(hash == 'online'){ showTabOnline(); } 
+			else if(hash == 'offline'){ showTabOffline(); }
+		}
+		//document.title = hash;
+}
+
+hashHandler();
+window.addEventListener('hashchange', hashHandler, false);
+
+
+var friendsData  = [
+{"no":  1, "fullname" : "ชาติชาย กอจิตตวนิจ", "mail": "chardchai.k@gmail.com", "nickname": "ชาติชาย", "phone": "086-8219911"},
+{"no":  2, "fullname" : "จารุวัฒน์ แหยมคง", "mail": "ball_jaruwat@hotmail.com", "nickname": "จารุวัฒน์", "phone": "082-5144690"},
+{"no":  3, "fullname" : "Thitinan Kliangsuwan", "mail": "thitinan.kl@gmail.com", "nickname": "Thitinan", "phone": "080-6489365"},
+{"no":  4, "fullname" : "Puchit Kochakul", "mail": "pukiji@gmail.com", "nickname": "Puchit", "phone": "086-6562534"},
+{"no":  5, "fullname" : "พรสุดา นาเลิง", "mail": "phonsuda-nan@hotmail.com", "nickname": "แนน", "phone": "096-3484244"},
+{"no":  6, "fullname" : "Krit Kosanwit", "mail": "teekrit@gmail.com", "nickname": "Krit", "phone": "098-5942894"},
+{"no":  7, "fullname" : "Kritchawat Banjoedthavorn", "mail": "supermaestoso@gmail.com", "nickname": "Kritchawat", "phone": "081-3504479"},
+{"no":  8, "fullname" : "Chatri Saenthamphol", "mail": "chatri.stp97@gmail.com", "nickname": "Chatri", "phone": "095-9532148"},
+{"no":  9, "fullname" : "Kritsakan Rotbut", "mail": "gritsakan1133@hotmail.com", "nickname": "Kritsakan", "phone": "080-8840857"},
+{"no":  10, "fullname" : "วิศวชาติ สินธุวณิก", "mail": "wisavachart.s@gmail.com", "nickname": "วิศวชาติ", "phone": "092-2698733"},
+{"no":  11, "fullname" : "Parichut Saetae", "mail": "Parichut.st05@gmail.com", "nickname": "Parichut", "phone": "084-6246563"},
+{"no":  12, "fullname" : "Watcharin Tassananchalee", "mail": "twatcharin90@gmail.com", "nickname": "Watcharin", "phone": "088-0184211"},
+{"no":  13, "fullname" : "Tacha Kumcha", "mail": "litdemonlit@gmail.com", "nickname": "Tacha", "phone": "081-9762242"},
+{"no":  14, "fullname" : "Karn Kaewpaengphan", "mail": "khankaewpaengphan@gmail.com", "nickname": "Karn", "phone": "098-3626994"},
+{"no":  15, "fullname" : "Peerapol Jirapathomsakul", "mail": "iboomblog@gmail.com", "nickname": "บูม", "phone": "096-6141695"},
+{"no":  16, "fullname" : "Thanaporn Cheenthada", "mail": "eye54067@hotmail.com", "nickname": "Thanaporn", "phone": "098-7059982"},
+{"no":  17, "fullname" : "พงศกร วิชาศรี", "mail": "wichasri.p@hotmail.com", "nickname": "ไอซ์", "phone": "099-1597492"},
+{"no":  18, "fullname" : "Saipan Srisongmeaung", "mail": "saipan.ssm@gmail.com", "nickname": "Saipan", "phone": "084-8282424"},
+{"no":  19, "fullname" : "Patcharapol Chingchanakol", "mail": "Patcharapol0210@gmail.com", "nickname": "Patcharapol", "phone": "098-2643521"},
+{"no":  20, "fullname" : "อารีวรรณ สุจินตวงษ์", "mail": "a.sujintawong@gmail.com", "nickname": "อารีวรรณ", "phone": "-"},
+{"no":  21, "fullname" : "พิชญ์นรี กระจ่างวงษ์", "mail": "pitnaree_@outlook.com", "nickname": "พิชญ์นรี", "phone": "098-2633085"},
+{"no":  22, "fullname" : "Akarawuth Tamrareang", "mail": "akarawuth@marvelic.co.th", "nickname": "Akarawuth", "phone": "061-6163663"},
+{"no":  23, "fullname" : "Rattasat Sudnongbua", "mail": "Rattasat_pmk@hotmail.com", "nickname": "Rattasat", "phone": "088-5942654"},
+{"no":  24, "fullname" : "Patthara Thongvisoong", "mail": "p.pattharath@gmail.com", "nickname": "Patthara", "phone": "081-7293944"},
+{"no":  25, "fullname" : "กิตติพัฒน์ เรืองเผ่าพันธุ์", "mail": "kittiphat.rpp@gmail.com", "nickname": "กิตติพัฒน์", "phone": "088-0999018"},
+{"no":  26, "fullname" : "Narakon Singsakda", "mail": "narakon.computer@gmail.com", "nickname": "Narakon", "phone": "061-5437888"},
+{"no":  27, "fullname" : "Sutja Dhavehutsadin Na Ayuthaya", "mail": "sutjadhavehutsadin@gmail.com", "nickname": "Sutja", "phone": "090-1123113"},
+{"no":  28, "fullname" : "Dechtana Treelaonampa", "mail": "pawit_budhong@hotmail.com", "nickname": "Dechtana", "phone": "091-8592247"},
+{"no":  29, "fullname" : "Sher Janmathong", "mail": "sjanmathong@gmail.com", "nickname": "Sher", "phone": "065-3091151"},
+{"no":  30, "fullname" : "Pakorn Proyrungroj", "mail": "pakorn.proy@gmail.com", "nickname": "Pakorn", "phone": "099-1974965"},
+{"no":  31, "fullname" : "Thuntapat Satirapeerakaan", "mail": "Johm28@gmail.com", "nickname": "Thuntapat", "phone": "065-5495195"},
+{"no":  32, "fullname" : "Surakat Moniam", "mail": "thegost258741@hotmail.com", "nickname": "เอก", "phone": "093-2363916"},
+{"no":  33, "fullname" : "Warin Poomarin", "mail": "warren.rice.ca@gmail.com", "nickname": "Warin", "phone": "092-6263642"},
+{"no":  34, "fullname" : "Theera Suriyawongse", "mail": "Dr.VanDamer@Gmail.com", "nickname": "Theera", "phone": "-"},
+{"no":  35, "fullname" : "ก้องภพ บุญวงศ์", "mail": "alanineify@gmail.com", "nickname": "ก้อง", "phone": "098-7670665"},
+{"no":  36, "fullname" : "ปานัท แสนมหาชัย", "mail": "panut.sanma@gmail.com", "nickname": "ปานัท", "phone": "-"},
+{"no":  37, "fullname" : "Thanakrit Chaivanichagul", "mail": "chichixyz@hotmail.com", "nickname": "Thanakrit", "phone": "085-5707172"},
+{"no":  38, "fullname" : "Thapwaris Chinsirirathkul", "mail": "xbyrzt@gmail.com", "nickname": "Thapwaris", "phone": "087-2505599"},
+{"no":  39, "fullname" : "Tanapat Leelarujiwong", "mail": "aodz3210@gmail.com", "nickname": "อ๊อด", "phone": "089-9197608"},
+{"no":  40, "fullname" : "Patavee Chancharoen", "mail": "clinic.estique@gmail.com", "nickname": "Patavee", "phone": "062-6230888"},
+{"no":  41, "fullname" : "Umaphon Puranapan", "mail": "p.umaphon@outlook.com", "nickname": "วา", "phone": "084-6879520"},
+{"no":  42, "fullname" : "Jirayu Somcharoensin", "mail": "pluem-jirayu@hotmail.com", "nickname": "Jirayu", "phone": "082-7718382"},
+{"no":  43, "fullname" : "Samatcha Srikham", "mail": "srikham.samatcha@gmai.com", "nickname": "Samatcha", "phone": "083-5294451"},
+{"no":  44, "fullname" : "Virachai Wongsena", "mail": "wvirachai@gmail.com", "nickname": "ชัย", "phone": "087-8082159"},
+{"no":  45, "fullname" : "Chaiwiwat Foungpaisarn", "mail": "chaiwiwatmixx@gmail.com", "nickname": "Chaiwiwat", "phone": "095-8606994"},
+{"no":  46, "fullname" : "Natthawan Srisan", "mail": "natthawan6395@gmail.com", "nickname": "โอเล่", "phone": "096-2394179"},
+{"no":  47, "fullname" : "Supakorn Meelarp", "mail": "spk.korn@gmail.com", "nickname": "กรณ์", "phone": "080-5154011"},
+{"no":  48, "fullname" : "Thanadol Wiwatvongkaseam", "mail": "petch_w@live.com", "nickname": "เพชร", "phone": "090-9837548"},
+{"no":  49, "fullname" : "PERANUT BOONYAKIT", "mail": "peranut.pepo@hotmail.com", "nickname": "PERANUT", "phone": "062-5253851"},
+{"no":  50, "fullname" : "นฤมล สาระสิงห์", "mail": "annyyakuza9@gmail.com", "nickname": "นฤมล", "phone": "091-3762379"}];
+
+var friendsOfflineData = [
+{"no":  1, "fullname" : "Wasin Hongnak", "mail": "xelticross@gmail.com", "nickname": "Wasin", "phone": "086-3672884"}, 
+{"no":  2, "fullname" : "Thanadech Saejia", "mail": "mickey_saechia@hotmail.com", "nickname": "Thanadech", "phone": "094-6519361"}, 
+{"no":  3, "fullname" : "Thamon Chongkwanyuen", "mail": "boss.thamon@gmail.com", "nickname": "Thamon", "phone": "094-2494724"}, 
+{"no":  4, "fullname" : "จิรภัทร กัณวเศรษฐ", "mail": "kanwaseth.j@gmail.com", "nickname": "Tob", "phone": "062-0048181"}, 
+{"no":  5, "fullname" : "Thanapon Ratanasoponchai", "mail": "thanapon160@gmail.com", "nickname": "Thanapon", "phone": "081-9348853"}, 
+{"no":  6, "fullname" : "Onsinee Traisuth", "mail": "onsinee.ts@gmail.com", "nickname": "Onsinee", "phone": "094-6907171"}, 
+{"no":  7, "fullname" : "พฤหัส เจริญรัตน์", "mail": "bayulgang@hotmail.com", "nickname": "พฤหัส", "phone": "082-3214566"}, 
+{"no":  8, "fullname" : "Itthisak Damrongkitkanwong", "mail": "itthisakds@gmail.com", "nickname": "Aum", "phone": "092-5419369"}, 
+{"no":  9, "fullname" : "Keavarin Dutphiboonpon", "mail": "keavarin39@gmail.com", "nickname": "Keavarin", "phone": "086-7541492"}, 
+{"no":  10, "fullname" : "Hasanbasori Samang", "mail": "hasanbasori.sa@gmail.com", "nickname": "Hasanbasori", "phone": "096-7073405"}, 
+{"no":  11, "fullname" : "ภัทรจาริน สกุลนาค", "mail": "7idea.office@gmail.com", "nickname": "ภัทรจาริน", "phone": "-"}, 
+{"no":  12, "fullname" : "ณรงค์กรณ์ หีบแก้ว", "mail": "narongkarn4@gmail.com", "nickname": "ณรงค์กรณ์", "phone": "063-7404441"}, 
+{"no":  13, "fullname" : "Suwijak Kantia", "mail": "suwijakbeer@gmail.com", "nickname": "SUWIJAK", "phone": "089-6922099"}, 
+{"no":  14, "fullname" : "Chaiyakorn Pakinthanapong", "mail": "f.chaiyakorn@gmail.com", "nickname": "Chaiyakorn", "phone": "064-2565991"}, 
+{"no":  15, "fullname" : "Peerapat Vongvanitch", "mail": "peerapatgame@gmail.com", "nickname": "Peerapat", "phone": "084-9969554"}, 
+{"no":  16, "fullname" : "Puckapong Klinchuen", "mail": "winja3012@gmail.com", "nickname": "Puckapong", "phone": "063-6598256"}, 
+{"no":  17, "fullname" : "Chayapol Sivasettee", "mail": "chayapol.s18@gmail.com", "nickname": "Chayapol", "phone": "085-0603185"}, 
+{"no":  18, "fullname" : "ทัศน์พล สุขอนันตธรรม", "mail": "thatphon123@hotmail.com", "nickname": "ทัศน์พล", "phone": "080-0452922"}, 
+{"no":  19, "fullname" : "ศุภวิริยะ สรณารักษ์", "mail": "xaviel2@gmail.com", "nickname": "ศุภวิริยะ", "phone": "063-6264654"}, 
+{"no":  20, "fullname" : "ณัฐพงศ์ ม่วงจันทึก", "mail": "nattapong.maun@bumail.net", "nickname": "ต้อม", "phone": "090-9945736"}, 
+{"no":  21, "fullname" : "Siwanin Chartkul", "mail": "siwaznder@gmail.com", "nickname": "Siwanin", "phone": "66966532428"}, 
+{"no":  22, "fullname" : "Natdanai Jeeradechakul", "mail": "jeeradechakul@gmail.com", "nickname": "Natdanai", "phone": "083-4169929"}, 
+{"no":  23, "fullname" : "Phudit Ruaybunsong", "mail": "phudit.rua@gmail.com", "nickname": "Phudit", "phone": "085-8053993"}, 
+{"no":  24, "fullname" : "ธีรวัฒน์ สมสิน", "mail": "theerawat_nap@hotmail.com", "nickname": "Snap", "phone": "092-6950330"}, 
+{"no":  25, "fullname" : "Sunsern Mahaisiriyodom", "mail": "sernssmh@gmail.com", "nickname": "Sunsern", "phone": "085-8432357"}, 
+{"no":  26, "fullname" : "Amnat Chattamanokul", "mail": "guboychatt@gmail.com", "nickname": "Amnat", "phone": "087-8088290"}, 
+{"no":  27, "fullname" : "Setthawut Kulsrisuwan", "mail": "bluepeople.boom@gmail.com", "nickname": "Setthawut", "phone": "062-3364561"}, 
+{"no":  28, "fullname" : "Kalin Panmanee", "mail": "Kalin.pmn@gmail.com", "nickname": "Ham", "phone": "090-9054459"}, 
+{"no":  29, "fullname" : "อรรถวุฒิ สุขสรรควณิช", "mail": "atthawut.suksankhawanit@gmail.com", "nickname": "อรรถวุฒิ", "phone": "086-4144527"}];
+		</script>
 	</body>
 </html>
