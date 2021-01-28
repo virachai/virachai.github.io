@@ -36,10 +36,13 @@
 
 			/* CSS friends */
 			.header_area.banner{
-				width: 100%;
-				max-width: 20vw;
+				width: 88px;
+				/*max-width: 20vw;*/
+				/*max-width: calc(100vw - 740px - 132px - 10px);*/
+				margin-left: calc(50vw - 370px - 88px + 15px);
 				min-width: 88px;
-				float: left;				
+				float: left;
+				/*min-height: 320px;*/
 			}			
 			.header_area .vertical-menu{
 				width: 88px;
@@ -126,6 +129,7 @@
 				width: 740px;
 				border-right: 1px solid rgb(235, 238, 240);
 				height: 100%;
+				min-width: 740px;
 			}			
 			.fa-user, .p-5 > a > .socialicons, .p-5 > a > .socialicons:hover {
 				padding-left: 5px;
@@ -521,6 +525,21 @@
 			}
 			#friend-office-id-00, #friend-id-00 {
 				opacity: 0;
+			}
+			@media screen and (max-width: 940px) {
+				.header_area.banner {
+					display: none;
+				}
+				.main {
+					margin-left: calc(50vw - 370px - 10px);
+					border-left: 1px solid rgb(235, 238, 240);
+					min-width: 740px;
+				}
+			}
+			@media screen and (max-width: 740px) {				
+				.main {
+					margin-left: 0;
+				}
 			}
 		</style>
     </head>
