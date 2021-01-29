@@ -1,0 +1,1093 @@
+<html lang="en">    
+    <head>
+		<!-- https://preview.colorlib.com/theme/meetme/ -->
+        <meta charset="utf-8">
+        <meta name="robots" content="noindex">
+        <meta name="googlebot" content="noindex">
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" >
+        <meta http-equiv="Pragma" content="no-cache" >
+        <meta http-equiv="Expires" content="0" >        
+        <meta name="viewport" content="width=device-width">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Homework #003 - Online CodeCamp#8 by Virachai Wongsena</title>
+        <link rel="alternate icon" class="js-site-favicon" type="image/png" href="https://github.githubassets.com/favicons/favicon.png">
+        <link rel="icon" class="js-site-favicon" type="image/svg+xml" href="https://github.githubassets.com/favicons/favicon.svg">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+        <style>
+            * {
+            box-sizing: border-box;
+            }
+            body {
+				line-height: 26px;
+				font-size: 16px;
+				font-family: "Roboto", sans-serif;
+				font-weight: normal;
+				color: #777777;
+				background-color: #fff;
+				padding: 0;
+				margin: 0;
+			}
+			.clearBoth { clear:both; }
+			h1, h2, h3, h4, h5, h6 {
+				font-family: "Heebo", sans-serif;
+				font-weight: bold;
+			}
+			a {
+				text-decoration: none;
+				transition: all 0.3s ease-in-out;
+			}	
+            .parent{
+				position: relative;
+			}
+			.child{
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}	
+
+            .child-vertical-center{
+				position: absolute;
+				top: 50%;				
+				transform: translateY(-50%);
+			}		
+
+			/* CSS friends */
+			.header_area{
+				/*width: 88px;				
+				margin-left: calc(50vw - 370px - 88px + 15px);
+				min-width: 88px;
+                float: left;*/
+                width: calc(50vw - 365px);
+                height: 100%;
+				position: fixed;
+                padding: 0;
+                margin: 0;
+                overflow: hidden;
+                overflow-y: auto;                             
+			}			
+			.header_area .vertical-menu{			
+				margin: 0;				
+				padding: 0;				
+				/*
+                border: 1px solid red;*/
+                margin-left: calc(50vw - 370px - 275px);
+                /*border-right: 1px solid rgb(235, 238, 240);*/
+                /*width: 275px;
+				 Twitter border */
+			}			
+			.header_area .area-padding{
+				width: 66px;   
+                width: 265px;             
+				/*overflow-y: hidden;*/
+				height: 100%;
+				padding-left: 10px;
+				padding-right: 10px;
+			}
+            h1.h1-heading {
+                margin: 0;				
+				padding: 0;	
+            }
+            a.link-button {
+                display: block;
+            }
+            a.link-button .link-area {
+                max-width: 100%;
+                min-width: 0%;             
+                border-radius: 9999px;
+                padding: 10px; 
+                width: -moz-fit-content;
+                width: fit-content;    
+                margin: 3px 0;           
+            }
+            a.link-button .link-area:hover {
+                background-color: #777777;        
+                background-color: rgba(29, 161, 242, 0.1);
+            }
+            a.link-button.active .icon-section i, a.link-button.active .icon-text span{
+                color: rgb(29, 161, 242);
+            }
+            .icon-section {
+                max-width: 32px;               
+                width: 32px;
+                text-align: center;
+            }
+            .icon-section i{
+                font-size: 27px;
+                color: rgb(29, 161, 242);                
+            }
+            .icon-text span{                
+                font-size: 19px;
+                font-weight: 700;
+                /*line-height: 25px;*/
+                text-align: start;
+                text-size-adjust: 100%;
+                color: black;
+                margin-right: 3px;
+                margin-left: 9px;
+
+            }
+            .link-area > div {
+                display: inline-block;
+            }
+            .menu-home {                
+                padding: 10px 0;
+                text-align: left;
+            }
+            .menu-catalog .icon-section i{
+                color: #707070;
+            }
+            .link-area > div.icon-text {
+                display: inline-block;
+            }
+            .main {
+                border-right: 1px solid rgb(235, 238, 240);  
+                border-left: 1px solid rgb(235, 238, 240);
+                /*border-left: 1px solid red;
+                border-left: 1px solid rgb(235, 238, 240);   */             
+                width: 100%;
+                max-width: 920px;
+                min-width: 300px;
+                /*width: 400px;*/
+                margin: 0;
+                /*margin-left: calc(100vw - 920px - 220px - 17px);*/
+                margin-left:  calc(50vw - 365px - 285px + (100vw - 920px)/2 );
+                margin-left:  calc( 27px + 285px + 50vw - (50vw - 365px + 920px)/2 );
+                height: 100%;
+                /* 435px scrollbar width : 17px*/
+            }
+            .menu-area {
+                min-height: 675px;
+            }
+            .main .title-text {
+                height: 24px;
+                width: 100%;
+                text-align: left;
+            }
+            .main h2.header-text2 {
+                font-weight: 800;
+                font-size: 19px;
+                color: rgb(15, 20, 25);
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+                line-height: 1.3125;
+                overflow-wrap: break-word;
+                min-width: 0px;
+                max-width: 100%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                padding: 0;
+                margin: 0;
+            }
+            .main .title-area .title-text {
+                margin-left: 15px;
+                padding: 15px 0;
+            }
+            .main .title-area .title-text > * {
+                display: inline;
+                margin: 0;
+            }
+            .main .title-area .title-text .fa{
+                color: grey;
+            }            
+            
+            .main .button-area a, .main .button-area a:hover {
+                background-color: transparent;
+                display: inline;
+                padding: 8px 10px;
+                margin: 0px;
+                margin-top: -5px;
+                border-radius: 9999px;
+                width: 19px;
+                height: 19px;
+                padding-top: 12px;
+            }
+            .main .button-area a:hover {
+                background-color: rgba(29, 161, 242, 0.1);
+            }
+            .main .menu-icon {
+                position: absolute;
+                margin: 21px; 
+                top: 0; 
+                right: 0;
+                /* color: rgb(29, 161, 242); */
+            }
+            .main .menu-icon .fa-search{                
+                color: rgb(29, 161, 242);
+                color: rgb(73, 80, 87);
+                cursor: pointer;
+                outline-color: rgb(16, 16, 16);
+            }
+            .main .menu-icon .fa-search:hover{                
+                color: rgb(29, 161, 242);                
+            }
+            .main .tab-area {
+                height: 53px;
+                border-bottom-width: 1px;
+                border-bottom-style: solid;
+                border-bottom-color: rgb(235, 238, 240);
+                -webkit-box-align: center;
+                align-items: center;
+            }
+            .main .switchbar {
+                display: inline-block;
+                width: calc(50%);
+                margin: 0;
+                text-align: center;
+            }
+            .main .switchbar:last-of-type {
+                position: absolute;
+                top: 0;
+                right: 10px;
+                width: 40px;                
+            }            
+            .tablist .presentation .tabitem {
+                border-bottom-color: rgb(29, 161, 242);
+                transform: translateY(1px);
+            }
+            .tablist .tabitem {
+                font-weight: 700;
+                font-size: 15px;
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+                line-height: 1.3125;
+                overflow-wrap: break-word;
+                min-width: 0px;
+                color: rgba(29,161,242,1.00);
+                border: 0 solid black;
+                border-bottom-color: rgb(235, 238, 240);
+                border-bottom-width: 2px;
+                border-bottom-style: solid;
+                transition-property: background-color, box-shadow;
+                transition-duration: 0.2s;
+                cursor: pointer;
+                -webkit-box-align: center;
+                align-items: center;
+                padding: 15px;
+                display: block;
+                width: auto;
+                transform: translateY(2px);
+                letter-spacing: 0.03rem;
+            }
+            .tablist .tabitem:hover,
+            .tablist .tabitem:visited,
+            .tablist .tabitem:active {
+                background-color: rgba(29, 161, 242, 0.1);
+            }         
+            
+            .tablist .tabitem{
+                width: 100%;
+                padding: 15px 0;
+            }
+            .main .switchbar:last-of-type {
+               border-radius: 50%;               
+            }
+            .tablist .tabitem.icon-arrow{
+                background-color: transparent; 
+            }
+            .tablist .tabitem:active .icon-arrow{
+                background-color: transparent;
+            }
+            #tab-phone-group i.fa-arrow-down {
+                color: rgb(29, 161, 242);  
+                color: orangered; 
+                padding: 7px;
+                margin: -7px 0px;                
+                background-color: rgba(29, 161, 242, 0.3);
+                border-radius: 9999px;
+                transform: translateY(2px);
+            }
+            #tab-phone-group i.fa-arrow-down:hover {
+                color: rgb(29, 161, 242);                
+            }
+            #myList3, .for-js-hide {
+                display: none;
+            }
+            #friend-office-id-00, #friend-id-00 {
+                opacity: 0;
+                opacity: 1;
+            }
+            .for-js {
+                border-bottom-width: 1px;
+                border-bottom-style: solid;
+                border-bottom-color: rgb(235, 238, 240);
+            }
+            .user-cell {
+                border-bottom-width: 1px;
+                border-bottom-color: rgb(235, 238, 240);
+                outline-style: none;
+                display: block;
+            }
+            .user-area {
+                outline-style: none;
+                transition-property: background-color, box-shadow;
+                transition-duration: 0.2s;
+                padding-bottom: 10px;
+                padding-top: 10px;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            .user-info {
+                white-space: nowrap;
+                color: rgb(15, 20, 25);
+                /* font-weight: 700; */
+                font-size: 15px;
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+                line-height: 1.3125;
+                overflow-wrap: break-word;
+                min-width: 0px;
+            }
+
+            .phone-item {
+                border-bottom-width: 1px;
+                border-bottom-color: rgb(235, 238, 240);
+                outline-style: none;
+                display: block;
+            }
+            .article {
+                color: black;
+                outline-style: none;
+                transition-property: background-color, box-shadow;
+                transition-duration: 0.2s;
+                padding: 0px 10px;
+            }            
+            .flex-container {
+                display: flex;
+                flex-direction: row;     
+                /*background-color: #f1f1f1;    
+                border: 1px dashed  #f1f1f1;*/
+                background-color: transparent;  
+                border-bottom: 1px dashed  orangered;       
+            }
+            .phone-item:nth-child(even) {
+                background-color: #f1f1f1;;   
+            }
+            /*.flex-container:first-child {      
+                border-top: 1px dashed  orangered;
+            }*/
+            .flex-container > div {                              
+                font-size: 15px;
+                display: flex;
+                justify-content:space-between;                            
+                width: auto;
+                border-right: 1px dashed  orangered;                
+                padding: 5px;
+            }  
+            .flex-container > div > span {     
+                    display: block;               
+                    overflow: hidden;
+                    text-overflow: ellipsis; 
+                    white-space: nowrap;
+                }         
+            .tag-number {
+                min-width: 50px;
+            }
+            .tag-group-en {
+                min-width: 90px;
+            }
+            .tag-operation-th {
+                min-width: 150px;
+                text-align: left;
+            }
+            .tag-organization-en {
+                min-width: calc(50% - (290px)/2 );
+            }
+            .tag-organization-th {
+                min-width: calc(50% - (290px)/2 );
+            }
+            .flex-container > div.tag-short-name,
+            .flex-container > div.tag-short-name2,
+            .flex-container > div.tag-short-name3 {
+                display: none;
+            }
+
+            .list-area {
+                width: 100%;
+                height: 100%;
+                max-height: calc(100vh - 114px);
+                /* background-color: #eee; */
+                overflow: scroll;
+                overflow-x: hidden;
+                position: sticky;
+                top: 0;
+            }
+        </style>
+    </head>
+    <body style="overflow-y: scroll;overflow-x: hidden;">
+		<header class="header_area">
+			<div class="vertical-menu">				
+                <div class="area-padding" style="position: relative;">
+                    <div class="menu-area">
+                        <div class="menu-home">
+                            <h1 role="heading" class="h1-heading">
+                                <a href="phonebook.html" role="button" class="link-button">
+                                    <div class="link-area parent">
+                                        <div class="icon-section"><i class="fas fa-home"></i></div>
+                                        <div class="icon-text child-vertical-center"><span>Home</span></div>
+                                        <div class="icon-text" style="opacity: 0;"><span>Home</span></div>                                        
+                                    </div>
+                                </a>
+                            </h1>
+                        </div>
+                        <div class="menu-catalog">
+                            <nav aria-label="Primary" role="navigation" class="nav-main">
+                                <a href="phonebook.html#airline" role="button" class="link-button">
+                                    <div class="link-area parent">
+                                        <div class="icon-section"><i class="fas fa-plane"></i></div>
+                                        <div class="icon-text child-vertical-center"><span>Airline (สายการบิน)</span></div>
+                                        <div class="icon-text" style="opacity: 0;"><span>Airline (สายการบิน)</span></div>                                        
+                                    </div>
+                                </a>
+                                <!-- <a href="phonebook.html#bank" role="button" class="link-button active"></a> -->
+                                <a href="phonebook.html#bank" role="button" class="link-button">
+                                    <div class="link-area parent">
+                                        <div class="icon-section"><i class="fas fa-hand-holding-usd"></i></div>
+                                        <div class="icon-text child-vertical-center"><span>Bank (ธนาคาร)</span></div>
+                                        <div class="icon-text" style="opacity: 0;"><span>Bank (ธนาคาร)</span></div>                                        
+                                    </div>
+                                </a>
+
+                                <a href="phonebook.html#bank" role="button" class="link-button">
+                                    <div class="link-area parent">
+                                        <div class="icon-section"><i class="fas fa-store-alt"></i></div>
+                                        <div class="icon-text child-vertical-center"><span>Business (ธุรกิจ)</span></div>
+                                        <div class="icon-text" style="opacity: 0;"><span>Business (ธุรกิจ)</span></div>                                        
+                                    </div>
+                                </a>
+
+                                <a href="phonebook.html#bank" role="button" class="link-button">
+                                    <div class="link-area parent">
+                                        <div class="icon-section"><i class="fas fa-utensils"></i></div>
+                                        <div class="icon-text child-vertical-center"><span>Food (อาหาร)</span></div>
+                                        <div class="icon-text" style="opacity: 0;"><span>Food (อาหาร)</span></div>                                        
+                                    </div>
+                                </a>
+
+                                <a href="phonebook.html#bank" role="button" class="link-button">
+                                    <div class="link-area parent">
+                                        <div class="icon-section"><i class="fas fa-blind"></i></div>
+                                        <div class="icon-text child-vertical-center"><span>Foundation (มูลนิธิ)</span></div>
+                                        <div class="icon-text" style="opacity: 0;"><span>Foundation (มูลนิธิ)</span></div>                                        
+                                    </div>
+                                </a>
+
+                                <a href="phonebook.html#bank" role="button" class="link-button">
+                                    <div class="link-area parent">
+                                        <div class="icon-section"><i class="fas fa-procedures"></i></div>
+                                        <div class="icon-text child-vertical-center"><span>Hospital (รพ.)</span></div>
+                                        <div class="icon-text" style="opacity: 0"><span>Hospital (รพ.)</span></div>                                        
+                                    </div>
+                                </a>
+
+                                <a href="phonebook.html#bank" role="button" class="link-button">
+                                    <div class="link-area parent">
+                                        <div class="icon-section"><i class="fas fa-car-crash"></i></div>
+                                        <div class="icon-text child-vertical-center"><span>Insurance (ประกัน)</span></div>
+                                        <div class="icon-text" style="opacity: 0;"><span>Insurance (ประกัน)</span></div>                                        
+                                    </div>
+                                </a>
+
+                                <a href="phonebook.html#bank" role="button" class="link-button">
+                                    <div class="link-area parent">
+                                        <div class="icon-section"><i class="fas fa-shield-alt"></i></div>
+                                        <div class="icon-text child-vertical-center"><span>Police (ตำรวจ)</span></div>
+                                        <div class="icon-text" style="opacity: 0;"><span>Police (ตำรวจ)</span></div>                                        
+                                    </div>
+                                </a>
+
+                                <a href="phonebook.html#bank" role="button" class="link-button">
+                                    <div class="link-area parent">
+                                        <div class="icon-section"><i class="fas fa-hammer"></i></div>
+                                        <div class="icon-text child-vertical-center"><span>Property (อสังหา)</span></div>
+                                        <div class="icon-text" style="opacity: 0;"><span>Property (อสังหา)</span></div>                                        
+                                    </div>
+                                </a>
+
+                                <a href="phonebook.html#bank" role="button" class="link-button">
+                                    <div class="link-area parent">
+                                        <div class="icon-section"><i class="fas fa-landmark"></i></div>
+                                        <div class="icon-text child-vertical-center"><span>Public (ราชการ)</span></div>
+                                        <div class="icon-text" style="opacity: 0;"><span>Public (ราชการ)</span></div>                                        
+                                    </div>
+                                </a>
+
+                                <a href="phonebook.html#bank" role="button" class="link-button">
+                                    <div class="link-area parent">
+                                        <div class="icon-section"><i class="fas fa-phone-volume"></i></div>
+                                        <div class="icon-text child-vertical-center"><span>Telecom (โทรคม)</span></div>
+                                        <div class="icon-text" style="opacity: 0;"><span>Telecom (โทรคม)</span></div>                                        
+                                    </div>
+                                </a>
+
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="main">
+			<div class="main-area">
+				<div class="main-title">
+					<div class="title-section">
+						<div class="title-area" style="position: relative;height: 60px;">							
+                            <div class="title-text">
+                                <div class="button-area">
+                                    <a href="phonebook.html" title="Phone Book"><i class="fa fa-lg fa-address-book" aria-hidden="true"></i></a>
+                                </div>
+								<h2 class="header-text2">                                    
+                                    <span class="for-js-hide text-hide1">Thailand's Tel. Number</span>
+                                    <span class="for-js-hide text-hide2">Thailand's Telephone Number</span>
+                                    <span class="text-hide3">Thailand's Telephone Number System</span>
+								</h2>
+							</div>
+							<div class="menu-icon">	
+                                <a href="#search" title="Search Phone Book"><i class="fa fa-lg fa-search" aria-hidden="true"></i></a>						
+							</div>
+						</div>
+					</div>					
+                </div>
+
+                <div class="tab-area">
+					<div class="tab-friend tablist" style="position: relative;">
+						<div class="switchbar presentation">
+							<a href="#all" class="tabitem">
+								<div class="tab-friend-section" id="tab-phone-all">
+									<span>All</span>
+								</div>
+							</a>
+						</div><div class="switchbar">
+							<a href="#airline" class="tabitem">
+								<div class="tab-friend-section" id="tab-phone-group-active">
+                                    <span>Airline</span>
+								</div>
+							</a>
+                        </div>
+                        <div class="switchbar">
+							<a href="#group" class="tabitem icon-arrow" style="border-color: transparent;">
+                                <div class="tab-friend-section" id="tab-phone-group" style="padding-right: 5px;">                                    
+                                    <span><i class="fas fa-arrow-down"></i></span>
+								</div>
+                            </a>
+                        </div>
+					</div>
+				</div>	
+            </div>
+
+            <div class="list-area">
+				<div class="all-my-friends">					
+					<div class="friend-lists">
+                        <div class="friend-lists-online for-js-hide" id="myListOrigin"><div class="for-js row phone-item" id="phone-id-0000">
+                                <div class="article flex-container">
+                                    <div class="tag-number">
+                                        <span>0000</span>
+                                    </div>
+                                    <div class="tag-group-en"> 
+                                        <span>Group</span>                                   
+                                    </div>
+                                    <div class="tag-operation-th">    
+                                        <span>ศูนย์บริการฯ 0000</span>                                  
+                                    </div>
+                                    <div class="tag-organization-en">
+                                        <span>Organization</span>                                     
+                                    </div>                                  
+                                    <div class="tag-organization-th" style="border-right: 0px;"> 
+                                        <span>องค์กร</span>                                    
+                                    </div>                                    
+                                    <div class="tag-short-name" style="border-right: 0px;">
+                                        <span>ศูนย์บริการฯ 0000 องค์กร</span>                                     
+                                    </div>
+                                    <div class="tag-short-name2" style="border-right: 0px;">
+                                        <span>ศูนย์บริการฯ องค์กร</span>                                     
+                                    </div>
+                                    <div class="tag-short-name3" style="border-right: 0px;">
+                                        <span>องค์กร</span>                                     
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="phone-list-all" id="myListShowAll">
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+        </main>
+        <style>
+            @media screen and (max-width: 1280px) {
+                .main{
+                    /*display: none;*/
+                    min-width: 640px;
+                    width: calc(100vw - ( 78px + 34px + 5px ) - 20px );
+                    margin: 0;
+                    margin-left: calc(78px + 34px + 5px);                    
+                }
+                .header_area {
+                    width: 100%;
+                    max-width: calc(78px + 34px + 5px);
+                    border-right: 1px solid red; 
+                }
+                .header_area .vertical-menu {
+                    width: 78px;
+                    margin-left: 5px;
+                    float: right;  
+                }
+                .header_area .area-padding {
+                    width: 66px;                
+                    padding-left: 5px;
+                    padding-right: 5px;
+                }
+
+                .link-area > div.icon-text {
+                    display: inline-block;
+                    display: none;
+                }
+            }
+            @media screen and (max-width: 920px) {
+                .flex-container > div.tag-organization-en {display: none;}
+                .flex-container > div.tag-organization-th { min-width: calc(100% - 285px);} 
+            }
+            @media screen and (max-width: 768px) {
+                .flex-container > div.tag-operation-th {display: none;}
+                .flex-container > div.tag-organization-en {display: none;}
+                .flex-container > div.tag-organization-th {display: none;} 
+                .flex-container > div.tag-short-name {display: flex; min-width: calc(100% - 150px);}
+                .text-hide3, .text-hide1 {display: none;}
+                .text-hide2 {display: inline-block;}
+                .header_area{ display: none;}
+                .main{                    
+                    min-width: 300px;
+                    max-width: 540px;
+                    width: 100%;
+                    margin: 0 auto;
+                    /*margin-left: calc(78px + 34px + 5px);*/              
+                }
+            }
+            @media screen and (max-width: 540px) {
+                .flex-container > div.tag-operation-th {display: none;}
+                .flex-container > div.tag-organization-en {display: none;}
+                .flex-container > div.tag-organization-th {display: none;} 
+                .flex-container > div.tag-short-name {display: none;}
+                .flex-container > div.tag-short-name2 {display: flex; min-width: calc(100% - 150px);}
+                .text-hide2, .text-hide3 {display: none;}
+                .text-hide1 {display: inline-block;}
+                .main{
+                    min-width: 300px;
+                    max-width: calc(100vw - 2px);
+                    height: 100vh;
+                    width: 100vw;
+                    margin:0;
+                    padding: 0;
+                    border: 0;
+                    overflow-x: hidden;
+                    overflow-y: visible;
+                    /*margin-left: calc(78px + 34px + 5px);*/              
+                }                 
+            }
+            @media screen and (max-width: 360px) {
+                .flex-container > div.tag-operation-th {display: none;}
+                .flex-container > div.tag-organization-en {display: none;}
+                .flex-container > div.tag-organization-th {display: none;} 
+                .flex-container > div.tag-short-name {display: none;}
+                .flex-container > div.tag-short-name2 {display: none;}
+                .flex-container > div.tag-short-name3 { display: flex; min-width: calc(100% - 150px);}
+                .flex-container > div.tag-short-name3 > span {     
+                    display: block;               
+                    overflow: hidden;
+                    text-overflow: ellipsis; 
+                    white-space: nowrap;
+                }
+                .menu-icon {display: none;}
+            }
+            @media screen and (max-width: 320px) {
+                #tab-phone-group-active {
+                    text-align: center;
+                    padding-right: 40px;
+                }
+            }
+            
+            
+        </style>
+        <script>
+
+            var elmOrigin = () => {
+                //let itm = document.getElementById("myList2").firstChild;
+                let itm = document.querySelector('#myListOrigin');
+                if( !(itm !== null )) return false;
+                //var itm = document.getElementById("myList2").firstChild;
+                // Copy the <li> element and its child nodes
+                let firstElm = itm.firstChild;
+                
+                if( !(firstElm !== null )) return false;	
+                return firstElm.cloneNode(true);
+            }
+
+            var setElm = (item, index, nodesDiv) => {
+                //let nodesDiv = document.querySelectorAll('div[id^="friend-id-"]');
+                if( !(nodesDiv !== null ) ) return false;
+                //var first = nodesDiv[0];	
+                let intNum = parseInt(nodesDiv.length) - 1;
+                let str = "0000" + intNum;
+                let subNum = 4;
+                let lastNum = str.substr(str.length - subNum, subNum);
+                let elmId = "phone-id-" + lastNum;
+                //let last = document.getElementById("friend-id-00").setAttribute("id", "friend-id-" + lastNum);
+                let lastElm = nodesDiv[intNum];
+                setDataElm(item, lastNum, lastElm);
+                let strId = nodesDiv[0].id;
+                let preId = strId.substr(0, strId.length - subNum);
+                //document.title = preId;
+                lastElm.setAttribute("id", preId + lastNum);
+                //document.title = lastNum;
+            }
+
+            var setDataElm = (item, index, elmId) => {
+                elmId.querySelector(".tag-number > span").innerHTML = item.no;
+                elmId.querySelector(".tag-group-en > span").innerHTML = item.groupEn;
+                elmId.querySelector(".tag-operation-th > span").innerHTML = item.serviceTh;
+                elmId.querySelector(".tag-organization-en > span").innerHTML = item.OrgEn;
+                elmId.querySelector(".tag-organization-th > span").innerHTML = item.orgTh;
+                let strName1 = item.serviceTh +" "+ item.orgTh;
+                let strName2 = strName1.replace(item.no+" ", "");
+                strName2 = strName2.replace("ศูนย์บริการฯ", "ศูนย์บริการ")
+                let strName3 = strName2.replace("บริษัท ", "");
+                strName3 = strName3.replace(" จำกัด", "");
+                strName3 = strName3.replace(" (มหาชน)", "");
+                strName3 = strName3.replace(item.serviceTh + " ", "");
+                elmId.querySelector(".tag-short-name > span").innerHTML = strName1;
+                elmId.querySelector(".tag-short-name2 > span").innerHTML = strName2;
+                elmId.querySelector(".tag-short-name3 > span").innerHTML = strName3;
+            }
+
+            var cloneElm = (item, index) => {
+                let cln = elmOrigin();
+                if(!cln) return;
+
+                // Append the cloned <li> element to <ul> with id="myList1"
+                var divElm = document.querySelector('#myListShowAll');
+                if( !(divElm !== null )) return false;
+                document.getElementById("myListShowAll").appendChild(cln);
+                
+                let nodesDiv = document.querySelectorAll('div[id^="phone-id-"]')
+                setElm(item, index, nodesDiv);
+
+            }
+
+            var getDataList = () => {
+                //cloneElm(0, 0);
+                phoneData.forEach( cloneElm );
+
+            }
+            setTimeout(function(){ getDataList(); }, 500 );
+
+            var phoneData = [
+{"no": "1100", "groupEn": "Telecom", "groupName": "Telecom (กลุ่มโทรคม)", "groupTh": "กลุ่มโทรคม", "serviceEn": "TOT Call Center 1100", "serviceTh": "ศูนย์บริการ TOT 1100", "OrgEn": "TOT PLC.", "orgTh": "บริษัท ทีโอที จำกัด (มหาชน)"}, 
+{"no": "1101", "groupEn": "Business", "groupName": "Business (กลุ่มธุรกิจ)", "groupTh": "กลุ่มธุรกิจ", "serviceEn": "Giffarine Ordering Service 1101", "serviceTh": "สั่งซื้อสินค้า Giffarine 1101", "OrgEn": "Giffarine Skyline Unity Co., Ltd.", "orgTh": "บริษัท กิฟฟารีน สกายไลน์ ยูนิตี้ จำกัด"}, 
+{"no": "1102", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "Hotline 1102", "serviceTh": "สายด่วนวุฒิสภา 1102", "OrgEn": "The Secretariat of the Senate (IPA: Independent Public Agency)", "orgTh": "สำนักงานเลขาธิการวุฒิสภา ส่วนราชการอิสระ"}, 
+{"no": "1103", "groupEn": "Telecom", "groupName": "Telecom (กลุ่มโทรคม)", "groupTh": "กลุ่มโทรคม", "serviceEn": "TT&T Contact Center 1103", "serviceTh": "ศูนย์บริการ TT&T 1103", "OrgEn": "TT&T PLC.", "orgTh": "บริษัท ทีที แอนด์ที จำกัด (มหาชน)"}, 
+{"no": "1104", "groupEn": "Property", "groupName": "Property (กลุ่มอสังหาริมทรัพย์)", "groupTh": "กลุ่มอสังหาริมทรัพย์", "serviceEn": "Call Center 1104", "serviceTh": "ศูนย์บริการฯ 1104", "OrgEn": "Suetrong Property Co., Ltd.", "orgTh": "บริษัท ซื่อตรง พร็อพเพอร์ตี้ จำกัด"}, 
+{"no": "1105", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "TCEB Call Center 1105", "serviceTh": "สายด่วน สสปน 1105", "OrgEn": "Convention and Exhibition Bureau (PO: Public Organization)", "orgTh": "สำนักงานส่งเสริมการจัดการประชุมและนิทรรศการ องค์การมหาชน"}, 
+{"no": "1106", "groupEn": "Hospital", "groupName": "Hospital (กลุ่มโรงพยาบาล)", "groupTh": "กลุ่มโรงพยาบาล", "serviceEn": "Asia Hospital Hotline 1106", "serviceTh": "สายด่วน รพ เอเชีย 1106", "OrgEn": "Asian Medical Devices Co., Ltd.", "orgTh": "บริษัท เอเซียน เมดิคอล ดีไวส์ จำกัด"}, 
+{"no": "1108", "groupEn": "Business", "groupName": "Business (กลุ่มธุรกิจ)", "groupTh": "กลุ่มธุรกิจ", "serviceEn": "AJ Call Center 1108", "serviceTh": "ศูนย์บริการฯ AJ 1108", "OrgEn": "Crown Tech Advance PLC.", "orgTh": "บริษัท คราวน์ เทค แอดวานซ์ จำกัด (มหาชน)"}, 
+{"no": "1109", "groupEn": "Business", "groupName": "Business (กลุ่มธุรกิจ)", "groupTh": "กลุ่มธุรกิจ", "serviceEn": "Mesense Shop 1109", "serviceTh": "สั่งซื้อสินค้า Mesense 1109", "OrgEn": "Mesense Co., Ltd.", "orgTh": "บริษัท มีเซ้นส์ จำกัด"}, 
+{"no": "1110", "groupEn": "Business", "groupName": "Business (กลุ่มธุรกิจ)", "groupTh": "กลุ่มธุรกิจ", "serviceEn": "Traveler’s Personal Assistant BUG 1110", "serviceTh": "ศูนย์ช่วยเหลือนักเดินทาง BUG 1110", "OrgEn": "Samart Multimedia Co., Ltd", "orgTh": "บริษัท สามารถ มัลติมีเดีย จำกัด"}, 
+{"no": "1111", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "Government Contact Center GCC 1111", "serviceTh": "ศูนย์บริการข้อมูลภาครัฐเพื่อประชาชน 1111", "OrgEn": "Electronic Government Agency, Ministry of Information and Communication Technology", "orgTh": "ศูนย์บริการข้อมูลภาครัฐเพื่อประชาชน กระทรวงเทคโนโลยีสารสนเทศและการสื่อสาร"}, 
+{"no": "1112", "groupEn": "Food", "groupName": "Food (กลุ่มอาหาร)", "groupTh": "กลุ่มอาหาร", "serviceEn": "The Pizza Company 1112", "serviceTh": "เดอะ พิซซ่า คอมปะนี 1112", "OrgEn": "Minor International PLC.", "orgTh": "บริษัท เดอะไมเนอร์ฟู้ด กรุ๊ป จำกัด (มหาชน)"}, 
+{"no": "1113", "groupEn": "Business", "groupName": "Business (กลุ่มธุรกิจ)", "groupTh": "กลุ่มธุรกิจ", "serviceEn": "Information Service BUG 1113", "serviceTh": "ศูนย์บริการข้อมูลทางโทรศัพท์ BUG 1113", "OrgEn": "Samart Multimedia Co., Ltd", "orgTh": "บริษัท สามารถ มัลติมีเดีย จำกัด"}, 
+{"no": "1114", "groupEn": "Business", "groupName": "Business (กลุ่มธุรกิจ)", "groupTh": "กลุ่มธุรกิจ", "serviceEn": "Toyota Nonthaburi Call Center 1114", "serviceTh": "ศูนย์บริการฯ โตโยต้านนทบุรี 1114", "OrgEn": "Toyota Nonthaburi Co., Ltd.", "orgTh": "บริษัท โตโยต้านนทบุรี ผู้จำหน่ายโตโยต้า จำกัด"}, 
+{"no": "1115", "groupEn": "Bank", "groupName": "Bank (กลุ่มธนาคาร)", "groupTh": "กลุ่มธนาคาร", "serviceEn": "Call Center 1115", "serviceTh": "ศูนย์บริการฯ 1115", "OrgEn": "Government Savings Bank", "orgTh": "ธนาคารออมสิน"}, 
+{"no": "1119", "groupEn": "Insurance", "groupName": "Insurance (กลุ่มประกันภัย)", "groupTh": "กลุ่มประกันภัย", "serviceEn": "Accidental Report 1119", "serviceTh": "แจ้งเหตุเกี่ยวกับสินไหม 1119", "OrgEn": "Chao Phaya Insurance PLC.", "orgTh": "บริษัท เจ้าพระยาประกันภัย จำกัด (มหาชน)"}, 
+{"no": "1122", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "Hotline 1122", "serviceTh": "สายด่วน 1122", "OrgEn": "Office of the Permanent Secretary, Prime Minister Office", "orgTh": "สำนักงานปลัดสำนักนายกรัฐมนตรี"}, 
+{"no": "1123", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "Call Center 1123", "serviceTh": "ศูนย์บริการฯ 1123", "OrgEn": "Office of the Permanent Secretary, Ministry of Transportation", "orgTh": "สำนักงานปลัดกระทรวงคมนาคม"}, 
+{"no": "1124", "groupEn": "Insurance", "groupName": "Insurance (กลุ่มประกันภัย)", "groupTh": "กลุ่มประกันภัย", "serviceEn": "Thai Life Care Center 1124", "serviceTh": "ไทยประกันชีวิตแคร์เซ็นเตอร์ 1124", "OrgEn": "Thai Life Insurance PLC.", "orgTh": "บริษัท ไทยประกันชีวิต จำกัด (มหาชน)"}, 
+{"no": "1125", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "Call Center 1125", "serviceTh": "ศูนย์บริการฯ 1125", "OrgEn": "Metropolitan Waterworks Authority, Ministry of Interior", "orgTh": "การประปานครหลวง กระทรวงมหาดไทย"}, 
+{"no": "1126", "groupEn": "Airline", "groupName": "Airline (กลุ่มสายการบิน)", "groupTh": "กลุ่มสายการบิน", "serviceEn": "Call Center 1126", "serviceTh": "ศูนย์บริการฯ 1126", "OrgEn": "Orient Thai Airlines Co., Ltd.", "orgTh": "บริษัท โอเรียนท์ไทย แอร์ไลน์ จำกัด"}, 
+{"no": "1129", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "PEA Call Center 1129", "serviceTh": "ศูนย์บริการฯ กฟภ. 1129", "OrgEn": "Provincial Electricity Authority, Ministry of Interior", "orgTh": "การไฟฟ้าส่วนภูมิภาค กระทรวงมหาดไทย"}, 
+{"no": "1130", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "MEA Call Center 1130", "serviceTh": "ศูนย์บริการฯ กฟน. 1130", "OrgEn": "Metropolitan Electricity Authority, Ministry of Interior", "orgTh": "การไฟฟ้านครหลวง กระทรวงมหาดไทย"}, 
+{"no": "1133", "groupEn": "Telecom", "groupName": "Telecom (กลุ่มโทรคม)", "groupTh": "กลุ่มโทรคม", "serviceEn": "TOT Phone Book Service 1133", "serviceTh": "บริการสอบถามเลขหมาย TOT 1133", "OrgEn": "TOT PLC.", "orgTh": "บริษัท ทีโอที จำกัด (มหาชน)"}, 
+{"no": "1134", "groupEn": "Foundation", "groupName": "Foundation (กลุ่มมูลนิธิ)", "groupTh": "กลุ่มมูลนิธิ", "serviceEn": "Hotline 1134", "serviceTh": "สายด่วน 1134", "OrgEn": "Pavena Foundation", "orgTh": "มูลนิธิปวีณา หงสกุล เพื่อเด็กและสตรี"}, 
+{"no": "1135", "groupEn": "Police", "groupName": "Police (กลุ่มตำรวจ)", "groupTh": "กลุ่มตำรวจ", "serviceEn": "Consumer Protection Police Division 1135", "serviceTh": "กองบังคับการปราบปรามการกระทำผิดเกี่ยวกับการคุ้มครองผู้บริโภค 1135", "OrgEn": "Consumer Protection Police Division, Royal Thai Police", "orgTh": "กองกำกับการปราบปรามการกระทำผิดเกี่ยวกับการคุ้มครองผู้บริโภค สำนักงานตำรวจแห่งชาติ"}, 
+{"no": "1136", "groupEn": "Police", "groupName": "Police (กลุ่มตำรวจ)", "groupTh": "กลุ่มตำรวจ", "serviceEn": "Natural Resources and Environmental Crime Division 1136", "serviceTh": "กองบังคับการปราบปรามการกระทำความผิดเกี่ยวกับทรัพยากรธรรมชาติและสิ่งแวดล้อม 1136", "OrgEn": "Natural Resources and Environmental Crime Division, Royal Thai Police", "orgTh": "กองกำกับการปราบปรามการกระทำผิดเกี่ยวกับทรัพยากรธรรมชาติและสิ่งแวดดล้อม สำนักงานตำรวจแห่งชาติ"}, 
+{"no": "1137", "groupEn": "Business", "groupName": "Business (กลุ่มธุรกิจ)", "groupTh": "กลุ่มธุรกิจ", "serviceEn": "JS100 Radio 1137", "serviceTh": "สถานีวิทยุ จส.100 1137", "OrgEn": "Pacific Corporation Co., Ltd.", "orgTh": "บริษัท แปซิฟิก คอร์ปอเรชั่น จำกัด (จ.ส.100)"}, 
+{"no": "1141", "groupEn": "Telecom", "groupName": "Telecom (กลุ่มโทรคม)", "groupTh": "กลุ่มโทรคม", "serviceEn": "Friendly Solution, TOT 1141", "serviceTh": "บริการระบบโทรผ่านอินเทอร์เน็ต TOT 1141", "OrgEn": "TOT PLC.", "orgTh": "บริษัท ทีโอที จำกัด (มหาชน)"}, 
+{"no": "1142", "groupEn": "Property", "groupName": "Property (กลุ่มอสังหาริมทรัพย์)", "groupTh": "กลุ่มอสังหาริมทรัพย์", "serviceEn": "Call Center 1142", "serviceTh": "ศูนย์บริการฯ 1142", "OrgEn": "A.D Houses Co., Ltd.", "orgTh": "บริษัท เอ.ดี. เฮ้าส์ จำกัด"}, 
+{"no": "1144", "groupEn": "Telecom", "groupName": "Telecom (กลุ่มโทรคม)", "groupTh": "กลุ่มโทรคม", "serviceEn": "Paclink Pager Service 1144", "serviceTh": "วิทยุติดตามตัว Paclink 1144", "OrgEn": "Paclink (Thailand) Co., Ltd.", "orgTh": "บริษัท แพ็คลิ้งค์ (ประเทศไทย) จำกัด"}, 
+{"no": "1145", "groupEn": "Food", "groupName": "Food (กลุ่มอาหาร)", "groupTh": "กลุ่มอาหาร", "serviceEn": "Chester’s Delivery 1145", "serviceTh": "Chester’s Delivery 1145", "OrgEn": "Chester’s Food Co., Ltd.", "orgTh": "บริษัท เชสเตอร์ฟู้ด จำกัด"}, 
+{"no": "1146", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "DRR Hotline 1146", "serviceTh": "สอบถามเส้นทาง สายด่วน 1146", "OrgEn": "Department of Rural Roads, Ministry of Transport", "orgTh": "กรมทางหลวงชนบท กระทรวงคมนาคม"}, 
+{"no": "1147", "groupEn": "Business", "groupName": "Business (กลุ่มธุรกิจ)", "groupTh": "กลุ่มธุรกิจ", "serviceEn": "Call Center 1147", "serviceTh": "ศูนย์บริการฯ 1147", "OrgEn": "Simat Technologies PLC.", "orgTh": "บริษัท ไซแมท เทคโนโลยี จำกัด (มหาชน)"}, 
+{"no": "1148", "groupEn": "Telecom", "groupName": "Telecom (กลุ่มโทรคม)", "groupTh": "กลุ่มโทรคม", "serviceEn": "AIS Serenade Call Center 1148", "serviceTh": "ศูนย์บริการลูกค้า AIS Serenade 1148", "OrgEn": "Advanced Info Service PLC.", "orgTh": "บริษัท แอดวานซ์ อินโฟร์ เซอร์วิส จำกัด (มหาชน)"}, 
+{"no": "1149", "groupEn": "Telecom", "groupName": "Telecom (กลุ่มโทรคม)", "groupTh": "กลุ่มโทรคม", "serviceEn": "AIS Corporate Call Center 1149", "serviceTh": "ศูนย์บริการลูกค้าองค์กร AIS Corporate 1149", "OrgEn": "Advanced Info Service PLC.", "orgTh": "บริษัท แอดวานซ์ อินโฟร์ เซอร์วิส จำกัด (มหาชน)"}, 
+{"no": "1150", "groupEn": "Food", "groupName": "Food (กลุ่มอาหาร)", "groupTh": "กลุ่มอาหาร", "serviceEn": "Pizza Hut 1150", "serviceTh": "Pizza Hut 1150", "OrgEn": "Yum Restaurants International (Thailand) Co., Ltd.", "orgTh": "บริษัท ยัมเรสเทอรองตส์ อินเตอร์เนชั่นแนล (ประเทศไทย) จำกัด"}, 
+{"no": "1151", "groupEn": "Property", "groupName": "Property (กลุ่มอสังหาริมทรัพย์)", "groupTh": "กลุ่มอสังหาริมทรัพย์", "serviceEn": "Call Center 1151", "serviceTh": "ศูนย์บริการฯ 1151", "OrgEn": "Land and Resort Co., Ltd.", "orgTh": "บริษัท แลนด์ แอนด์ รีสอร์ท จำกัด"}, 
+{"no": "1153", "groupEn": "Business", "groupName": "Business (กลุ่มธุรกิจ)", "groupTh": "กลุ่มธุรกิจ", "serviceEn": "B-Quick 1153", "serviceTh": "ศูนย์บริการฯ B-Quick 1153", "OrgEn": "B-Quick Co., Ltd.", "orgTh": "บริษัท บี-ควิก จำกัด"}, 
+{"no": "1154", "groupEn": "Business", "groupName": "Business (กลุ่มธุรกิจ)", "groupTh": "กลุ่มธุรกิจ", "serviceEn": "Call Center 1154", "serviceTh": "ศูนย์บริการฯ 1154", "OrgEn": "Asian Phytoceutical PLC.", "orgTh": "บริษัท เอเชียน ไฟย์โตซูติคอลส์ จำกัด (มหาชน)"}, 
+{"no": "1155", "groupEn": "Police", "groupName": "Police (กลุ่มตำรวจ)", "groupTh": "กลุ่มตำรวจ", "serviceEn": "Tourist Police Division 1155", "serviceTh": "ตำรวจท่องเที่ยว 1155", "OrgEn": "Tourist Police Division, Royal Thai Police", "orgTh": "กองบังคับการตำรวจท่องเที่ยว สำนักงานตำรวจแห่งชาติ"}, 
+{"no": "1156", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "VEC Hotline 1156", "serviceTh": "สายด่วนอาชีวะ 1156", "OrgEn": "Office of the Vocational Education Commission, Ministry of Education", "orgTh": "สำนักงานคณะกรรมการการอาชีวศึกษา กระทรวงศึกษาธิการ"}, 
+{"no": "1157", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "Informal Debt Call Center 1157", "serviceTh": "ปรึกษาเกี่ยวกับคดีหนี้นอกระบบ 1157", "OrgEn": "Office of The Attorney General (IPA)", "orgTh": "สำนักงานอัยการสูงสุด ส่วนราชการอิสระ"}, 
+{"no": "1158", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "Call Center 1158", "serviceTh": "ศูนย์บริการฯ 1158", "OrgEn": "Deposit Protection Agency (IPA)", "orgTh": "สถาบันคุ้มครองเงินฝาก ส่วนราชการอิสระ"}, 
+{"no": "1159", "groupEn": "Insurance", "groupName": "Insurance (กลุ่มประกันภัย)", "groupTh": "กลุ่มประกันภัย", "serviceEn": "Customer Relation 1159", "serviceTh": "ศูนย์ลูกค้าสัมพันธ์ 1159", "OrgEn": "Krungthai-AXA Life Insurance PLC.", "orgTh": "บริษัท กรุงไทย-แอกซ่า ประกันชีวิต จำกัด (มหาชน)"}, 
+{"no": "1160", "groupEn": "Property", "groupName": "Property (กลุ่มอสังหาริมทรัพย์)", "groupTh": "กลุ่มอสังหาริมทรัพย์", "serviceEn": "Customer Service 1160", "serviceTh": "บริการลูกค้า 1160", "OrgEn": "Siam Global House PLC.", "orgTh": "บริษัท สยามโกลบอลเฮ้าส์ จำกัด (มหาชน)"}, 
+{"no": "1161", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "RD Call Center 1161", "serviceTh": "ศูนย์บริการสรรพากร 1161", "OrgEn": "The Revenue Department, Ministry of Finance", "orgTh": "กรมสรรพากร กระทรวงการคลัง"}, 
+{"no": "1162", "groupEn": "Food", "groupName": "Food (กลุ่มอาหาร)", "groupTh": "กลุ่มอาหาร", "serviceEn": "Nestle Drinking Water 1162", "serviceTh": "สั่งน้ำดื่ม เนสท์เล่ 1162", "OrgEn": "Nestle (Thai) Ltd.", "orgTh": "บริษัท เนสท์เล่ (ไทย) จำกัด"}, 
+{"no": "1163", "groupEn": "Foundation", "groupName": "Foundation (กลุ่มมูลนิธิ)", "groupTh": "กลุ่มมูลนิธิ", "serviceEn": "Emergency Hotline 1163", "serviceTh": "สายด่วนกู้ภัย 1163", "OrgEn": "Hatyai Rescue", "orgTh": "มูลนิธิมิตรภาพสามัคคี (ท่งเซียเซี่ยงตึ๊ง) หาดใหญ่"}, 
+{"no": "1164", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "Customs Care Center 1164", "serviceTh": "ศูนย์บริการศุลกากร 1164", "OrgEn": "The Customs Department, Ministry of Finance", "orgTh": "กรมศุลกากร กระทรวงการคลัง"}, 
+{"no": "1165", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "Narcotics Hotline 1165", "serviceTh": "สายด่วยยาเสพติด 1165", "OrgEn": "Medical Department, Ministry of Public Health", "orgTh": "กรมการแพทย์ กระทรวงสาธารณสุข"}, 
+{"no": "1166", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "CPB Hotline 1166", "serviceTh": "สายด่วน สคบ. 1166", "OrgEn": "Office of the Consumer Protection Board, Prime Minister Office", "orgTh": "สำนักงานคณะกรรมการคุ้มครองผู้บริโภค สำนักนายกรัฐมนตรี"}, 
+{"no": "1167", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "Hotline 1167", "serviceTh": "สายด่วน 1167", "OrgEn": "Lawyers Council of Thailand (IPO: Indepencent Private Organization)", "orgTh": "สภาทนายความ หน่วยงานอิสระอิสระ"}, 
+{"no": "1168", "groupEn": "Business", "groupName": "Business (กลุ่มธุรกิจ)", "groupTh": "กลุ่มธุรกิจ", "serviceEn": "Emergency Call 1168", "serviceTh": "โทรฉุกเฉิน 1168", "OrgEn": "Securitas (Thailand) Ltd.", "orgTh": "บริษัท ซิเคียวริทัส (ประเทศไทย) จำกัด"}, 
+{"no": "1169", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "Hotline 1169", "serviceTh": "สายด่วน 1169", "OrgEn": "Department of International Trade Promotion, Ministry of Commerce", "orgTh": "กรมส่งเสริมการค้าระหว่างประเทศ กระทรวงพาณิชย์"}, 
+{"no": "1170", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "MOAC Call Center 1170", "serviceTh": "ศูนย์บริการข้อมูลข่าวสารกระทรวงเกษตรและสหกรณ์ 1170", "OrgEn": "Office of the Permanent Secretary, Ministry of Agriculture and Cooperatives", "orgTh": "สำนักงานปลัดกระทรวงเกษตรและสหกรณ์"}, 
+{"no": "1171", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "Election Hotline 1171", "serviceTh": "สายด่วนเลือกตั้ง 1171", "OrgEn": "Office of the Election Commission of Thailand (IPA)", "orgTh": "สำนักงานคณะกรรมการการเลือกตั้ง ส่วนราชการอิสระ"}, 
+{"no": "1172", "groupEn": "Business", "groupName": "Business (กลุ่มธุรกิจ)", "groupTh": "กลุ่มธุรกิจ", "serviceEn": "CMC Hotline 1172", "serviceTh": "สายด่วน CMC 1172", "OrgEn": "Chaopraya Mahanakorn PLC.", "orgTh": "บริษัท เจ้าพระยามหานคร จำกัด (มหาชน)"}, 
+{"no": "1175", "groupEn": "Telecom", "groupName": "Telecom (กลุ่มโทรคม)", "groupTh": "กลุ่มโทรคม", "serviceEn": "AIS Call Center 1175", "serviceTh": "ศูนย์บริการลูกค้า AIS 1175", "OrgEn": "Advanced Info Service PLC.", "orgTh": "บริษัท แอดวานซ์ อินโฟร์ เซอร์วิส จำกัด (มหาชน)"}, 
+{"no": "1176", "groupEn": "Business", "groupName": "Business (กลุ่มธุรกิจ)", "groupTh": "กลุ่มธุรกิจ", "serviceEn": "Call Center 1176", "serviceTh": "ศูนย์บริการฯ 1176", "OrgEn": "D.T.C. Enterprise Co., Ltd.", "orgTh": "บริษัท ดี.ที.ซี. เอ็นเตอร์ไพร์ส จำกัด"}, 
+{"no": "1177", "groupEn": "Telecom", "groupName": "Telecom (กลุ่มโทรคม)", "groupTh": "กลุ่มโทรคม", "serviceEn": "Report TOT Phone Malfunction [1177 + Phone Number]", "serviceTh": "แจ้งเหตุโทรศัพท์และอินเตอร์เน็ต TOT ขัดข้อง กด 1177 ตามด้วยหมายเลข", "OrgEn": "TOT PLC.", "orgTh": "บริษัท ทีโอที จำกัด (มหาชน)"}, 
+{"no": "1178", "groupEn": "Police", "groupName": "Police (กลุ่มตำรวจ)", "groupTh": "กลุ่มตำรวจ", "serviceEn": "Immigration Bureau 1178", "serviceTh": "ตำรวจตรวจคนเข้าเมือง 1178", "OrgEn": "Immigration Bureau, Royal Thai Police", "orgTh": "สำนักงานตรวจคนเข้าเมือง สำนักงานตำรวจแห่งชาติ"}, 
+{"no": "1179", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "GPF Phone 1179", "serviceTh": "ระบบโทรศัพท์ตอบรับอัตโนมัติ กบข 1179", "OrgEn": "The Government Pension Fund, Ministry of Finance", "orgTh": "กองทุนบำเหน็จบำนาญข้าราชการ กระทรวงการคลัง"}, 
+{"no": "1181", "groupEn": "Airline", "groupName": "Airline (กลุ่มสายการบิน)", "groupTh": "กลุ่มสายการบิน", "serviceEn": "Smile Call Center 1181", "serviceTh": "ศูนย์บริการฯ Smile 1181", "OrgEn": "Thai Smile Airways Co., Ltd.", "orgTh": "บริษัท ไทยสมายล์แอร์เวย์ จำกัด"}, 
+{"no": "1182", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "TMD Call Center 1182", "serviceTh": "สายด่วน อต 1182", "OrgEn": "Thai Meteorological Department, Ministry of Information and Communication Technology", "orgTh": "กรมอุตุนิยมวิทยา กระทรวงเทคโนโลยีสารสนเทศและการสื่อสาร"}, 
+{"no": "1185", "groupEn": "Telecom", "groupName": "Telecom (กลุ่มโทรคม)", "groupTh": "กลุ่มโทรคม", "serviceEn": "AIS Fibre Contact Center 1185", "serviceTh": "ศูนย์บริการลูกค้า AIS Fibre 1185", "OrgEn": "Advanced Info Service PLC.", "orgTh": "บริษัท แอดวานซ์ อินโฟร์ เซอร์วิส จำกัด (มหาชน)"}, 
+{"no": "1186", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "Hotline OIC 1186", "serviceTh": "สายด่วน คปภ 1186", "OrgEn": "Office of Insurance Commission (IPA)", "orgTh": "สำนักงานคณะกรรมการกำกับและส่งเสริมการประกอบธุรกิจประกันภัย ส่วนราชการอิสระ"}, 
+{"no": "1188", "groupEn": "Telecom", "groupName": "Telecom (กลุ่มโทรคม)", "groupTh": "กลุ่มโทรคม", "serviceEn": "Thailand YellowPages 1188", "serviceTh": "ค้นหาหมายเลขโทรศัพท์ 1188", "OrgEn": "Teleinfo Media PLC.", "orgTh": "บริษัท เทเลอินโฟ มีเดีย จำกัด (มหาชน)"}, 
+{"no": "1190", "groupEn": "Police", "groupName": "Police (กลุ่มตำรวจ)", "groupTh": "กลุ่มตำรวจ", "serviceEn": "Border Patrol Police Division 1190", "serviceTh": "ตำรวจตระเวนชายแดน 1190", "OrgEn": "Border Patrol Police Division, Royal Thai Police", "orgTh": "กองบัญชาการตำรวจตระเวนชายแดน สำนักงานตำรวจแห่งชาติ"}, 
+{"no": "1191", "groupEn": "Police", "groupName": "Police (กลุ่มตำรวจ)", "groupTh": "กลุ่มตำรวจ", "serviceEn": "Anti-Human Trafficking Division 1191", "serviceTh": "กองบังคับการปราบปรามการกระทำความผิดเกี่ยวกับการค้ามนุษย์ 1191", "OrgEn": "Anti-Human Trafficking Division, Royal Thai Police", "orgTh": "กองบังคับการปราบปรามการกระทำความผิดเกี่ยวกับการค้ามนุษย์ สำนักงานตำรวจแห่งชาติ"}, 
+{"no": "1192", "groupEn": "Police", "groupName": "Police (กลุ่มตำรวจ)", "groupTh": "กลุ่มตำรวจ", "serviceEn": "Lost Car Center 1192", "serviceTh": "ศูนย์รับแจ้งรถหาย 1192", "OrgEn": "Car and motorcycle theft Suppression Center, Royal Thai Police", "orgTh": "ศูนย์ปราบปรามการโจรกรรมรถยนต์รถจักยานยนต์ สำนักงานตำรวจแห่งชาติ"}, 
+{"no": "1193", "groupEn": "Police", "groupName": "Police (กลุ่มตำรวจ)", "groupTh": "กลุ่มตำรวจ", "serviceEn": "Highway Police Division 1193", "serviceTh": "ตำรวจทางหลวง 1193", "OrgEn": "Highway Police Division, Royal Thai Police", "orgTh": "กองบังคับการตำรวจทางหลวง สำนักงานตำรวจแห่งชาติ"}, 
+{"no": "1195", "groupEn": "Police", "groupName": "Police (กลุ่มตำรวจ)", "groupTh": "กลุ่มตำรวจ", "serviceEn": "CSD Hotline 1195", "serviceTh": "ตำรวจกองปราบฯ 1195", "OrgEn": "Crime Suppression Division, Royal Thai Police", "orgTh": "กองบังคับการปราบปราม สำนักงานตำรวจแห่งชาติ"}, 
+{"no": "1196", "groupEn": "Police", "groupName": "Police (กลุ่มตำรวจ)", "groupTh": "กลุ่มตำรวจ", "serviceEn": "Marine Police Division 1196", "serviceTh": "ตำรวจน้ำ 1196", "OrgEn": "Marine Police Division, Royal Thai Police", "orgTh": "กองบังคับการตำรวจน้ำ สำนักงานตำรวจแห่งชาติ"}, 
+{"no": "1197", "groupEn": "Police", "groupName": "Police (กลุ่มตำรวจ)", "groupTh": "กลุ่มตำรวจ", "serviceEn": "Traffic Police Division 1197", "serviceTh": "ตำรวจจราจร 1197", "OrgEn": "Traffic Police Division, Royal Thai Police", "orgTh": "กองบังคับการตำรวจจราจร สำนักงานตำรวจแห่งชาติ"}, 
+{"no": "1198", "groupEn": "Property", "groupName": "Property (กลุ่มอสังหาริมทรัพย์)", "groupTh": "กลุ่มอสังหาริมทรัพย์", "serviceEn": "Call Center 1198", "serviceTh": "ศูนย์บริการฯ 1198", "OrgEn": "Land and Houses PLC.", "orgTh": "บริษัท แลนด์ แอนด์เฮ้าส์ จำกัด (มหาชน)"}, 
+{"no": "1199", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "Hotline 1199", "serviceTh": "สายด่วน 1199", "OrgEn": "Marine Department, Ministry of Transport", "orgTh": "กรมเจ้าท่า กระทรวงคมนาคม"}, 
+{"no": "1200", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "NBTC Call Center 1200", "serviceTh": "สายด่วน กสทช. 1200", "OrgEn": "National Broadcasting and Telecommunications Commission (IPA)", "orgTh": "สำนักงานคณะกรรมการกิจการโทรคมนาคมแห่งชาติ ส่วนราชการอิสระ"}, 
+{"no": "1202", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "DSI Hotline 1202", "serviceTh": "สายด่วน ดีเอสไอ 1202", "OrgEn": "Department of Special Investigation, Ministry of Justice", "orgTh": "กรมสอบสวนคดีพิเศษ กระทรวงยุติธรรม"}, 
+{"no": "1203", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "Hotline 1203", "serviceTh": "สายด่วน 1203", "OrgEn": "Office of the Permanent Secretary, Ministry of Commerce", "orgTh": "สำนักงานปลัดกระทรวงพาณิชย์"}, 
+{"no": "1204", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "Call Center 1204", "serviceTh": "ศูนย์บริการฯ 1204", "OrgEn": "Energy Regulatory Commission, Ministry of Energy", "orgTh": "สำนักงานคณะกรรมการกำกับกิจการพลังงาน กระทรวงพลังงาน"}, 
+{"no": "1205", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "NACC Hotline 1205", "serviceTh": "สายด่วน ปปช 1205", "OrgEn": "Office of the National Anti-Corruption Commission (IPA)", "orgTh": "สำนักงานคณะกรรมการป้องกันและปราบปรามการทุจริตแห่งชาติ ป.ป.ช. ส่วนราชการอิสระ"}, 
+{"no": "1206", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "PACC Call Center 1206", "serviceTh": "สายด่วน ปปท 1206", "OrgEn": "Office of the Public Sector Anti-Corruption Commission, Ministry of Justice", "orgTh": "สำนักงานคณะกรรมการป้องกันและปราบปรามการทุจริตในภาครัฐ ป.ป.ท. กระทรวงยุติธรรม"}, 
+{"no": "1207", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "SEC Call Center 1207", "serviceTh": "ศูนย์บริการฯ กลต 1207", "OrgEn": "The Securities and Exchange Commission (IPA)", "orgTh": "สำนักงานคณะกรรมการกำกับหลักทรัพย์และตลาดหลักทรัพย์ ส่วนราชการอิสระ"}, 
+{"no": "1208", "groupEn": "Hospital", "groupName": "Hospital (กลุ่มโรงพยาบาล)", "groupTh": "กลุ่มโรงพยาบาล", "serviceEn": "Call Center 1208", "serviceTh": "คอลเซ็นเตอร์ 1208", "OrgEn": "Ten M.D. Nakornsawan Co., Ltd.", "orgTh": "บริษัท เท็น เอ็ม.ดี.นครสวรรค์ จำกัด"}, 
+{"no": "1210", "groupEn": "Business", "groupName": "Business (กลุ่มธุรกิจ)", "groupTh": "กลุ่มธุรกิจ", "serviceEn": "Call Center 1210", "serviceTh": "ศูนย์บริการฯ 1210", "OrgEn": "Thiensurat PLC.", "orgTh": "บริษัท เธียรสุรัตน์ จำกัด (มหาชน)"}, 
+{"no": "1212", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "Hotline Report Abuse and Improper Website 1212", "serviceTh": "สายด่วนรับแจ้งเว็บไซต์ที่ขัดต่อความมั่นคงวัฒนธรรม/ศีลธรรม 1212", "OrgEn": "Ministry of Information and Communication Technology", "orgTh": "กระทรวงเทคโนโลยีสารสนเทศและการสื่อสาร ICT"}, 
+{"no": "1213", "groupEn": "Bank", "groupName": "Bank (กลุ่มธนาคาร)", "groupTh": "กลุ่มธนาคาร", "serviceEn": "FCC Call Center 1213", "serviceTh": "ศูนย์บริการ ศคง 1213", "OrgEn": "Bank of Thailand", "orgTh": "ธนาคารแห่งประเทศไทย"}, 
+{"no": "1215", "groupEn": "Business", "groupName": "Business (กลุ่มธุรกิจ)", "groupTh": "กลุ่มธุรกิจ", "serviceEn": "Call Center 1215", "serviceTh": "ศูนย์บริการฯ 1215", "OrgEn": "Thep Sombat Co., ltd.", "orgTh": "บริษัท เทพสมบัติ จำกัด"}, 
+{"no": "1222", "groupEn": "Telecom", "groupName": "Telecom (กลุ่มโทรคม)", "groupTh": "กลุ่มโทรคม", "serviceEn": "TOT Online Dial Up Internet 1222", "serviceTh": "ต่ออินเตอร์เน็ตจากโทรศัพท์ TOT 1222", "OrgEn": "TOT PLC.", "orgTh": "บริษัท ทีโอที จำกัด (มหาชน)"}, 
+{"no": "1227", "groupEn": "Food", "groupName": "Food (กลุ่มอาหาร)", "groupTh": "กลุ่มอาหาร", "serviceEn": "Scoozi Pizza 1227", "serviceTh": "สกูซี่พิซซ่า 1227", "OrgEn": "Scoozi Italian Restaurant Co., Ltd.", "orgTh": "บริษัท สกูซี่ อิตาเลี่ยน เรสเตอรอง จำกัด"}, 
+{"no": "1234", "groupEn": "Telecom", "groupName": "Telecom (กลุ่มโทรคม)", "groupTh": "กลุ่มโทรคม", "serviceEn": "Y-tel 1234 Distance Call Service", "serviceTh": "บริการโทรทางไกล ตจว Y-tel 1234", "OrgEn": "TOT PLC.", "orgTh": "บริษัท ทีโอที จำกัด (มหาชน)"}, 
+{"no": "1275", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "Call Center 1275", "serviceTh": "ศูนย์บริการ 1275", "OrgEn": "Department of Sericulture, Ministry of Agriculture and Cooperatives", "orgTh": "สถาบันหม่อนไหม กระทรวงเกษตรและสหกรณ์"}, 
+{"no": "1278", "groupEn": "Telecom", "groupName": "Telecom (กลุ่มโทรคม)", "groupTh": "กลุ่มโทรคม", "serviceEn": "I-Box Service 1278", "serviceTh": "บริการรับฝากข้อความ I-Box 1278", "OrgEn": "TOT PLC.", "orgTh": "บริษัท ทีโอที จำกัด (มหาชน)"}, 
+{"no": "1288", "groupEn": "Telecom", "groupName": "Telecom (กลุ่มโทรคม)", "groupTh": "กลุ่มโทรคม", "serviceEn": "TOT Online 1288", "serviceTh": "ต่ออินเตอร์เน็ต TOT 1288", "OrgEn": "TOT PLC.", "orgTh": "บริษัท ทีโอที จำกัด (มหาชน)"}, 
+{"no": "1289", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "Hotline 1289", "serviceTh": "สายด่วน 1289", "OrgEn": "The Support Arts and Crafts International Centre of Thailand (Public Organization)", "orgTh": "ศูนย์ส่งเสริมศิลปาชีพระหว่างประเทศ องค์การมหาชน"}, 
+{"no": "1300", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "Prachabodi Call Center 1300", "serviceTh": "ศูนย์ประชาบดี 1300", "OrgEn": "Ministry of Social Development and Human Security", "orgTh": "ศูนย์ประชาบดี กระทรวงการพัฒนาสังคมและความมั่นคงของมนุษย์"}, 
+{"no": "1301", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "SME Call Center 1301", "serviceTh": "ศูนย์บริการฯ สสว 1301", "OrgEn": "Office of Small and Medium Enterprises Promotion, Prime Minister Office", "orgTh": "สำนักงานส่งเสริมวิสาหกิจขนาดกลางและขนาดย่อม สสว. สำนักนายกรัฐมนตรี"}, 
+{"no": "1302", "groupEn": "Bank", "groupName": "Bank (กลุ่มธนาคาร)", "groupTh": "กลุ่มธนาคาร", "serviceEn": "ibank Call Center 1302", "serviceTh": "ศูนย์บริการฯ ibank 1302", "OrgEn": "Islamic Bank of Thailand", "orgTh": "ธนาคารอิสลามแห่งประเทศไทย"}, 
+{"no": "1303", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "Call Center 1303", "serviceTh": "ศูนย์บริการฯ 1303", "OrgEn": "Council of Engineers (IPO)", "orgTh": "สภาวิศวกร หน่วยงานอิสระอิสระ"}, 
+{"no": "1310", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "Green call 1310", "serviceTh": "สายด่วน Green call 1310", "OrgEn": "Ministry of Natural Resources and Environment", "orgTh": "กระทรวงทรัพยากรธรรมชาติและสิ่งแวดล้อม"}, 
+{"no": "1313", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "Call Center 1313", "serviceTh": "ศูนย์บริการฯ 1313", "OrgEn": "Office of the Permanent Secretary, Ministry of Science and Technology", "orgTh": "สำนักงานปลัดกระทรวงวิทยาศาสตร์และเทคโนโลยี"}, 
+{"no": "1318", "groupEn": "Airline", "groupName": "Airline (กลุ่มสายการบิน)", "groupTh": "กลุ่มสายการบิน", "serviceEn": "Call Center 1318", "serviceTh": "ศูนย์บริการฯ 1318", "OrgEn": "Nok Airlines PLC.", "orgTh": "บริษัท สายการบินนกแอร์ จำกัด (มหาชน)"}, 
+{"no": "1322", "groupEn": "Telecom", "groupName": "Telecom (กลุ่มโทรคม)", "groupTh": "กลุ่มโทรคม", "serviceEn": "CAT Contact Center 1322", "serviceTh": "ศูนย์บริการ กสท 1322", "OrgEn": "CAT Telecom PLC.", "orgTh": "บริษัท กสท โทรคมนาคม จำกัด (มหาชน)"}, 
+{"no": "1323", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "Menatal Health Contact 1323", "serviceTh": "ปรึกษาปัญหาสุขภาพจิต 1323", "OrgEn": "Department of Mental Health, Ministry of Public Health", "orgTh": "หน่วยบริการสังกัดกรมสุขภาพจิต กระทรวงสาธารณาสุข"}, 
+{"no": "1330", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "NHSO Hotline 1330", "serviceTh": "สายด่วน สปสช 1330", "OrgEn": "National Health Security Office, Ministry of Public Health", "orgTh": "สำนักงานหลักประกันสุขภาพแห่งชาติ กระทรวงสาธารณะสุข"}, 
+{"no": "1331", "groupEn": "Telecom", "groupName": "Telecom (กลุ่มโทรคม)", "groupTh": "กลุ่มโทรคม", "serviceEn": "TrueMove H Care 1331", "serviceTh": "ศูนย์บริการ ทรูมูฟ เอช 1331", "OrgEn": "True Move H Universal Communication Co., Ltd.", "orgTh": "บริษัท ทรู มูฟ เอช ยูนิเวอร์แซล คอมมูนิเคชั่น จำกัด"}, 
+{"no": "1332", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "Customs Hotline 1332", "serviceTh": "สายด่วนศุลกากร 1332", "OrgEn": "The Customs Department, Ministry of Finance", "orgTh": "กรมศุลกากร กระทรวงการคลัง"}, 
+{"no": "1333", "groupEn": "Bank", "groupName": "Bank (กลุ่มธนาคาร)", "groupTh": "กลุ่มธนาคาร", "serviceEn": "Bualuang Phone 1333", "serviceTh": "บัวหลวงโฟน 1333", "OrgEn": "Bangkok Bank PLC.", "orgTh": "ธนาคารกรุงเทพ จำกัด (มหาชน)"}, 
+{"no": "1344", "groupEn": "Food", "groupName": "Food (กลุ่มอาหาร)", "groupTh": "กลุ่มอาหาร", "serviceEn": "S&P Delivery 1344", "serviceTh": "S&P บริการส่งถึงบ้าน 1344", "OrgEn": "S&P Syndicate PLC.", "orgTh": "บริษัท เอสแอนด์ พีซินดิเคท จำกัด (มหาชน)"}, 
+{"no": "1348", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "BMTA Call Center 1348", "serviceTh": "ศูนย์บริการฯ ขสมก 1348", "OrgEn": "Bangkok Mass Transit Authority, Ministry of Transport", "orgTh": "องค์การขนส่งมวลชนกรุงเทพ ขสมก. กระทรวงคมนาคม"}, 
+{"no": "1352", "groupEn": "Insurance", "groupName": "Insurance (กลุ่มประกันภัย)", "groupTh": "กลุ่มประกันภัย", "serviceEn": "Accidental Report Center 1352", "serviceTh": "ศูนย์รับแจ้งอุบัติเหตุ 1352", "OrgEn": "Thai Setthakit Insurance PLC.", "orgTh": "บริษัท ไทยเศรษฐกิจประกันภัย จำกัด (มหาชน)"}, 
+{"no": "1355", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "Call Center 1355", "serviceTh": "สายด่วนศาลปกครอง 1355", "OrgEn": "The Office of the Administrative Court (IPA)", "orgTh": "สำนักงานศาลปกครอง ส่วนราชการอิสระ"}, 
+{"no": "1356", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "Transport Safty Center 1356", "serviceTh": "ศูนย์ปลอดภัยคมนาคม 1356", "OrgEn": "Transport Safty Center, Ministry of Transport", "orgTh": "ศูนย์ปลอดภัยกระทรวงคมนาคม กระทรวงคมนาคม"}, 
+{"no": "1357", "groupEn": "Bank", "groupName": "Bank (กลุ่มธนาคาร)", "groupTh": "กลุ่มธนาคาร", "serviceEn": "Call Center 1357", "serviceTh": "ศูนย์บริการฯ 1357", "OrgEn": "Small and Medium Enterprise Development Bank of Thailand", "orgTh": "ธนาคารพัฒนาวิสาหกิจขนาดกลางและขนาดย่อมแห่งประเทศไทย"}, 
+{"no": "1358", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "Hotline 1358", "serviceTh": "สายด่วน 1358", "OrgEn": "Department of Industrial Promotion, Ministry of Industry", "orgTh": "กรมส่งเสริมอุตสาหกรรม กระทรวงอุตสาหกรรม"}, 
+{"no": "1359", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "Hotline Informal Debt/Finance 1359", "serviceTh": "สายด่วนการเงินนอกระบบ/หนี้นอกระบบ 1359", "OrgEn": "Fiscal Policy Office, Ministry of Finance", "orgTh": "สำนักงานเศรษฐกิจการคลัง กระทรวงการคลัง"}, 
+{"no": "1362", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "DNP Hotline 1362", "serviceTh": "สายด่วน กรมอุทยานฯ 1362", "OrgEn": "Department of National Parks, Wildlife and Plant Conservation, Ministry of Natural Resources and Environment", "orgTh": "กรมอุทยานแห่งชาติสัตว์ป่าและพันธ์พืช กระทรวงทรัพยากรธรรมชาติและสิ่งแวดล้อม"}, 
+{"no": "1365", "groupEn": "Business", "groupName": "Business (กลุ่มธุรกิจ)", "groupTh": "กลุ่มธุรกิจ", "serviceEn": "PTT Call Center 1365", "serviceTh": "ศูนย์บริการฯ ปตท 1365", "OrgEn": "PTT PLC.", "orgTh": "บริษัท ปตท. จำกัด (มหาชน)"}, 
+{"no": "1367", "groupEn": "Hospital", "groupName": "Hospital (กลุ่มโรงพยาบาล)", "groupTh": "กลุ่มโรงพยาบาล", "serviceEn": "Ramathibodi Poison Center1367", "serviceTh": "ศูนย์พิษวิทยา รพ.รามาธิบดี 1367", "OrgEn": "Faculty of Medicine Ramathibodi Hospital Mahidol University", "orgTh": "โรงพยาบาลรามาธิบดี (กระทรวงสาธารณสุข)"}, 
+{"no": "1368", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "Hotline 1368", "serviceTh": "สายด่วน 1368", "OrgEn": "Department of Intellectual Property, Ministry of Commerce", "orgTh": "กรมทรัพย์สินทางปัญญา กระทรวงพาณิชย์"}, 
+{"no": "1373", "groupEn": "Insurance", "groupName": "Insurance (กลุ่มประกันภัย)", "groupTh": "กลุ่มประกันภัย", "serviceEn": "Allianz Customer Care Center 1373", "serviceTh": "ศูนย์ดูแลลูกค้าอลิอันซ์ อยุธยา 1373", "OrgEn": "Allianz Ayudhya Assurance PLC.", "orgTh": "บริษัท อลิอันซ์ อยุธยา ประกันชีวิต จำกัด (มหาชน)"}, 
+{"no": "1375", "groupEn": "Property", "groupName": "Property (กลุ่มอสังหาริมทรัพย์)", "groupTh": "กลุ่มอสังหาริมทรัพย์", "serviceEn": "Call Center 1375", "serviceTh": "ศูนย์บริการฯ 1375", "OrgEn": "Property Perfect PLC.", "orgTh": "บริษัท พร็อพเพอร์ตี้เพอร์เฟค จำกัด (มหาชน)"}, 
+{"no": "1377", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "Complaint Hotline 1377", "serviceTh": "สายด่วนร้องเรียน 1377", "OrgEn": "National Human Right Commission (IPA)", "orgTh": "สำนักงานคณะกรรมการสิทธิมนุษยชนแห่งชาติ ส่วนราชการอิสระ"}, 
+{"no": "1384", "groupEn": "Business", "groupName": "Business (กลุ่มธุรกิจ)", "groupTh": "กลุ่มธุรกิจ", "serviceEn": "Customer Relation 1384", "serviceTh": "ฝ่ายลูกค้าสัมพันธ์ 1384", "OrgEn": "Linde (Thailand) PLC.", "orgTh": "บริษัท ลินเด้ จำกัด (มหาชน)"}, 
+{"no": "1385", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "DTF Hotline 1385", "serviceTh": "ศูนย์บริการฯ 1385", "OrgEn": "Department of Foreign Trade, Ministry of Commerce", "orgTh": "กรมการค้าต่างประเทศ กระทรวงพาณิชย์"}, 
+{"no": "1386", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "Narcotics Report 1386", "serviceTh": "แจ้งเบาะแสยาเสพติด 1386", "OrgEn": "Office of the Narcotics Control Board, Ministry of Justice", "orgTh": "สำนักงานคณะกรรมการป้องกันและปราบปรามยาเสพติด ป.ป.ส. กระทรวงยุติธรรม"}, 
+{"no": "1387", "groupEn": "Foundation", "groupName": "Foundation (กลุ่มมูลนิธิ)", "groupTh": "กลุ่มมูลนิธิ", "serviceEn": "Hotline for Children & Youth 1387", "serviceTh": "สายด่วนให้คำปรึกษาสำหรับเด็กและเยาวชน 1387", "OrgEn": "Childline Thailand Foundation", "orgTh": "มูลนิธิสายเด็ก"}, 
+{"no": "1388", "groupEn": "Property", "groupName": "Property (กลุ่มอสังหาริมทรัพย์)", "groupTh": "กลุ่มอสังหาริมทรัพย์", "serviceEn": "Call Center 1388", "serviceTh": "ศูนย์บริการฯ 1388", "OrgEn": "Quality Houses PLC.", "orgTh": "บริษัท ควอลิตี้เฮ้าส์ จำกัด (มหาชน)"}, 
+{"no": "1411", "groupEn": "Hospital", "groupName": "Hospital (กลุ่มโรงพยาบาล)", "groupTh": "กลุ่มโรงพยาบาล", "serviceEn": "Sirindhron Heart Center 1411", "serviceTh": "ศูนย์โรคหัวใจสิรินธร โรงพยาบาลพระมงกุฎเกล้า 1411", "OrgEn": "Phramongkutklao Hospital", "orgTh": "โรงพยาบาลพระมงกุฎเกล้า"}, 
+{"no": "1412", "groupEn": "Foundation", "groupName": "Foundation (กลุ่มมูลนิธิ)", "groupTh": "กลุ่มมูลนิธิ", "serviceEn": "Contact TTRS 1412", "serviceTh": "ติดต่อ TTRS 1412", "OrgEn": "Universal Foundation for Persons with Disabilities", "orgTh": "มูลนิธิสากลเพื่อคนพิการ"}, 
+{"no": "1413", "groupEn": "Foundation", "groupName": "Foundation (กลุ่มมูลนิธิ)", "groupTh": "กลุ่มมูลนิธิ", "serviceEn": "Stop Drink 1413", "serviceTh": "ศูนย์ปรึกษาปัญหาสุรา 1413", "OrgEn": "Thai Health Promotion Foundation", "orgTh": "มูลนิธิวิถีสุข"}, 
+{"no": "1414", "groupEn": "Foundation", "groupName": "Foundation (กลุ่มมูลนิธิ)", "groupTh": "กลุ่มมูลนิธิ", "serviceEn": "Hotline Knowledge Services for Blind 1414", "serviceTh": "สายด่วนข่าวสารความรู้คนตาบอด 1414", "OrgEn": "Thailand Association of the Blind", "orgTh": "สมาคมคนตาบอดแห่งประเทศไทย"}, 
+{"no": "1415", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "Children Hospital Direct Line 1415", "serviceTh": "สายตรงโรงพยาบาลเด็ก 1415", "OrgEn": "Queen Sirikit National Institute of Child Health, Ministry of Public Health", "orgTh": "สถาบันสุขภาพเด็กแห่งชาติมหาราชินี กระทรวงสาธารณสูข"}, 
+{"no": "1416", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "EGAT Call Center 1416", "serviceTh": "ศูนย์บริการข้อมูล กฟผ. 1416", "OrgEn": "Electricity Generating Authority of Thailand, Ministry of Energy", "orgTh": "การไฟฟ้าฝ่ายผลิตแห่งประเทศไทย กระทรวงพลังงาน"}, 
+{"no": "1418", "groupEn": "Foundation", "groupName": "Foundation (กลุ่มมูลนิธิ)", "groupTh": "กลุ่มมูลนิธิ", "serviceEn": "PTTF Emergency 1418", "serviceTh": "เจ็บป่วยฉุกเฉินโทรมุลนิธิป่อเต๊กตึ้ง 1418", "OrgEn": "Poh Teck Tung Foundation", "orgTh": "มูลนิธิป่อเต็กตึ๊ง"}, 
+{"no": "1422", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "DDC Hotline 1422", "serviceTh": "สายด่วนกรมควบคุมโรค 1422", "OrgEn": "Department of Desease Control, Ministry of Public Health", "orgTh": "กระทรวงสาธารณสุข"}, 
+{"no": "1460", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "Hotline 1460", "serviceTh": "สายด่วน 1460", "OrgEn": "Royal Irrigation Department, Ministry of Agriculture and Cooperatives", "orgTh": "กรมชลประทาน กระทรวงเกษตรและสหกรณ์"}, 
+{"no": "1474", "groupEn": "Hospital", "groupName": "Hospital (กลุ่มโรงพยาบาล)", "groupTh": "กลุ่มโรงพยาบาล", "serviceEn": "Contact Center 1474", "serviceTh": "สายด่วน 1474", "OrgEn": "Siriraj Piyamaharajkarun Hospital", "orgTh": "โรงพยาบาลศิริราช ปิยมหาราชการุณย์"}, 
+{"no": "1477", "groupEn": "Telecom", "groupName": "Telecom (กลุ่มโทรคม)", "groupTh": "กลุ่มโทรคม", "serviceEn": "TOT Leased Line Internet Service 1477", "serviceTh": "วงจรเช่า ทีโอที Internet Service 1477", "OrgEn": "TOT PLC.", "orgTh": "บริษัท ทีโอที จำกัด (มหาชน)"}, 
+{"no": "1479", "groupEn": "Foundation", "groupName": "Foundation (กลุ่มมูลนิธิ)", "groupTh": "กลุ่มมูลนิธิ", "serviceEn": "Disabled Health Hotline 1479", "serviceTh": "สายด่วนคนพิการ 1479", "OrgEn": "The Redemptorist Foundation for People with Disabilities", "orgTh": "มูลนิธิพระมหาไถ่เพื่อการพัฒนาคนพิการ"}, 
+{"no": "1484", "groupEn": "Insurance", "groupName": "Insurance (กลุ่มประกันภัย)", "groupTh": "กลุ่มประกันภัย", "serviceEn": "Customer Relation 1484", "serviceTh": "ศูนย์ลูกค้าสัมพันธ์เมืองไทยประกันภัย 1484", "OrgEn": "Muang Thai Insurance PLC.", "orgTh": "บริษัท เมืองไทยประกันภัย จำกัด (มหาชน)"}, 
+{"no": "1490", "groupEn": "Telecom", "groupName": "Telecom (กลุ่มโทรคม)", "groupTh": "กลุ่มโทรคม", "serviceEn": "Friendly Solution, TOT 1490", "serviceTh": "บริการระบบ Call Center ของ TOT 1490", "OrgEn": "TOT PLC.", "orgTh": "บริษัท ทีโอที จำกัด (มหาชน)"}, 
+{"no": "1506", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "SSO Hotline 1506", "serviceTh": "สายด่วน สปส 1506", "OrgEn": "Social Security Office, Ministry of Labour", "orgTh": "สำนักงานประกันสังคม กระทรวงแรงงาน"}, 
+{"no": "1530", "groupEn": "Telecom", "groupName": "Telecom (กลุ่มโทรคม)", "groupTh": "กลุ่มโทรคม", "serviceEn": "3BB Customer Relation 1530", "serviceTh": "ลูกค้าสัมพันธ์ 3BB 1530", "OrgEn": "Triple T Broadband, PLC.", "orgTh": "บริษัท ทริปเปิลที บรอดแบนด์ จำกัด (มหาชน)"}, 
+{"no": "1540", "groupEn": "Business", "groupName": "Business (กลุ่มธุรกิจ)", "groupTh": "กลุ่มธุรกิจ", "serviceEn": "Gas Control Center 1540", "serviceTh": "ศูนย์ควบคุมการส่งก๊าซ 1540", "OrgEn": "PTT PLC. (Gas Control Center)", "orgTh": "บริษัท ปตท. จำกัด (มหาชน) ศูนย์ควบคุมการส่งก๊าซ"}, 
+{"no": "1543", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "EXAT Call Center 1543", "serviceTh": "สายด่วน กทพ 1543", "OrgEn": "Expressway Authority of Thailand, Ministry of Transport", "orgTh": "การทางพิเศษแห่งประเทศไทย กระทรวงคมนาคม"}, 
+{"no": "1544", "groupEn": "Telecom", "groupName": "Telecom (กลุ่มโทรคม)", "groupTh": "กลุ่มโทรคม", "serviceEn": "CAT Phonenet Calling Card 1544", "serviceTh": "บัตรโทรศัพท์ทางไกลต่างประเทศ CAT Phonenet 1544", "OrgEn": "CAT Telecom PLC.", "orgTh": "บริษัท กสท โทรคมนาคม จำกัด (มหาชน)"}, 
+{"no": "1545", "groupEn": "Business", "groupName": "Business (กลุ่มธุรกิจ)", "groupTh": "กลุ่มธุรกิจ", "serviceEn": "THP Contact Center 1545", "serviceTh": "ศูนย์บริการฯ ปณท 1545", "OrgEn": "Thailand Post Co., Ltd.", "orgTh": "บริษัท ไปรษณีย์ไทย จำกัด"}, 
+{"no": "1546", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "Labor Hotline 1546", "serviceTh": "สายด่วนแรงงาน 1546", "OrgEn": "Department of Labor Protection and Welfare, Ministry of Labour", "orgTh": "กรมสวัสดิการและคุ้มครองแรงงาน กระทรวงแรงงานและสวัสดิการสังคม"}, 
+{"no": "1548", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "ID Call Center 1548", "serviceTh": "ปรึกษาปัญหาด้านการทะเบียนและบัตรประจำตัวประชาชน 1548", "OrgEn": "Department of Provincial Administration, Ministry of Interior", "orgTh": "กรมการปกครอง กระทรวงมหาดไทย"}, 
+{"no": "1555", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "BKK Call Center 1555", "serviceTh": "ศูนย์รับแจ้งทุกข์กรุงเทพมหานคร/ศูนย์ กทม. 1555", "OrgEn": "Bangkok Metropolitan Administration, Ministry of Interior, Ministry of Interior", "orgTh": "ศาลาว่าการจังหวัดกรุงเทพ กระทรวงมหาดไทย"}, 
+{"no": "1556", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "Hotline FDA 1556", "serviceTh": "สายด่วน อย. 1556", "OrgEn": "Food and Drug Administration, Ministry of Public Health", "orgTh": "สำนักงานคณะกรรมการอาหารและยา กระทรวงสาธารณสุข"}, 
+{"no": "1557", "groupEn": "Insurance", "groupName": "Insurance (กลุ่มประกันภัย)", "groupTh": "กลุ่มประกันภัย", "serviceEn": "Customer Relation 1557", "serviceTh": "ศูนย์ลูกค้าสัมพันธ์ 1557", "OrgEn": "The Viriyah Insurance PLC.", "orgTh": "บริษัท วิริยะประกันภัย จำกัด (มหาชน)"}, 
+{"no": "1558", "groupEn": "Bank", "groupName": "Bank (กลุ่มธนาคาร)", "groupTh": "กลุ่มธนาคาร", "serviceEn": "Customer Relation 1558", "serviceTh": "บริการลูกค้าสัมพันธ์ 1558", "OrgEn": "TMB Bank PLC.", "orgTh": "ธนาคารทหารไทย จำกัด (มหาชน)"}, 
+{"no": "1563", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "Call Center 1563", "serviceTh": "ศูนย์บริการฯ 1563", "OrgEn": "Office of the Permanent Secretary, Ministry of Industry", "orgTh": "สำนักงานปลัดกระทรวงอุตสาหกรรม"}, 
+{"no": "1564", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "Hotline Hazardous Substances Contro Bureau 1564", "serviceTh": "สายด่วนข้อมูลระงับอุบัติภัยจากสารเคมีและวัตถุอันตราย 1564", "OrgEn": "Hazardous Substances Contro Bureau, Ministry of Industry", "orgTh": "กรมโรงงานอุตสาหกรรม กระทรวงอุตสาหกรรม"}, 
+{"no": "1567", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "Damrongdham Center 1567", "serviceTh": "ศูนย์ดำรงธรรม 1567", "OrgEn": "Office of the Permanent Secretary, Ministry of Interior", "orgTh": "สำนักงานปลัดกระทรวงมหาดไทย"}, 
+{"no": "1569", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "Hotline 1569", "serviceTh": "สายด่วน 1569", "OrgEn": "Department of Internal Trade, Ministry of Commerce", "orgTh": "กรมการค้าภายใน กระทรวงพาณิชย์"}, 
+{"no": "1570", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "Hotline 1570", "serviceTh": "สายด่วน 1570", "OrgEn": "Department of Business Development, Ministry of Commerce", "orgTh": "กรมพัฒนาธุรกิจการค้า กระทรวงพาณิชย์"}, 
+{"no": "1572", "groupEn": "Bank", "groupName": "Bank (กลุ่มธนาคาร)", "groupTh": "กลุ่มธนาคาร", "serviceEn": "Krungsri Phone 1572", "serviceTh": "กรุงศรีโฟน 1572", "OrgEn": "Bank of Ayudhya PLC.", "orgTh": "ธนาคารกรุงศรีอยุธยา จำกัด (มหาชน)"}, 
+{"no": "1577", "groupEn": "Business", "groupName": "Business (กลุ่มธุรกิจ)", "groupTh": "กลุ่มธุรกิจ", "serviceEn": "Home Shopping 1577", "serviceTh": "Home Shopping 1577", "OrgEn": "Property Technology Co., Ltd.", "orgTh": "บริษัท พรอพเพอร์ตี้เทคโนโลยี จำกัด"}, 
+{"no": "1579", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "Education Hotline 1579", "serviceTh": "ขอคำปรึกษา/คำแนะนำ ผ่านงานสายด่วนการศึกษา 1579", "OrgEn": "Ministry of Education", "orgTh": "ศูนย์ช่วยเหลือเด็กทางการศึกษา กระทรวงศึกษาธิการ"}, 
+{"no": "1581", "groupEn": "Insurance", "groupName": "Insurance (กลุ่มประกันภัย)", "groupTh": "กลุ่มประกันภัย", "serviceEn": "AIA Call Center 1581", "serviceTh": "AIA Call Center 1581", "OrgEn": "American International Assurance Co., Ltd.", "orgTh": "บริษัท อเมริกันอินเตอร์แนชชั่นแนลแอสชัวรันส์ จำกัด"}, 
+{"no": "1584", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "Call Center and Public Passenger Protection Center 1584", "serviceTh": "ร้องเรียนรถโดยสารสาธารณะ 1584", "OrgEn": "Department of Land Transport, Ministry of Transport", "orgTh": "กรมการขนส่งทางบก กระทรวงคมนาคม"}, 
+{"no": "1586", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "Complaint Center 1586", "serviceTh": "ศูนย์รับเรื่องร้องเรียนร้องทุกข์ 1586", "OrgEn": "Department of Highway, Ministry of Transport", "orgTh": "สำนักงานประชาสัมพันธ์ กรมทางหลวง กระทรวงคมนาคม"}, 
+{"no": "1588", "groupEn": "Bank", "groupName": "Bank (กลุ่มธนาคาร)", "groupTh": "กลุ่มธนาคาร", "serviceEn": "CitiPhone Banking 1588", "serviceTh": "ซิตี้โฟนแบงก์กิ้ง 1588", "OrgEn": "Citibank NA (Bangkok Branch)", "orgTh": "ธนาคารซิตี้แบงค์"}, 
+{"no": "1593", "groupEn": "Bank", "groupName": "Bank (กลุ่มธนาคาร)", "groupTh": "กลุ่มธนาคาร", "serviceEn": "Customer Service Center 1593", "serviceTh": "ศูนย์บริการลูกค้า 1593", "OrgEn": "Bank for Agriculture and Agricultural Cooperatives", "orgTh": "ธนาคารเพื่อการเกษตรและสหกรณ์การเกษตร (ธ.ก.ส.)"}, 
+{"no": "1595", "groupEn": "Bank", "groupName": "Bank (กลุ่มธนาคาร)", "groupTh": "กลุ่มธนาคาร", "serviceEn": "SC Call Center 1595", "serviceTh": "ศูนย์บริการฯ SC 1595", "OrgEn": "Standard Chartered Bank (Thai) PLC.", "orgTh": "ธนาคารสแตนดาร์ด ชาร์เตอร์ด (ไทย) จำกัด (มหาชน)"}, 
+{"no": "1596", "groupEn": "Insurance", "groupName": "Insurance (กลุ่มประกันภัย)", "groupTh": "กลุ่มประกันภัย", "serviceEn": "Call Center 1596", "serviceTh": "ศูนย์บริการฯ 1596", "OrgEn": "Syn Mun Kong PLC.", "orgTh": "บริษัท สินมั่นคงประกันภัย จำกัด (มหาชน)"}, 
+{"no": "1599", "groupEn": "Police", "groupName": "Police (กลุ่มตำรวจ)", "groupTh": "กลุ่มตำรวจ", "serviceEn": "Offender Reporting Center 1599", "serviceTh": "แจ้งเบาะแสการกระทำความผิด ขอความช่วยเหลือ สอบถามข้อมูล 1599", "OrgEn": "Operation Center, Royal Thai Police", "orgTh": "ศูนย์ปฏิบัติการ สำนักงานตำรวจแห่งชาติ"}, 
+{"no": "1600", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "QUITLINE 1600", "serviceTh": "สายนี้ปลอดบุหรี่ 1600", "OrgEn": "National Quit Smoking Service Center (IPA)", "orgTh": "ศูนย์บริการเลิกบุหรี่ทางโทรศัพท์แห่งชาติ หน่วยงานอิสระอิสระ"}, 
+{"no": "1601", "groupEn": "Business", "groupName": "Business (กลุ่มธุรกิจ)", "groupTh": "กลุ่มธุรกิจ", "serviceEn": "Messenger Win 1601", "serviceTh": "สายด่วนส่งเอกสาร 1601", "OrgEn": "Uinfo Co., Ltd.", "orgTh": "บริษัท ยูอินโฟ จำกัด"}, 
+{"no": "1602", "groupEn": "Business", "groupName": "Business (กลุ่มธุรกิจ)", "groupTh": "กลุ่มธุรกิจ", "serviceEn": "Hotline 1602", "serviceTh": "สายด่วน 1602", "OrgEn": "Advice Holdings Group Co., Ltd.", "orgTh": "บริษัท ไทยร่วมค้าเดอะซิสเต็ม"}, 
+{"no": "1606", "groupEn": "Business", "groupName": "Business (กลุ่มธุรกิจ)", "groupTh": "กลุ่มธุรกิจ", "serviceEn": "QE Call Center 1606", "serviceTh": "ศูนย์บริการฯ QE 1606", "OrgEn": "Quality Express Co., Ltd.", "orgTh": "บริษัท ควอลิตี้ เอ็กซ์เพรส จำกัด"}, 
+{"no": "1607", "groupEn": "Business", "groupName": "Business (กลุ่มธุรกิจ)", "groupTh": "กลุ่มธุรกิจ", "serviceEn": "Call Center 1607", "serviceTh": "ศูนย์บริการฯ 1607", "OrgEn": "Verena International Co., Ltd.", "orgTh": "บริษัท เวอร์รีน่า อินเตอร์เนชั่นแนล จำกัด"}, 
+{"no": "1608", "groupEn": "Property", "groupName": "Property (กลุ่มอสังหาริมทรัพย์)", "groupTh": "กลุ่มอสังหาริมทรัพย์", "serviceEn": "Call Center 1608", "serviceTh": "ศูนย์บริการฯ 1608", "OrgEn": "Nusasiri PLC.", "orgTh": "บริษัท ณุศาศิริ จำกัด (มหาชน)"}, 
+{"no": "1609", "groupEn": "Hospital", "groupName": "Hospital (กลุ่มโรงพยาบาล)", "groupTh": "กลุ่มโรงพยาบาล", "serviceEn": "Call Center 1609", "serviceTh": "ศูนย์บริการฯ 1609", "OrgEn": "Chularat Hospital PCL", "orgTh": "บริษัท โรงพยาบาล จุฬารัตน์ จำกัด (มหาชน)"}, 
+{"no": "1610", "groupEn": "Property", "groupName": "Property (กลุ่มอสังหาริมทรัพย์)", "groupTh": "กลุ่มอสังหาริมทรัพย์", "serviceEn": "Call Center 1610", "serviceTh": "ศูนย์บริการฯ 1610", "OrgEn": "Life and Living Co., Ltd.", "orgTh": "บริษัท ไลฟ แอนด์ ลิฟวิ่ง จำกัด"}, 
+{"no": "1611", "groupEn": "Business", "groupName": "Business (กลุ่มธุรกิจ)", "groupTh": "กลุ่มธุรกิจ", "serviceEn": "Call Center 1611", "serviceTh": "ศูนย์บริการฯ 1611", "OrgEn": "Account Channels PLC.", "orgTh": "บริษัท เนเร่ จำกัด"}, 
+{"no": "1612", "groupEn": "Food", "groupName": "Food (กลุ่มอาหาร)", "groupTh": "กลุ่มอาหาร", "serviceEn": "Domino's Pizza 1612", "serviceTh": "โดมิโนพิซซ่า 1612", "OrgEn": "Evolution Capital PLC.", "orgTh": "บริษัท เอฟโวลูชั่น แคปปิตอล จำกัด (มหาชน)"}, 
+{"no": "1613", "groupEn": "Telecom", "groupName": "Telecom (กลุ่มโทรคม)", "groupTh": "กลุ่มโทรคม", "serviceEn": "NOC Hotline 1613", "serviceTh": "ศูนย์ปฏิบัติการเครือข่าย 1613", "OrgEn": "Symphony Communication PLC.", "orgTh": "บริษัท ซิมโฟนี่ คอมมูนิเคชั่น จำกัด (มหาชน)"}, 
+{"no": "1614", "groupEn": "Business", "groupName": "Business (กลุ่มธุรกิจ)", "groupTh": "กลุ่มธุรกิจ", "serviceEn": "PT Call Center 1614", "serviceTh": "ศูนย์บริการฯ PT 1614", "OrgEn": "PTG Energy PLC.", "orgTh": "บริษัท พีทีจี เอ็นเนอยี จำกัด (มหาชน)"}, 
+{"no": "1615", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "Call Center 1615", "serviceTh": "ศูนย์บริการฯ 1615", "OrgEn": "National Housing Authority, Ministry of Social Development and Human Security", "orgTh": "การเคหะแห่งชาติ กระทรวงการพัฒนาสังคมและความมั่นคงของมนุษย์"}, 
+{"no": "1616", "groupEn": "Business", "groupName": "Business (กลุ่มธุรกิจ)", "groupTh": "กลุ่มธุรกิจ", "serviceEn": "Call Center 1616", "serviceTh": "ศูนย์บริการฯ 1616", "OrgEn": "VRP Engineering & Trading Co., Ltd.", "orgTh": "บริษัท วีอาร์พี เอ็นจิเนียริ่ง แอนด์ เทรดดิ้ง จำกัด"}, 
+{"no": "1617", "groupEn": "Telecom", "groupName": "Telecom (กลุ่มโทรคม)", "groupTh": "กลุ่มโทรคม", "serviceEn": "T-Pin Calling Card 1617", "serviceTh": "บัตรโทรศัพท์ T-Pin 1617", "OrgEn": "TT&T PLC.", "orgTh": "บริษัท ทีที แอนด์ที จำกัด (มหาชน)"}, 
+{"no": "1619", "groupEn": "Business", "groupName": "Business (กลุ่มธุรกิจ)", "groupTh": "กลุ่มธุรกิจ", "serviceEn": "Call Center 1619", "serviceTh": "ศูนย์บริการฯ 1619", "OrgEn": "CTH PLC.", "orgTh": "บริษัท เคเบิล ไทย โฮลดิ้ง จำกัด (มหาชน)"}, 
+{"no": "1620", "groupEn": "Insurance", "groupName": "Insurance (กลุ่มประกันภัย)", "groupTh": "กลุ่มประกันภัย", "serviceEn": "Hotline Car Accident Report 24 Hrs. 1620", "serviceTh": "สายด่วนแจ้งอุบัติเหตุรถยนต์ 24 ชั่วโมง 1620", "OrgEn": "Bangkok Insurance PCL.", "orgTh": "บริษัท กรุงเทพประกันภัย จำกัด (มหาชน)"}, 
+{"no": "1621", "groupEn": "Insurance", "groupName": "Insurance (กลุ่มประกันภัย)", "groupTh": "กลุ่มประกันภัย", "serviceEn": "Customer Service Center 1621", "serviceTh": "ศูนย์บริการลูกค้า 1621", "OrgEn": "Prudential Life Assurance (Thailand) PLC.", "orgTh": "บริษัท พรูเด็นเชียล ประกันชีวิต (ประเทศไทย) จำกัด (มหาชน)"}, 
+{"no": "1622", "groupEn": "Property", "groupName": "Property (กลุ่มอสังหาริมทรัพย์)", "groupTh": "กลุ่มอสังหาริมทรัพย์", "serviceEn": "Call Center 1622", "serviceTh": "ศูนย์บริการฯ 1622", "OrgEn": "M.K. Real Estate Development PLC.", "orgTh": "บริษัท มั่นคงเคหะการ จำกัด (มหาชน)"}, 
+{"no": "1623", "groupEn": "Property", "groupName": "Property (กลุ่มอสังหาริมทรัพย์)", "groupTh": "กลุ่มอสังหาริมทรัพย์", "serviceEn": "Call Center 1623", "serviceTh": "ศูนย์บริการฯ 1623", "OrgEn": "Asian Property Development PLC.", "orgTh": "บริษัท เอเชี่ยน พร็อพเพอร์ตี้ ดีเวลลอปเม้นท์ (มหาชน) จำกัด"}, 
+{"no": "1624", "groupEn": "Business", "groupName": "Business (กลุ่มธุรกิจ)", "groupTh": "กลุ่มธุรกิจ", "serviceEn": "Call Center 1624", "serviceTh": "ศูนย์บริการฯ 1624", "OrgEn": "Nakhon Chai Air Co., Ltd.", "orgTh": "บริษัท นครชัยแอร์ จำกัด"}, 
+{"no": "1626", "groupEn": "Telecom", "groupName": "Telecom (กลุ่มโทรคม)", "groupTh": "กลุ่มโทรคม", "serviceEn": "T-Net Dial Up Internet 1626", "serviceTh": "T-Net Dial Up Internet 1626", "OrgEn": "TT&T PLC.", "orgTh": "บริษัท ทีที แอนด์ที จำกัด (มหาชน)"}, 
+{"no": "1629", "groupEn": "Business", "groupName": "Business (กลุ่มธุรกิจ)", "groupTh": "กลุ่มธุรกิจ", "serviceEn": "GMMZ Call Center 1629", "serviceTh": "ศูนย์บริการ GMMZ 1629", "OrgEn": "GMM Z Trading Co., Ltd.", "orgTh": "บริษัท จีเอ็มเอ็ม แซท เทรดดิ้ง จำกัด"}, 
+{"no": "1631", "groupEn": "Business", "groupName": "Business (กลุ่มธุรกิจ)", "groupTh": "กลุ่มธุรกิจ", "serviceEn": "King Power Contact Centre 1631", "serviceTh": "ศูนย์บริการฯ King Power 1631", "OrgEn": "King Power International Co., Ltd.", "orgTh": "บริษัท คิงเพาเวอร์ อินเตอร์เนชั่นแนล จำกัด"}, 
+{"no": "1636", "groupEn": "Property", "groupName": "Property (กลุ่มอสังหาริมทรัพย์)", "groupTh": "กลุ่มอสังหาริมทรัพย์", "serviceEn": "Call Center 1636", "serviceTh": "ศูนย์บริการฯ 1636", "OrgEn": "AQ Estate PLC.", "orgTh": "บริษัท เอคิว เอสเตท จำกัด (มหาชน) (ชื่อเดิมกฤษฎามหานคร)"}, 
+{"no": "1637", "groupEn": "Business", "groupName": "Business (กลุ่มธุรกิจ)", "groupTh": "กลุ่มธุรกิจ", "serviceEn": "Call Center 1637", "serviceTh": "ศูนย์บริการฯ 1637", "OrgEn": "Charoen Cabletv Network Co., Ltd.", "orgTh": "บริษัท เจริญเคเบิลทีวี เน็ตเวอร์ค จำกัด"}, 
+{"no": "1638", "groupEn": "Business", "groupName": "Business (กลุ่มธุรกิจ)", "groupTh": "กลุ่มธุรกิจ", "serviceEn": "Service Center 1638", "serviceTh": "ศูนย์ซ่อมยันมาร์ 1638", "OrgEn": "Yanmar S.P. Co., Ltd.", "orgTh": "บริษัท ยันม่าร์ เอส.พี. จำกัด"}, 
+{"no": "1639", "groupEn": "Business", "groupName": "Business (กลุ่มธุรกิจ)", "groupTh": "กลุ่มธุรกิจ", "serviceEn": "Customer Service 1639", "serviceTh": "ฝ่ายบริการลูกค้า 1639", "OrgEn": "Zalora (Thailand) Co., Ltd.", "orgTh": "บริษัท ซาโลร่า (ไทยแลนด์) จำกัด"}, 
+{"no": "1640", "groupEn": "Business", "groupName": "Business (กลุ่มธุรกิจ)", "groupTh": "กลุ่มธุรกิจ", "serviceEn": "Call Center 1640", "serviceTh": "ศูนย์บริการฯ 1640", "OrgEn": "Metro Systems Corporation PLC.", "orgTh": "บริษัท เมโทรซิสเต็มส์คอร์ปอเรชั่น จำกัด (มหาชน)"}, 
+{"no": "1642", "groupEn": "Food", "groupName": "Food (กลุ่มอาหาร)", "groupTh": "กลุ่มอาหาร", "serviceEn": "MK Delivery Service 1642", "serviceTh": "MK Delivery Service 1642", "OrgEn": "MK Restaurant Group PLC.", "orgTh": "บริษัท เอ็มเค เรสโตรองต์ กรุ๊ป จำกัด (มหาชน)"}, 
+{"no": "1644", "groupEn": "Police", "groupName": "Police (กลุ่มตำรวจ)", "groupTh": "กลุ่มตำรวจ", "serviceEn": "Police Radio FM 91 MHz 1644", "serviceTh": "สถานีวิทยุพิทักษ์สันติราษฎร์ สวพ. FM91 1644", "OrgEn": "Police Radio FM 91 MHz, Communications Division, Royal Thai Police, Royal Thai Police", "orgTh": "สถานีวิทยุพิทักษ์สันติราษฎร์ สวพ.91 กองตำรวจสื่อสาร สำนักงานตำรวจแห่งชาติ"}, 
+{"no": "1645", "groupEn": "Hospital", "groupName": "Hospital (กลุ่มโรงพยาบาล)", "groupTh": "กลุ่มโรงพยาบาล", "serviceEn": "Hotline 1645", "serviceTh": "สายด่วน 1645", "OrgEn": "Thonburi Hospital", "orgTh": "บริษัท ธนบุรี เฮลท์แคร์ กรุ๊ป จำกัด (มหาชน)"}, 
+{"no": "1646", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "Erawan Medical Rescue Unit 1646", "serviceTh": "ศูนย์เอราวัณ สำนักการแพทย์กรุงเทพมหานคร 1646", "OrgEn": "Bangkok EMS, Bangkok Metropolitan Administration", "orgTh": "สำนักการแพทย์ศูนย์เอราวัณ กรุงเทพมหานคร"}, 
+{"no": "1647", "groupEn": "Business", "groupName": "Business (กลุ่มธุรกิจ)", "groupTh": "กลุ่มธุรกิจ", "serviceEn": "Customer Service 1647", "serviceTh": "ฝ่ายบริการลูกค้า 1647", "OrgEn": "Thai Rent A Car (1978) Co., Ltd.", "orgTh": "บริษัท ไทยเร้นท์อะคาร์ (1978) จำกัด"}, 
+{"no": "1648", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "GPO Call Center 1648", "serviceTh": "ศูนย์บริการ อภ 1648", "OrgEn": "The Government Pharmaceutical Organization, Ministry of Public Health", "orgTh": "องค์การเภสัชกรรม กระทรวงสาธารณสุข"}, 
+{"no": "1650", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "Complaint Hotline 1650", "serviceTh": "สายด่วนร้องทุกข์ 1650", "OrgEn": "Pollution Control Department, Ministry of Natural Resources and Environment", "orgTh": "กรมควบคุมมลพิษ กระทรวงทรัพยากรธรรมชาติและสิ่งแวดล้อม"}, 
+{"no": "1651", "groupEn": "Business", "groupName": "Business (กลุ่มธุรกิจ)", "groupTh": "กลุ่มธุรกิจ", "serviceEn": "Call Center 1651", "serviceTh": "ศูนย์บริการฯ 1651", "OrgEn": "Bangchak Peteoleum PLC.", "orgTh": "บริษัท บางจากปิโตรเลียม จำกัด (มหาชน)"}, 
+{"no": "1652", "groupEn": "Business", "groupName": "Business (กลุ่มธุรกิจ)", "groupTh": "กลุ่มธุรกิจ", "serviceEn": "Call Center 1652", "serviceTh": "ศูนย์บริการฯ 1652", "OrgEn": "Srisawad Power 1979 PLC.", "orgTh": "บริษัท ศรีสวัสดิ์ พาวเวอร์ 1979 จำกัด (มหาชน)"}, 
+{"no": "1660", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "NIEO Hotline 1660", "serviceTh": "สายด่วน กศน 1660", "OrgEn": "Non-Formal and Informal Education Office, Ministry of Education", "orgTh": "สำนักงานส่งเสริมการศึกษานอกระบบและการศึกษาตามอัธยาศัย ก.ศ.น. กระทรวงศึกษาธิการ"}, 
+{"no": "1661", "groupEn": "Business", "groupName": "Business (กลุ่มธุรกิจ)", "groupTh": "กลุ่มธุรกิจ", "serviceEn": "Siam Taxi 1661", "serviceTh": "สหกรณ์แท็กซี่สยาม 1661", "OrgEn": "Siam-Taxi Co-Operative Ltd.", "orgTh": "สหกรณ์แท็กซี่สยาม จำกัด"}, 
+{"no": "1662", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "PWA Call Center 1662", "serviceTh": "ศูนย์บริการฯ กปภ 1662", "OrgEn": "Provincial Waterworks Authority, Ministry of Interior", "orgTh": "การประปาส่วนภูมิภาค กระทรวงมหาดไทย"}, 
+{"no": "1663", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "HIV Hotline 1663", "serviceTh": "สายด่วน ปรึกษาเอดส์ 1663", "OrgEn": "The Thai Red Cross AIDS Research Centre (IPA)", "orgTh": "ศูนย์วิจัยโรคเอดส์ สภากาชาดไทย"}, 
+{"no": "1664", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "Thai Red Cross Call Center 1664", "serviceTh": "ศูนย์บริการสภากาชาดไทย 1664", "OrgEn": "The Thai Red Cross Society (IPA)", "orgTh": "สภากาชาดไทย ส่วนราชการอิสระ"}, 
+{"no": "1666", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "Organ Donation Center 1666", "serviceTh": "ศูนย์รับบริจาคอวัยวะฯ 1666", "OrgEn": "Organ Donation Center (IPA)", "orgTh": "ศูนย์บริจาคอวัยวะฯ สภากาชาดไทย"}, 
+{"no": "1667", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "Hotline Mental Health 1667", "serviceTh": "สายด่วนสุขภาพจิต 1667", "OrgEn": "Department of Mental Health, Ministry of Public Health", "orgTh": "กรมสุขภาพจิต ใช้ในโครงการ TO BE NUMBER ONE กระทรวงสาธารณสุข"}, 
+{"no": "1668", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "Hotline Cancer 1668", "serviceTh": "สายด่วนมะเร็ง 1668", "OrgEn": "National Cancer Institute, Department of Medicine", "orgTh": "สถาบันโรคทรวงอก และสถาบันมะเร็งแห่งชาติ กรมการแพทย์"}, 
+{"no": "1669", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "Narenthorn EMS Center 1669", "serviceTh": "ศูนย์นเรนทร แจ้งเจ็บป่วยฉุกเฉิน 1669", "OrgEn": "Narenthorn EMS Center, Ministry of Public Health", "orgTh": "ศูนย์นเรนทร กระทรวงสาธารณสุข"}, 
+{"no": "1671", "groupEn": "Business", "groupName": "Business (กลุ่มธุรกิจ)", "groupTh": "กลุ่มธุรกิจ", "serviceEn": "Hotline 1671", "serviceTh": "สายด่วน 1671", "OrgEn": "CTI Logistics Co., Ltd.", "orgTh": "บริษัท ซีทีไอ โลจิสติกส์ จำกัด"}, 
+{"no": "1672", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "TAT Information Service Center 1672", "serviceTh": "ศูนย์บริการข่าวสารการท่องเที่ยว ททท 1672", "OrgEn": "The Tourism Authority of Thailand, Ministry of Tourism & Sports", "orgTh": "การท่องเที่ยวแห่งประเทศไทย กระทรวงการท่องเที่ยวและกีฬา"}, 
+{"no": "1675", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "Hotline Healthy Food Good Health 1675", "serviceTh": "สายด่วน กินดี สุขภาพดี 1675", "OrgEn": "Department of Health, Ministry of Public Health", "orgTh": "กรมอนามัย กระทรวงสาธารณสุข"}, 
+{"no": "1676", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "Complaint Hotline 1676", "serviceTh": "สายด่วนร้องเรียน 1676", "OrgEn": "Office of the Ombudsman (IPA)", "orgTh": "สำนักงานผู้ตรวจการแผ่นดิน ส่วนราชการอิสระ"}, 
+{"no": "1677", "groupEn": "Business", "groupName": "Business (กลุ่มธุรกิจ)", "groupTh": "กลุ่มธุรกิจ", "serviceEn": "RD1677", "serviceTh": "ร่วมด้วยช่วยกัน 1677", "OrgEn": "I.N.N.Radio Co., ltd.", "orgTh": "บริษัท ไอ.เอ็น.เอ็น.เรดิโอ จำกัด และ บมจ. ยูไนเต็ดคอมมูนิเคชั่น"}, 
+{"no": "1678", "groupEn": "Telecom", "groupName": "Telecom (กลุ่มโทรคม)", "groupTh": "กลุ่มโทรคม", "serviceEn": "dtac Call Center 1678", "serviceTh": "ศูนย์บริการ dtac 1678", "OrgEn": "Total Access Communication PLC.", "orgTh": "บริษัท โทเทิ่ล แอ็คเซ็ส คอมมูนิเคชั่น จำกัด (มหาชน)"}, 
+{"no": "1681", "groupEn": "Business", "groupName": "Business (กลุ่มธุรกิจ)", "groupTh": "กลุ่มธุรกิจ", "serviceEn": "Taxi Radio 1681", "serviceTh": "แท็กซี่เรดิโอ 1681", "OrgEn": "Thai Ace Communication Co., Ltd.", "orgTh": "บริษัท ไทยเอซ คอมมูนิเคชั่น จำกัด"}, 
+{"no": "1685", "groupEn": "Property", "groupName": "Property (กลุ่มอสังหาริมทรัพย์)", "groupTh": "กลุ่มอสังหาริมทรัพย์", "serviceEn": "Call Center 1685", "serviceTh": "ศูนย์บริการฯ 1685", "OrgEn": "Sansiri PLC.", "orgTh": "บริษัท แสนสิริ จำกัด (มหาชน)"}, 
+{"no": "1689", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "Complaint Center 1689", "serviceTh": "ศูนย์วายุภักษ์ฟ้าใส 1689", "OrgEn": "Office of the Permanent Secretary, Ministry of Finance", "orgTh": "สำนักงานปลัดกระทรวงการคลัง"}, 
+{"no": "1690", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "SRT Call Center 1690", "serviceTh": "ศูนย์บริการข้อมูลลูกค้าสัมพันธ์ รฟท 1690", "OrgEn": "State Railway of Thailand, Ministry of Transport", "orgTh": "การรถไฟแห่งประเทศไทย กระทรวงคมนาคม"}, 
+{"no": "1691", "groupEn": "Hospital", "groupName": "Hospital (กลุ่มโรงพยาบาล)", "groupTh": "กลุ่มโรงพยาบาล", "serviceEn": "Police General Hospital Ambulance Center 1691", "serviceTh": "ศูนย์รถพยาบาล รพ.ตำรวจ 1691", "OrgEn": "Police General Hospital", "orgTh": "สำนักงานตำรวจแห่งชาติ (โรงพยาบาลตำรวจ)"}, 
+{"no": "1694", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "Employment Hotline 1694", "serviceTh": "สายด่วนจัดหางาน 1694", "OrgEn": "Department of Employment, Ministry of Labour", "orgTh": "กรมการจัดหางาน กระทรวงแรงงาน"}, 
+{"no": "1699", "groupEn": "Business", "groupName": "Business (กลุ่มธุรกิจ)", "groupTh": "กลุ่มธุรกิจ", "serviceEn": "Reservation 1699", "serviceTh": "สำรองห้องพัก 1699", "OrgEn": "Dusit Thani PLC.", "orgTh": "บริษัท ดุสิตธานี จำกัด (มหาชน)"}, 
+{"no": "1710", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "AMLO Hotline 1710", "serviceTh": "สายด่วน ปปง 1710", "OrgEn": "Anti-Money Laundering Office (IPA)", "orgTh": "สนง.ป้องกันและปราบปรามการฟอกเงิน ป.ป.ง. ส่วนราชการอิสระ"}, 
+{"no": "1711", "groupEn": "Food", "groupName": "Food (กลุ่มอาหาร)", "groupTh": "กลุ่มอาหาร", "serviceEn": "McDelivery 1711", "serviceTh": "McDelivery 1711", "OrgEn": "McThai Co., Ltd.", "orgTh": "บริษัท แมคไทย จำกัด"}, 
+{"no": "1712", "groupEn": "Business", "groupName": "Business (กลุ่มธุรกิจ)", "groupTh": "กลุ่มธุรกิจ", "serviceEn": "Card Service Center 1712", "serviceTh": "ศูนย์บริการสมาชิกบัตรฯ 1712", "OrgEn": "Tesco Card Services Ltd.", "orgTh": "บริษัท เทสโก้ คาร์ด เซอร์วิสเซส จำกัด"}, 
+{"no": "1713", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "Call Center 1713", "serviceTh": "ศูนย์บริการฯ 1713", "OrgEn": "Excise Department, Ministry of Finance", "orgTh": "กรมสรรพสามิต กระทรวงการคลัง"}, 
+{"no": "1714", "groupEn": "Business", "groupName": "Business (กลุ่มธุรกิจ)", "groupTh": "กลุ่มธุรกิจ", "serviceEn": "Buy a Car 1714", "serviceTh": "คิดจะซื้อรถกด 1714", "OrgEn": "Showroom Car Center Co., Ltd.", "orgTh": "บริษัท โชว์รูมคาร์เซ็นเตอร์ จำกัด"}, 
+{"no": "1715", "groupEn": "Hospital", "groupName": "Hospital (กลุ่มโรงพยาบาล)", "groupTh": "กลุ่มโรงพยาบาล", "serviceEn": "Hotline 1715", "serviceTh": "สายด่วน 1715", "OrgEn": "Ekachai Hospital", "orgTh": "บริษัท เอกชัยการแพทย์ จำกัด (โรงพยาบาลเอกชัย)"}, 
+{"no": "1717", "groupEn": "Foundation", "groupName": "Foundation (กลุ่มมูลนิธิ)", "groupTh": "กลุ่มมูลนิธิ", "serviceEn": "DDD Hotline 1717", "serviceTh": "สายด่วนเมาไม่ขับ 1717", "OrgEn": "Don't Drive Drunk Foundation", "orgTh": "มูลนิธิเมาไม่ขับ"}, 
+{"no": "1718", "groupEn": "Foundation", "groupName": "Foundation (กลุ่มมูลนิธิ)", "groupTh": "กลุ่มมูลนิธิ", "serviceEn": "Khun Poom Foundation 1718", "serviceTh": "มูลนิธิคุณพุ่ม 1718", "OrgEn": "Khun Poom Foundation", "orgTh": "มูลนิธิคุณพุ่ม"}, 
+{"no": "1719", "groupEn": "Hospital", "groupName": "Hospital (กลุ่มโรงพยาบาล)", "groupTh": "กลุ่มโรงพยาบาล", "serviceEn": "Contact Center 1719", "serviceTh": "ศูนย์บริการฯ 1719", "OrgEn": "Bangkok Dusit Medical Services PLC.", "orgTh": "บริษัท กรุงเทพดุสิตเวชการ จำกัด (มหาชน)"}, 
+{"no": "1720", "groupEn": "Property", "groupName": "Property (กลุ่มอสังหาริมทรัพย์)", "groupTh": "กลุ่มอสังหาริมทรัพย์", "serviceEn": "Call Center 1720", "serviceTh": "ศูนย์บริการฯ 1720", "OrgEn": "Supalai PLC.", "orgTh": "บริษัท ศุภาลัย จำกัด (มหาชน)"}, 
+{"no": "1721", "groupEn": "Business", "groupName": "Business (กลุ่มธุรกิจ)", "groupTh": "กลุ่มธุรกิจ", "serviceEn": "Call Center 1721", "serviceTh": "ศูนย์บริการฯ 1721", "OrgEn": "TNT Express Worldwide (Thailand) Co., Ltd.", "orgTh": "บริษัท ทีเอ็นที เอ็กซเพรส เวิลด์ไวด์ (ประเทศไทย) จำกัด"}, 
+{"no": "1722", "groupEn": "Airline", "groupName": "Airline (กลุ่มสายการบิน)", "groupTh": "กลุ่มสายการบิน", "serviceEn": "AOT Contact Center 1722", "serviceTh": "ศูนย์บริการฯ ทอท 1722", "OrgEn": "Airports of Thailand PLC.", "orgTh": "บริษัท ท่าอากาศยานไทย จำกัด"}, 
+{"no": "1723", "groupEn": "Hospital", "groupName": "Hospital (กลุ่มโรงพยาบาล)", "groupTh": "กลุ่มโรงพยาบาล", "serviceEn": "Call Center 1723", "serviceTh": "ศูนย์บริการฯ 1723", "OrgEn": "Yanhee International Hospital", "orgTh": "โรงพยาบาลยันฮี"}, 
+{"no": "1724", "groupEn": "Hospital", "groupName": "Hospital (กลุ่มโรงพยาบาล)", "groupTh": "กลุ่มโรงพยาบาล", "serviceEn": "Hotline Bangkok Emergency Services 1724", "serviceTh": "สายด่วน Bangkok Emergency Services 1724", "OrgEn": "Bangkok Dusit Medical Services PLC.", "orgTh": "บริษัท กรุงเทพดุสิตเวชการ จำกัด (มหาชน)"}, 
+{"no": "1725", "groupEn": "Business", "groupName": "Business (กลุ่มธุรกิจ)", "groupTh": "กลุ่มธุรกิจ", "serviceEn": "Customer Service Center 1725", "serviceTh": "บริการโทรศัพท์อัตโนมัติ 1725", "OrgEn": "TMB Asset Management Co., Ltd.", "orgTh": "บริษัท หลักทรัพย์จัดการกองทุนทหารไทย จำกัด"}, 
+{"no": "1726", "groupEn": "Insurance", "groupName": "Insurance (กลุ่มประกันภัย)", "groupTh": "กลุ่มประกันภัย", "serviceEn": "Customer Care Center 1726", "serviceTh": "ศูนย์ดูแลลูกค้า 1726", "OrgEn": "Southeast Insurance PLC.", "orgTh": "บริษัท อาคเนย์ประกันภัย จำกัด (มหาชน)"}, 
+{"no": "1727", "groupEn": "Business", "groupName": "Business (กลุ่มธุรกิจ)", "groupTh": "กลุ่มธุรกิจ", "serviceEn": "Customer Care Center 1727", "serviceTh": "ศูนย์บริการลูกค้า 1727", "OrgEn": "Zuellig Pharma Ltd.", "orgTh": "บริษัท ซิลลิค ฟาร์มา จำกัด"}, 
+{"no": "1728", "groupEn": "Hospital", "groupName": "Hospital (กลุ่มโรงพยาบาล)", "groupTh": "กลุ่มโรงพยาบาล", "serviceEn": "Call Center 1728", "serviceTh": "ศูนย์บริการ 1728", "OrgEn": "Sikarin Hospital", "orgTh": "บริษัท ศิครินทร์ จำกัด (มหาชน)"}, 
+{"no": "1729", "groupEn": "Insurance", "groupName": "Insurance (กลุ่มประกันภัย)", "groupTh": "กลุ่มประกันภัย", "serviceEn": "Hotline 1729", "serviceTh": "ศูนย์บริการฯ 1729", "OrgEn": "Assets Insurance Co., Ltd.", "orgTh": "บริษัท สินทรัพย์ประกันภัย จำกัด (มหาชน)"}, 
+{"no": "1730", "groupEn": "Business", "groupName": "Business (กลุ่มธุรกิจ)", "groupTh": "กลุ่มธุรกิจ", "serviceEn": "Call Center 1730", "serviceTh": "ศูนย์บริการฯ 1730", "OrgEn": "Easy System Telecom Co., Ltd.", "orgTh": "บริษัท อีซี่ ซิสเต็ม เทเลคอม จำกัด"}, 
+{"no": "1731", "groupEn": "Business", "groupName": "Business (กลุ่มธุรกิจ)", "groupTh": "กลุ่มธุรกิจ", "serviceEn": "Metro Care Center 1731", "serviceTh": "เมโทรแคร์เซ็นเตอร์ 1731", "OrgEn": "Premier Metrobus Co., Ltd.", "orgTh": "บริษัท พรีเมียร์ เมโทรบัส จำกัด"}, 
+{"no": "1732", "groupEn": "Business", "groupName": "Business (กลุ่มธุรกิจ)", "groupTh": "กลุ่มธุรกิจ", "serviceEn": "Insee Call Center 1732", "serviceTh": "ศูนย์บริการอินทรี 1732", "OrgEn": "Siam City Cement PLC.", "orgTh": "บริษัท ปูนซีเมนต์นครหลวง จำกัด (มหาชน)"}, 
+{"no": "1734", "groupEn": "Business", "groupName": "Business (กลุ่มธุรกิจ)", "groupTh": "กลุ่มธุรกิจ", "serviceEn": "Call Center 1734", "serviceTh": "ศูนย์บริการฯ 1734", "OrgEn": "Chevrolet Sales (Thailand) Ltd.", "orgTh": "บริษัท เชฟโรเลต เซลล์ (ประเทศไทย) จำกัด"}, 
+{"no": "1735", "groupEn": "Business", "groupName": "Business (กลุ่มธุรกิจ)", "groupTh": "กลุ่มธุรกิจ", "serviceEn": "Call Center 1735", "serviceTh": "ศูนย์บริการฯ 1735", "OrgEn": "Shiyo Tripple A Group", "orgTh": "บริษัท ชัยโย เอเอ จำกัด"}, 
+{"no": "1736", "groupEn": "Insurance", "groupName": "Insurance (กลุ่มประกันภัย)", "groupTh": "กลุ่มประกันภัย", "serviceEn": "Call Center 1736", "serviceTh": "ศูนย์บริการ 1736", "OrgEn": "Dhipaya Insurance PLC.", "orgTh": "บริษัท ทิพยประกันภัย จำกัด"}, 
+{"no": "1737", "groupEn": "Insurance", "groupName": "Insurance (กลุ่มประกันภัย)", "groupTh": "กลุ่มประกันภัย", "serviceEn": "Hotline 1737", "serviceTh": "ศูนย์บริการ 1737", "OrgEn": "TQM Insurance Broker Co., Ltd.", "orgTh": "บริษัท ทีคิวเอ็ม อินชัวร์รันส์ โบรคเกอร์ จำกัด"}, 
+{"no": "1738", "groupEn": "Telecom", "groupName": "Telecom (กลุ่มโทรคม)", "groupTh": "กลุ่มโทรคม", "serviceEn": "Thookdee Top Up Phone Card 1738", "serviceTh": "เติมเงินบัตรโทรศัทพ์ถูกดี 1738", "OrgEn": "Jasmine Internet Co., Ltd.", "orgTh": "บริษัท จัสมิน อินเตอร์เนต จำกัด"}, 
+{"no": "1739", "groupEn": "Property", "groupName": "Property (กลุ่มอสังหาริมทรัพย์)", "groupTh": "กลุ่มอสังหาริมทรัพย์", "serviceEn": "Contact Center 1739", "serviceTh": "ศูนย์บริการ 1739", "OrgEn": "Pruksa Real Estate PLC.", "orgTh": "บริษัท พฤกษา เรียลเอสเตท จำกัด (มหาชน)"}, 
+{"no": "1741", "groupEn": "Insurance", "groupName": "Insurance (กลุ่มประกันภัย)", "groupTh": "กลุ่มประกันภัย", "serviceEn": "Hotline Accident Report 1741", "serviceTh": "สายด่วนแจ้งอุบัติเหตุ 1741", "OrgEn": "Mittare Insurance PLC.", "orgTh": "บริษัท มิตรแท้ประกันภัย จำกัด (มหาชน)"}, 
+{"no": "1743", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "Call Center 1743", "serviceTh": "ศูนย์บริการฯ 1743", "OrgEn": "The Secretariat of The House of Representatives (IPA)", "orgTh": "สำนักงานเลขาธิการสภาผู้แทนราษฎร ส่วนราชการอิสระ"}, 
+{"no": "1745", "groupEn": "Hospital", "groupName": "Hospital (กลุ่มโรงพยาบาล)", "groupTh": "กลุ่มโรงพยาบาล", "serviceEn": "Call Center 1745", "serviceTh": "ศูนย์บริการฯ 1745", "OrgEn": "Bangpakok Hospital Group Co., Ltd.", "orgTh": "บริษัท บางปะกอก ฮอสพิทอล กรุ๊ป จำกัด"}, 
+{"no": "1746", "groupEn": "Business", "groupName": "Business (กลุ่มธุรกิจ)", "groupTh": "กลุ่มธุรกิจ", "serviceEn": "Call Center 1746", "serviceTh": "ศูนย์บริการฯ 1746", "OrgEn": "Dohome Co., Ltd.", "orgTh": "บริษัท ดูโอม จำกัด"}, 
+{"no": "1747", "groupEn": "Business", "groupName": "Business (กลุ่มธุรกิจ)", "groupTh": "กลุ่มธุรกิจ", "serviceEn": "Technical Service Hotline 1747", "serviceTh": "สายด่วนบริการเทคนิค 1747", "OrgEn": "SIAM KUBOTA Corporation Co., Ltd", "orgTh": "บริษัท สยามคูโบต้าคอร์ปอเรชั่น จำกัด"}, 
+{"no": "1748", "groupEn": "Insurance", "groupName": "Insurance (กลุ่มประกันภัย)", "groupTh": "กลุ่มประกันภัย", "serviceEn": "Navakij Call Center 1748", "serviceTh": "Navakij Call Center 1748", "OrgEn": "The Navakij Insurance PLC.", "orgTh": "บริษัท นวกิจประกันภัย จำกัด (มหาชน)"}, 
+{"no": "1749", "groupEn": "Property", "groupName": "Property (กลุ่มอสังหาริมทรัพย์)", "groupTh": "กลุ่มอสังหาริมทรัพย์", "serviceEn": "Call Center 1749", "serviceTh": "ศูนย์บริการฯ 1749", "OrgEn": "SC Asset Corporation PLC.", "orgTh": "บริษัท เอส ซี แอสเสท คอร์ปอเรชั่น จำกัด (มหาชน)"}, 
+{"no": "1750", "groupEn": "Business", "groupName": "Business (กลุ่มธุรกิจ)", "groupTh": "กลุ่มธุรกิจ", "serviceEn": "Call Center 1750", "serviceTh": "ศูนย์บริการฯ 1750", "OrgEn": "Asiasoft Corporation PLC.", "orgTh": "บริษัท เอเซียซอฟท์ คอร์ปอเรชั่น จำกัด (มหาชน)"}, 
+{"no": "1751", "groupEn": "Business", "groupName": "Business (กลุ่มธุรกิจ)", "groupTh": "กลุ่มธุรกิจ", "serviceEn": "Call Center 1751", "serviceTh": "ศูนย์บริการฯ 1751", "OrgEn": "Promise (Thailand) Co., Ltd.", "orgTh": "บริษัท พรอมมิส (ประเทศไทย) จำกัด"}, 
+{"no": "1753", "groupEn": "Property", "groupName": "Property (กลุ่มอสังหาริมทรัพย์)", "groupTh": "กลุ่มอสังหาริมทรัพย์", "serviceEn": "Call Center 1753", "serviceTh": "ศูนย์บริการฯ 1753", "OrgEn": "Prinsiri PLC.", "orgTh": "บริษัท ปริญสิริ จำกัด (มหาชน)"}, 
+{"no": "1755", "groupEn": "Business", "groupName": "Business (กลุ่มธุรกิจ)", "groupTh": "กลุ่มธุรกิจ", "serviceEn": "CPAC Engineer 1755", "serviceTh": "สายตรงวิศวกรซีแพค 1755", "OrgEn": "The Concrete Products & Aggregate Co., Ltd.", "orgTh": "บริษัท ผลิตภัณฑ์และวัตถุก่อสร้าง จำกัด"}, 
+{"no": "1756", "groupEn": "Business", "groupName": "Business (กลุ่มธุรกิจ)", "groupTh": "กลุ่มธุรกิจ", "serviceEn": "Customer Relation 1756", "serviceTh": "ลูกค้าสัมพันธ์ 1756", "OrgEn": "Big C Supercenter PLC.", "orgTh": "บริษัท บิ๊กซี ซูเปอร์เซ็นเตอร์ จำกัด (มหาชน)"}, 
+{"no": "1757", "groupEn": "Business", "groupName": "Business (กลุ่มธุรกิจ)", "groupTh": "กลุ่มธุรกิจ", "serviceEn": "Call Center 1757", "serviceTh": "ศูนย์บริการฯ 1757", "OrgEn": "Citi Service and Solution Co., Ltd.", "orgTh": "บริษัท ซิตี้ เซอร์วิส แอนด์ โซลูชั่น จำกัด"}, 
+{"no": "1758", "groupEn": "Insurance", "groupName": "Insurance (กลุ่มประกันภัย)", "groupTh": "กลุ่มประกันภัย", "serviceEn": "Cigna Customer Service Center 1758", "serviceTh": "ศูนย์บริการลูกค้าซิกน่า 1758", "OrgEn": "Cigna Insurance PLC.", "orgTh": "บริษัท ซิกน่า ประกันภัย จำกัด (มหาชน)"}, 
+{"no": "1759", "groupEn": "Business", "groupName": "Business (กลุ่มธุรกิจ)", "groupTh": "กลุ่มธุรกิจ", "serviceEn": "Call Center 1759", "serviceTh": "ศูนย์บริการฯ 1759", "OrgEn": "Double A (1991) PLC.", "orgTh": "บริษัท ดั๊บเบิ้ลเอ (1991) จำกัด (มหาชน)"}, 
+{"no": "1760", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "Call Center 1760", "serviceTh": "ศูนย์บริการฯ 1760", "OrgEn": "Land Development Department, Ministry of Agriculture and Cooperatives", "orgTh": "กรมพัฒนาที่ดิน กระทรวงเกษตรและสหกรณ์"}, 
+{"no": "1764", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "ALRO Hotline 1764", "serviceTh": "สายด่วน สปก 1764", "OrgEn": "Agricultural Land Reform Office, Ministry of Agriculture and Cooperatives", "orgTh": "สำนักงานการปฏิรูปที่ดินเพื่อเกษตรกรรม สปก. กระทรวงเกษตรและสหกรณ์"}, 
+{"no": "1765", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "MOC Hotline 1765", "serviceTh": "สายด่วนกระทรวงวัฒนธรรม 1765", "OrgEn": "Ministry of Culture", "orgTh": "กระทรวงวัฒนธรรม"}, 
+{"no": "1766", "groupEn": "Insurance", "groupName": "Insurance (กลุ่มประกันภัย)", "groupTh": "กลุ่มประกันภัย", "serviceEn": "Call Center 1766", "serviceTh": "ศูนย์บริการฯ 1766", "OrgEn": "Muang Thai Life Assurance PLC.", "orgTh": "บริษัท เมืองไทยประกันชีวิต จำกัด (มหาชน)"}, 
+{"no": "1767", "groupEn": "Food", "groupName": "Food (กลุ่มอาหาร)", "groupTh": "กลุ่มอาหาร", "serviceEn": "Chef Express 1767", "serviceTh": "เชฟส์ เอ็กซ์เพรส 1767", "OrgEn": "Chef Express Co., Ltd.", "orgTh": "บริษัท เชฟส์ เอ็กซ์เพรส จำกัด"}, 
+{"no": "1770", "groupEn": "Bank", "groupName": "Bank (กลุ่มธนาคาร)", "groupTh": "กลุ่มธนาคาร", "serviceEn": "Call Center 1770", "serviceTh": "ศูนย์บริการฯ 1770", "OrgEn": "Thanachart Bank PLC.", "orgTh": "ธนาคารธนชาต จำกัด (มหาชน)"}, 
+{"no": "1771", "groupEn": "Airline", "groupName": "Airline (กลุ่มสายการบิน)", "groupTh": "กลุ่มสายการบิน", "serviceEn": "Call Center 1771", "serviceTh": "ศูนย์บริการฯ 1771", "OrgEn": "Bangkok Airways PLC.", "orgTh": "บริษัท การบินกรุงเทพ จำกัด (มหาชน)"}, 
+{"no": "1772", "groupEn": "Hospital", "groupName": "Hospital (กลุ่มโรงพยาบาล)", "groupTh": "กลุ่มโรงพยาบาล", "serviceEn": "Call Center 1772", "serviceTh": "ศูนย์บริการฯ 1772", "OrgEn": "Phyathai Hospital", "orgTh": "บริษัท โรงพยาบาลพญาไท ๓ จำกัด และโรงพยาบาลพญาไท ๒ ใช้ร่วม *"}, 
+{"no": "1773", "groupEn": "Food", "groupName": "Food (กลุ่มอาหาร)", "groupTh": "กลุ่มอาหาร", "serviceEn": "Oishi Delivery 1773", "serviceTh": "Oishi Delivery 1773", "OrgEn": "Oishi Group PLC.", "orgTh": "บริษัท โออิชิ กรุ๊ป (มหาชน) จำกัด"}, 
+{"no": "1775", "groupEn": "Property", "groupName": "Property (กลุ่มอสังหาริมทรัพย์)", "groupTh": "กลุ่มอสังหาริมทรัพย์", "serviceEn": "Call Center 1775", "serviceTh": "ศูนย์บริการฯ 1775", "OrgEn": "SENA Development PLC.", "orgTh": "บริษัท เสนาดีเวลลอปเมนท์ จำกัด (มหาชน)"}, 
+{"no": "1776", "groupEn": "Hospital", "groupName": "Hospital (กลุ่มโรงพยาบาล)", "groupTh": "กลุ่มโรงพยาบาล", "serviceEn": "Call Center 1776", "serviceTh": "สายด่วน 1776", "OrgEn": "Mahachai Hospital PLC.", "orgTh": "โรงพยาบาลมหาชัย จำกัด (มหาชน)"}, 
+{"no": "1777", "groupEn": "Telecom", "groupName": "Telecom (กลุ่มโทรคม)", "groupTh": "กลุ่มโทรคม", "serviceEn": "TOT3G Call Center 1777", "serviceTh": "ศูนย์บริการ TOT3G 1777", "OrgEn": "TOT PLC.", "orgTh": "บริษัท ทีโอที จำกัด (มหาชน) (3 G call Center)"}, 
+{"no": "1778", "groupEn": "Property", "groupName": "Property (กลุ่มอสังหาริมทรัพย์)", "groupTh": "กลุ่มอสังหาริมทรัพย์", "serviceEn": "Call Center 1778", "serviceTh": "ศูนย์บริการฯ 1778", "OrgEn": "Lalin Property PLC.", "orgTh": "บริษัท ลลิล พร็อบเพอร์ตี้ จำกัด (มหาชน)"}, 
+{"no": "1782", "groupEn": "Business", "groupName": "Business (กลุ่มธุรกิจ)", "groupTh": "กลุ่มธุรกิจ", "serviceEn": "Hotline 1782", "serviceTh": "สายด่วน 1782", "OrgEn": "Federal Express (Thailand) Co., Ltd.", "orgTh": "บริษัท เฟดเดอรัล เอ็กซ์เพรส คอร์ปอเรชั่น"}, 
+{"no": "1783", "groupEn": "Property", "groupName": "Property (กลุ่มอสังหาริมทรัพย์)", "groupTh": "กลุ่มอสังหาริมทรัพย์", "serviceEn": "Call Center 1783", "serviceTh": "ศูนย์บริการฯ 1783", "OrgEn": "Built Land PLC.", "orgTh": "บริษัท บิลท์ แลนด์ จำกัด"}, 
+{"no": "1784", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "DDPM Hotline 1784", "serviceTh": "สายด่วนนิรภัย 1784", "OrgEn": "Department of Disaster Prevention and Mitigation", "orgTh": "กรมป้องกันและบรรเทาสาธารณภัย กระทรวงมหาดไทย"}, 
+{"no": "1785", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "Hotline 1785", "serviceTh": "สายด่วน 1785", "OrgEn": "Office of the Public Sector Development Commission, Prime Minister Office", "orgTh": "สำนักงานพัฒนาระบบราชการ ก.พ.ร. สำนักนายกรัฐมนตรี"}, 
+{"no": "1787", "groupEn": "Property", "groupName": "Property (กลุ่มอสังหาริมทรัพย์)", "groupTh": "กลุ่มอสังหาริมทรัพย์", "serviceEn": "Call Center 1787", "serviceTh": "ศูนย์บริการฯ 1787", "OrgEn": "Nirvana Development Co., Ltd.", "orgTh": "บริษัท เนอวานา ดีเวลลอปเม้นท์ จำกัด"}, 
+{"no": "1788", "groupEn": "Food", "groupName": "Food (กลุ่มอาหาร)", "groupTh": "กลุ่มอาหาร", "serviceEn": "CP Fresh Mart Delivery 1788", "serviceTh": "CP Fresh Mart Delivery 1788", "OrgEn": "CPF Trading Co., Ltd.", "orgTh": "บริษัท ซีพีเอฟ เทรดดิ้ง จำกัด"}, 
+{"no": "1789", "groupEn": "Business", "groupName": "Business (กลุ่มธุรกิจ)", "groupTh": "กลุ่มธุรกิจ", "serviceEn": "After Sales Services 1789", "serviceTh": "ศูนย์บริการหลังการขาย 1789", "OrgEn": "Haier Electrical Appliances (Thailand) Co., Ltd.", "orgTh": "บริษัท ไฮเออร์ อีเลคทริคอล แอพพลายส์แอนซ์ (ประเทศไทย) จำกัด"}, 
+{"no": "1790", "groupEn": "Insurance", "groupName": "Insurance (กลุ่มประกันภัย)", "groupTh": "กลุ่มประกันภัย", "serviceEn": "LMG One Call 1790", "serviceTh": "LMG One Call 1790", "OrgEn": "LMG Insurance PLC.", "orgTh": "บริษัท แอลเอ็มจี ประกันภัย จำกัด (มหาชน)"}, 
+{"no": "1791", "groupEn": "Insurance", "groupName": "Insurance (กลุ่มประกันภัย)", "groupTh": "กลุ่มประกันภัย", "serviceEn": "Call Center 1791", "serviceTh": "ศูนย์บริการฯ 1791", "OrgEn": "Road Accident Victims Protection Co., Ltd.", "orgTh": "บริษัท กลางคุ้มครองผู้ประสบภัยจากรถ จำกัด (คปภ.)"}, 
+{"no": "1792", "groupEn": "Hospital", "groupName": "Hospital (กลุ่มโรงพยาบาล)", "groupTh": "กลุ่มโรงพยาบาล", "serviceEn": "Hotline 1792", "serviceTh": "สายด่วน 1792", "OrgEn": "Vichaivej International Hospital", "orgTh": "บริษัท ศรีวิชัยเวชวิวัฒน์ จำกัด (มหาชน)"}, 
+{"no": "1793", "groupEn": "Property", "groupName": "Property (กลุ่มอสังหาริมทรัพย์)", "groupTh": "กลุ่มอสังหาริมทรัพย์", "serviceEn": "Call Center 1793", "serviceTh": "ศูนย์บริการฯ 1793", "OrgEn": "D-Land Group Co., Ltd.", "orgTh": "บริษัท ดีแลนด์ กรุ๊ป จำกัด"}, 
+{"no": "1794", "groupEn": "Business", "groupName": "Business (กลุ่มธุรกิจ)", "groupTh": "กลุ่มธุรกิจ", "serviceEn": "Call Center 1794", "serviceTh": "ศูนย์บริการฯ 1794", "OrgEn": "Barcony Co., Ltd.", "orgTh": "บริษัท บาร์โคนี่ จำกัด"}, 
+{"no": "1795", "groupEn": "Business", "groupName": "Business (กลุ่มธุรกิจ)", "groupTh": "กลุ่มธุรกิจ", "serviceEn": "Call Center 1795", "serviceTh": "ศูนย์บริการฯ 1795", "OrgEn": "TCT Accessories Co., Ltd.", "orgTh": "บริษัท ทีซีที เอสเซสโซรี่ จำกัด"}, 
+{"no": "1797", "groupEn": "Property", "groupName": "Property (กลุ่มอสังหาริมทรัพย์)", "groupTh": "กลุ่มอสังหาริมทรัพย์", "serviceEn": "Call Center 1797", "serviceTh": "ศูนย์บริการฯ 1797", "OrgEn": "Areeya Property PLC.", "orgTh": "บริษัท อารียา พรอพเพอร์ตี้ จำกัด (มหาชน)"}, 
+{"no": "1798", "groupEn": "Business", "groupName": "Business (กลุ่มธุรกิจ)", "groupTh": "กลุ่มธุรกิจ", "serviceEn": "Sixt Rent a Car 1798", "serviceTh": "ซิกท์ เช่ารถ 1798", "OrgEn": "Master Motor Services (Thailand) Co., Ltd.", "orgTh": "บริษัท มาสเตอร์ มอเตอร์ เซอร์วิส (ประเทศไทย) จำกัด"}, 
+{"no": "1799", "groupEn": "Telecom", "groupName": "Telecom (กลุ่มโทรคม)", "groupTh": "กลุ่มโทรคม", "serviceEn": "Information Service 1799", "serviceTh": "ทุกคำถาม มีคำตอบ 1799", "OrgEn": "TOT PLC.", "orgTh": "บริษัท ทีโอที จำกัด (มหาชน)"}, 
+{"no": "1811", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "Time Set 1811", "serviceTh": "เทียบเวลา 1811", "OrgEn": "Hydrographics Department, Royal Thai Navy", "orgTh": "กรมอุทกศาสตร์ กองทัพเรือ"}, 
+{"no": "1860", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "NDW Hotline 1860", "serviceTh": "ศูนย์เตือนภัยพิบัติแห่งชาติ 1860", "OrgEn": "National Disaster Warning Center, Ministry of Information and Communication Technology", "orgTh": "ศูนย์เตือนภัยพิบัติแห่งชาติ คณะกรรมการระบบการเตือนภัยล่วงหน้า กระทรวงเทคโนโลยีสารสนเทศและการสื่อสาร"}, 
+{"no": "1880", "groupEn": "Public", "groupName": "Public (กลุ่มราชการ)", "groupTh": "กลุ่มราชการ", "serviceEn": "SBPAC Hotline 1880", "serviceTh": "สายด่วน ศอ บต 1880", "OrgEn": "Souther Border Provinces Administrative Center", "orgTh": "ศูนย์อำนวยการบริหารจังหวัดชายแดนภาคใต้ ศอ.บต."}
+];
+        </script>
+    </body>
+</html>
