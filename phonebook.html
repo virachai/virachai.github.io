@@ -385,7 +385,7 @@
                 min-width: 90px;
             }
             .tag-operation-th {
-                min-width: 150px;
+                min-width: 310px;
                 text-align: left;
             }
             .tag-organization-en {
@@ -393,6 +393,7 @@
             }
             .tag-organization-th {
                 min-width: calc(50% - (290px)/2 );
+                min-width: calc(100% - 450px );
             }
             .flex-container > div.tag-short-name,
             .flex-container > div.tag-short-name2,
@@ -587,7 +588,7 @@
                                     <div class="tag-operation-th">    
                                         <span>ศูนย์บริการฯ 0000</span>                                  
                                     </div>
-                                    <div class="tag-organization-en">
+                                    <div class="tag-organization-en" style="display: none;">
                                         <span>Organization</span>                                     
                                     </div>                                  
                                     <div class="tag-organization-th" style="border-right: 0px;"> 
@@ -625,7 +626,7 @@
                 .header_area {
                     width: 100%;
                     max-width: calc(78px + 34px + 5px);
-                    border-right: 1px solid red; 
+                    /*border-right: 1px solid red; */
                 }
                 .header_area .vertical-menu {
                     width: 78px;
@@ -644,8 +645,11 @@
                 }
             }
             @media screen and (max-width: 920px) {
-                .flex-container > div.tag-organization-en {display: none;}
+                .flex-container > div.tag-organization-en {display: none;}                
                 .flex-container > div.tag-organization-th { min-width: calc(100% - 285px);} 
+                /* 210 + 350 = 560*/
+                .flex-container > div.tag-operation-th {min-width: 180px;}
+                .flex-container > div.tag-organization-th { min-width: calc(100% - 320px );} 
             }
             @media screen and (max-width: 768px) {
                 .flex-container > div.tag-operation-th {display: none;}
