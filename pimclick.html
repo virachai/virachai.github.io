@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Media Query</title>
+        <style>
+			*{
+                box-sizing: border-box;
+				background: 0 0;
+				border: 0;
+				margin: 0;
+				padding: 0;
+				vertical-align: baseline;
+				outline: 0;
+            }
+            .clearfix:after, .clearfix:before {
+                content: " ";
+                display: table;
+            }
+            *, ::before, ::after {
+                box-sizing: inherit;
+            }
+			.main-wrapper {
+				background-color: #fff;
+				transition: left .33s cubic-bezier(.694,.0482,.335,1);
+				left: 0;
+			}
+			body {
+				font-family: radley,sans-serif;
+				color: #636363;
+				font-size: 16px;
+				font-weight: 400;
+                overflow-y: visible;
+                overflow-x: hidden;
+			}
+			body, .main-wrapper, .content {
+				background-color: #fff;
+			}
+			.main-wrapper-inner {
+				width: 100%;
+				overflow: hidden;
+			}
+			.content {
+				margin-top: -100px;
+				z-index: 100;
+			}
+			.content, .main-wrapper, sub, sup {
+				position: relative;
+			}
+			.title {
+				display: block;
+				height: 200px;
+				text-align: left;
+				z-index: 101;
+				background-color: #e27d23;
+			}
+			.q_slider, .title, .title img {
+				width: 100%;
+				position: relative;
+			}
+			.title-outer.with-image .title {
+				height: auto !important;
+				line-height: normal;
+				background: 0 0;
+			}
+            /*.contact-page-form form:before, .contact-page-form form:after {*/
+            .form-title {
+                /*content: "Contact us";*/
+                position: absolute;
+                top: 75px;
+                /*left: calc(50% - 235px);*/
+                width: 100%;
+                font-family: Montserrat,sans-serif;
+                font-weight: 700;
+                font-size: 57px;
+                color: #2b2d2f;
+                letter-spacing: -4px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            /*.contact-page-form form:after {*/
+            .form-title span:last-child {
+                /*content: " today";*/
+                color: #fe214c;
+                /*left: calc(50% + 59px);*/
+            }
+            /* div.wpcf7-response-output{ display: none !important; }*/
+
+            /* full_width */
+            .full_width {
+                position: static;
+                z-index: 100;
+            }
+            .content_inner > .full_width > .full_width_inner {
+                padding-top: 0;
+            }
+            .full_width_inner {
+                position: static;
+            }
+            div.section {
+                position: relative;
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .contact-page-form {
+                margin-top: -320px;                
+                z-index: 999;
+                /*margin-left: -15px;
+                margin-right: -15px;*/
+                position: relative;
+            }
+            .grid_section .section_inner, .parallax_grid_section .parallax_section_inner {
+                width: 1100px;
+                margin: 0 auto;
+                position: relative;
+                z-index: 20;
+            }
+            .parallax_section_inner_margin, body:not(.has_general_padding) .section_inner_margin {
+                margin-left: -15px;
+                margin-right: -15px;
+                margin: 0px
+            }
+            .wpb_column, .vc_column_container, .vc_col-sm-12 {
+                padding-top: 0 !important;
+            }
+            .vc_column_container {
+                padding-left: 0;
+                padding-right: 0;
+            }
+            .vc_column_container > .vc_column-inner {
+                box-sizing: border-box;
+                padding-left: 15px;
+                padding-right: 15px;
+                width: 100%;
+                padding-right: 0px !important;
+            }
+            div.form7 {
+                margin: 0;
+                padding: 0;            
+                font-family: Open-Sans,sans-serif;
+            }
+            .full_width .ratio {
+                display: block;
+                position: relative;
+                width: 100%;
+                max-width: 320px;
+                height: auto;
+                visibility: hidden;
+                margin-top: 0px;
+                min-height: 230px;
+            }
+            img {
+                border-style: none;
+            }
+
+            @media (min-width: 768px) {
+                .vc_col-sm-12 {
+                    width: 100%;
+                }
+                .vc_col-sm-1,
+                .vc_col-sm-10,
+                .vc_col-sm-11,
+                .vc_col-sm-12,
+                .vc_col-sm-2,
+                .vc_col-sm-3,
+                .vc_col-sm-4,
+                .vc_col-sm-5,
+                .vc_col-sm-6,
+                .vc_col-sm-7,
+                .vc_col-sm-8,
+                .vc_col-sm-9 {
+                    position: relative;
+                    min-height: 1px;
+                    padding-left: 15px;
+                    padding-right: 15px;
+                    -webkit-box-sizing: border-box;
+                    -moz-box-sizing: border-box;
+                    box-sizing: border-box;
+                    /*float: left;*/
+                }
+            }
+
+            div.grid_section .section_inner {
+                width: 1100px;
+                margin: 0 auto;
+                position: relative;
+                z-index: 20;
+                height: auto;
+            }
+            .contact-page-form form p .input-text, .contact-page-form form p .textarea {
+                width: 100%;
+            }
+            .contact-page-form form p .input-text {
+                width: 100%;
+            }
+            .contact-page-form form p:nth-child(2) .input-text{
+                width: 96%;
+            }
+            .contact-page-form form p:nth-child(3), .contact-page-form form p:nth-child(2){
+                width: 50%;
+                float: left;        
+            }
+            .contact-page-form .form7 p {
+                font-family: Montserrat,sans-serif;
+                font-size: 18px !important;
+                line-height: 39px;
+                font-weight: 300;
+                font-style: normal;
+            }
+            .contact-page-form .form7 p > span > * {
+                position: relative;
+            }
+            .contact-page-form .form7 p input, .contact-page-form .form7 p textarea {
+                /* line-height: 18px; */
+                margin-bottom: 20px;
+                background-color: #ffffff;
+                border: 1px solid #e6e3e3;
+                color: #636363;
+                border-radius: 5px;
+                position: relative;
+                line-height: 27px;
+                padding: 10px 17px;
+                font-size: 18px!important;
+            }         
+            .contact-page-form form p:nth-child(6) {
+                text-align: center;
+            }
+            .contact-page-form form input.bt-submit {
+                position: relative;
+                display: inline-block;
+                width: auto;
+                height: 42px;
+                /*line-height: 42px;*/
+                margin: 0;
+                padding: 0 41px;
+                border: 0 solid #da7c0e;                
+                font-weight: 700;
+                font-family: Montserrat;
+                text-align: left;
+                color: #fff;
+                background-color: #da7c0e;
+                text-decoration: none;
+                cursor: pointer;
+                outline: 0;
+                font-style: normal;
+                text-transform: uppercase;
+                text-shadow: none;
+                letter-spacing: 1px;
+                white-space: nowrap;
+
+                background: #e91126;
+                font-size: 30px !important;
+                margin-top: 12px;
+                padding: 0px 60px;
+                color: white;
+                text-transform: uppercase;
+                height: 50px;
+            }
+            .form-title {        
+                text-align: left;        
+                width: auto;                
+                display: block;
+                margin: 0 auto;
+            }
+            
+            .contact-page-form form {
+                background: #FFF;
+                padding: 180px 65px 60px 65px;
+                border-radius: 20px;
+                box-shadow: 0px 1px 20px 20px rgba(234, 229, 229, 0.2784313725490196);
+                position: relative;
+            }
+             
+            /*.contact-page-form form p:nth-child(2) input.wpcf7-form-control.wpcf7-text{
+                width: calc(100% - 20px);
+            }*/
+
+            @media only screen and (max-width: 1200px) {
+                .content {margin-top: -35px;}
+                .contact-page-form form{
+                    margin-top: 100px;
+                    margin-left: 0;
+                    margin-right: 0;
+
+                    padding: 180px 65px 60px 65px;
+                    padding: 160px 55px 50px 55px;                                     
+                }
+                div.grid_section .section_inner {
+                    width: 950px;
+                }
+                .form-title {
+                    font-size: 52px;
+                }
+            }
+
+            @media only screen and (max-width: 1000px){
+                .contact-page-form form{
+                    margin-top: 120px;
+                    padding: 160px 55px 50px 55px;
+                    padding: 140px 45px 40px 45px; 
+                    /*padding: 30px;*/
+                }
+                /*.content {margin-top: -50px;}*/
+                div.grid_section .section_inner {
+                    width: 768px;
+                }
+                .form-title {
+                    top: 30px;
+                    font-size: 47px;
+                }
+            }
+
+            @media only screen and (max-width: 768px) {
+                .contact-page-form form{
+                    margin-top: 160px;
+                    padding: 120px 45px 40px 45px; 
+                    padding: 100px 35px 30px 35px; 
+                    /*padding: 15px;*/
+                }
+                .content {margin-top: -25px;}
+                div.grid_section .section_inner {
+                    width: 600px;
+                }
+                .form-title {
+                    font-size: 42px;                    
+                }
+            }
+
+            @media only screen and (max-width: 600px) {
+                .contact-page-form form{
+                    margin-top: 200px;
+                    padding: 100px 35px 30px 35px; 
+                    padding: 80px 25px 20px 25px;  
+                    /*padding: 10px;*/
+                }
+                .content {margin-top: -10px;}                
+                .form-title {
+                    font-size: 32px;
+                }
+                div.grid_section .section_inner {
+                    width: 420px;
+                }
+                .contact-page-form form p:nth-child(2) .input-text{
+                    width: 100%;
+                }
+                .contact-page-form form p:nth-child(3), .contact-page-form form p:nth-child(2){
+                    width: 100%;
+                    float: unset;        
+                }
+            }
+
+            @media only screen and (max-width: 420px) {
+                .contact-page-form form{
+                    margin-top: 200px;     
+                    padding: 80px 25px 20px 25px;   
+                    padding: 60px 15px 10px 15px;               
+                }
+                .content {margin-top: 0;}
+                .form-title {
+                    font-size: 32px;
+                }
+                div.grid_section .section_inner {
+                    width: 320px;
+                }
+            }
+            
+
+        </style>
+    </head>
+	<body>
+		<div class="main-wrapper">
+			<div class="main-wrapper-inner">
+				<div class="content">
+					<div class="content-inner">
+						<div class="title-outer with-image">
+							<div class="title">
+                                <div class="image responsive"><img src="https://www.pimclick.com/wp-content/uploads/2018/11/contact-banner.jpg" alt="Contact Banner"></div>
+                                
+                                <!--<div class="title_holder">
+                                    <div class="container clearfix">
+                                        <div class="container_inner clearfix">
+                                            <div class=" title_subtitle_holder ">
+                                                <div class="title_subtitle_holder_inner title_content_background">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>-->
+
+							</div>
+                        </div>
+                        
+                        <div class="full_width">
+                            <div class="full_width_inner">
+                                <!-- <img class="ratio" src="./ratio-4-3.gif" alt="ratio" /> -->
+                                <div id="contact-page-form" class="section contact-page-form grid_section" style=" padding-bottom:80px; text-align:left;">
+                                    
+                                    <div class="section_inner clearfix" style="position: relative;">
+                                        <div class="section_inner_margin clearfix">
+                                            <div class="wpb_column vc_column_container vc_col-sm-12">
+                                                <div class="vc_column-inner">
+                                                    <div class="wpb_wrapper">
+                                    
+                                                        <div role="form" class="form7" dir="ltr" style="position: relative;">
+                                       
+                                                            <form action="pimclick.html" method="post" class="form7-form">                                                               
+                                                                <h2 class="form-title">
+                                                                    <span>Contact us</span>
+                                                                    <span>Today</span>
+                                                                </h2>
+                                                                
+                                                                <p class="cl_name">Your Name (required)<br>
+                                                                    <span class="your-name">
+                                                                        <input type="text" name="your-name" value="" size="40" class="input-text" aria-required="true" aria-invalid="false">
+                                                                </span>
+                                                                </p>
+                                                                
+                                                                <p>Your Email (required)<br>
+                                                                    <span class="your-email">
+                                                                        <input type="email" name="your-email" value="" size="40" class="input-text" aria-required="true" aria-invalid="false">
+                                                                    </span>
+                                                                </p>
+                                                                
+                                                                <p>Subject<br>
+                                                                    <span class="your-subject">
+                                                                        <input type="text" name="your-subject" value="" size="40" class="input-text" aria-invalid="false">
+                                                                    </span>
+                                                                </p>
+                                                                
+                                                                <p>Your Message<br>
+                                                                    <span class="your-message">
+                                                                        <textarea name="your-message" cols="40" rows="7" class="textarea" aria-invalid="false"></textarea>
+                                                                    </span>
+                                                                </p>
+
+                                                                <p>
+                                                                    <input type="button" value="Send" class="bt-submit">                                                                    
+                                                                </p>
+                                                            </form>
+
+                                                        </div>
+                                                    
+                                                    </div>
+                                                
+                                                </div>
+                                            
+                                            </div>
+                                        
+                                        </div>
+                                    
+                                    </div>
+                                
+                                </div>                           
+                            
+                            </div>
+                        </div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+        <!-- <div class = "banner"><h1>pimclick</h1><h1>creative digital agency</h1></div>
+        <div class="subcon1" style="height: 700px;">
+            <h2 style="font-size: 50px;">Contact us today</h2>
+            <div class = "form">
+                <table>
+                    <tr>
+                        <td>Your Name</td>  
+                        <td>Your Email</td>
+                    </tr>
+                    <tr>
+                        <td><input class = "n1" style="width: 80%; height: 50px;"></td>
+                        <td><input class = "n1" style="width: 80%; height: 50px;"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Subject</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input class = "n2" style="width: 90%; height:150px;"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Your Message</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input class = "n2" style="width: 90%; height:150px;"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="subcon2">
+            <p class="content" style="font-size: 35px;">Pimclick is a full service web design and online marketing agency offering a unique blend of creativity and expertise within the entirety of the digital spectrum. With headquarters located in Paris, France and branch offices dispersed throughout major cities such as Dubai, Hong Kong, Casablanca and Bangkok..</p>
+        </div>
+        <div class="subcon2">
+            <img src="https://www.thaimediapr.com/wp-content/uploads/2018/03/pimclick.png" width="80%">
+        </div>
+        <div class="container">
+            
+            <div class="subcon">
+                <h3 class="title">Digital Strategy</h3>
+                <p class="content" >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <div class="subcon">
+                <h3 class="title">Digital Production</h3>
+                <p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <div class="subcon">
+                <h3 class="title">E-Marketing</h3>
+                <p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <div class="subcon">
+                <h3 class="title">Graphic Design</h3>
+                <p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <div class="subcon">
+                <h3 class="title">Video Production</h3>
+                <p class="content" >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+        </div>
+                       
+        <div class="subcon1">
+            <h2 class="title">Footer</h2>
+            <p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div> -->
+        
+
+        
+    </body>
+</html>
