@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">    
+    <head>
+        <meta charset="utf-8">
+        <meta name="robots" content="noindex">
+        <meta name="googlebot" content="noindex">
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" >
+        <meta http-equiv="Pragma" content="no-cache" >
+        <meta http-equiv="Expires" content="0" > 
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Homework #005(03) - Online CodeCamp#8 by Virachai Wongsena</title>
+        <style>
+div.gallery {
+  border: 1px solid #ccc;
+  color: #FFFFFF;
+  background-color: #4CAF50;
+  border-radius: 10px;
+  box-shadow: 4px 8px 8px silver;
+  overflow: hidden;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 10px;
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+div.desc h4{
+  margin: 8px 0;
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+        </style>
+      </head>
+<body>
+<h2>Responsive Image Gallery</h2>
+<h4>Resize the browser window to see the effect.</h4>
+
+<div class="responsive">
+  <div class="gallery">
+    <div>
+      <a target="_blank" href="https://www.w3schools.com/css/img_5terre.jpg">
+        <img src="https://www.w3schools.com/css/img_5terre.jpg" alt="Cinque Terre" width="600" height="400">
+      </a>
+      <div class="desc">
+        <h4>Cinque Terre</h4>
+        <span>Cinque Terre national park, Italy.</span>
+      </div>
+    </div>    
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <div>
+      <a target="_blank" href="https://www.w3schools.com/css/img_forest.jpg">
+        <img src="https://www.w3schools.com/css/img_forest.jpg" alt="Forest Bridge" width="600" height="400">
+      </a>
+      <div class="desc">
+        <h4>Beautiful Bridge</h4>
+        <span>Wooden Bridge in the forest</span>
+      </div>
+    </div>    
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <div>
+      <a target="_blank" href="https://www.w3schools.com/css/img_lights.jpg">
+        <img src="https://www.w3schools.com/css/img_lights.jpg" alt="Aurora Borealis" width="600" height="400">
+      </a>
+      <div class="desc">
+        <h4>Aurora Borealis</h4>
+        <span>Natural light display in the sky</span>
+      </div>
+    </div>    
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <div>
+      <a target="_blank" href="https://www.w3schools.com/css/img_mountains.jpg">
+        <img src="https://www.w3schools.com/css/img_mountains.jpg" alt="Snow Mountain" width="600" height="400">
+      </a>
+      <div class="desc">
+        <h4>Snow Mountain</h4>
+        <span>Snowy mountainous regions</span>
+      </div>
+    </div>    
+  </div>
+</div>
+
+<div class="clearfix"></div>
+
+</body>
+</html>
