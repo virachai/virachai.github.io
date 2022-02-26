@@ -43,3 +43,5 @@ I’m currently learning Front-End, Back-End, DevOps & more.
 * How to write a resume
 * Linux and Docker
 * Test Driven Development (TDD)
+
+Update 2022
