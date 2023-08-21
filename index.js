@@ -410,7 +410,7 @@ function sleep(ms) {
  // demo();
 
 // 2023-08-21 - Implement an icon click functionality to access the top section
-document.querySelector("i.fas.fa-arrow-to-top") && document.querySelector("i.fas.fa-arrow-to-top").addEventListener('click', () => {
+document.querySelector("i.fa.fa-arrow-up") && document.querySelector("i.fa.fa-arrow-up").addEventListener('click', () => {
     window.scrollTo({
         top: 0,
         behavior: 'smooth'
