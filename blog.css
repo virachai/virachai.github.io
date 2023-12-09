@@ -94,3 +94,99 @@
      background-color: #2581c6;
      color: #fff;
 }
+
+#portfolio .grid-container {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+     gap: 20px;
+     padding: 20px;
+     max-width:1024px;
+     width:96%;
+     width:100%;
+     margin-left:auto;
+     margin-right:auto;
+}
+ #portfolio .card {
+     border: 1px solid #ddd;
+     border-radius: 5px;
+     padding: 15px;
+     text-align: center;
+     /*display: block;*/
+     position: relative;
+     padding-bottom: 80px;
+}
+ #portfolio .card img {
+     max-width: 100%;
+     width: 100%;
+     height: 100%;
+     max-height: 222px;
+     object-fit: cover;
+}
+ #portfolio h4.u-text-4 {
+     letter-spacing: 0px;
+     line-height: 1;
+     font-weight: 300;
+     font-family: Sora;
+     font-size: 1.25rem;
+     text-transform: none;
+     margin: 15px 0 0 0;
+     text-align: left;
+     color: #111111;
+}
+ #portfolio p.u-text-5 {
+     margin: 15px 0;
+     text-align: left;
+     color: #111111;
+}
+ #portfolio .u-shape {
+     height: 23px;
+     margin-bottom: 0;
+     margin-top: 0;
+}
+ #portfolio .u-palette-1-base {
+     color: #ffffff;
+     background-color: #e748a2;
+}
+ #portfolio .u-palette-2-base {
+     color: #ffffff;
+     background-color: #43bd46;
+}
+ #portfolio .u-palette-3-base {
+     color: #ffffff;
+     background-color: #e5e800;
+}
+ #portfolio .u-palette-4-base {
+     color: #ffffff;
+     background-color: #c17ff0;
+}
+ #portfolio .u-palette-5-base {
+     color: #ffffff;
+     background-color: #ee7bbc;
+}
+ #portfolio .u-palette-5-base {
+     color: #ffffff;
+     background-color: #e748a2;
+}
+/* Custom styling for btn btn-primary */
+ #portfolio .btn.btn-primary {
+     background-color: #3498db;
+     color: #fff;
+     border: none;
+     padding: 10px 20px;
+     border-radius: 5px;
+     font-size: 16px;
+     cursor: pointer;
+     transition: background-color 0.3s ease, color 0.3s ease;
+     margin: 0;
+     display: block;
+     font-weight: bold;
+     text-decoration-line: none;
+     position: absolute;
+     bottom: 15px;
+     left: 15px;
+     right: 15px;
+}
+ #portfolio .btn.btn-primary:hover {
+     background-color: #2581c6;
+     color: #fff;
+}
